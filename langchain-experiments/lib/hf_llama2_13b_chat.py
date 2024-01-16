@@ -21,12 +21,14 @@ def query(template, model_params = None, **params):
         }
     prompt = template.format_map(params)
     payload = {
-        "inputs": f"<s>[INST] <<SYS>>You are a helpful assistant. You keep your answers short. When asked to provide data as response, do not return additional comments.<</SYS>>{prompt}[/INST]",
+        "inputs": f"<s>[INST] <<SYS>>You are a helpful assistant. You keep your answers short. When asked to provide data such as CSV data or JSON as response, do not return additional comments or notes.<</SYS>>{prompt}[/INST]",
         "parameters": model_params
     }
     response = requests.post(API_URL, headers=headers, json=payload)
     response.raise_for_status()
     try:
-        return response.json()
+        return response.json()[0].get("generated_text")
     except JSONDecodeError:
-        raise RuntimeError(f'Cannot parse response from {response.url}.')
+        with open('tmp/response.txt', "w", encoding='utf-8') as f:
+            f.write(response.text)
+        raise RuntimeError(f'Cannot parse response from {response.url}. See tmp/response.txt')
