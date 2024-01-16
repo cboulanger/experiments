@@ -1,3 +1,3 @@
 # Experiments with https://python.langchain.com
 
-`pip install langchain langchain-cli openai huggingface_hub`
+`pip install langchain langchain-cli openai huggingface_hub langchain_openai`
