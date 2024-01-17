@@ -1,0 +1,10 @@
+['Martinez, Dr. Christian Busse, Bundesministerium für Ernährung und Landwirtschaft, Bonn Agrarprodukt Recht',
+ 'Prof. Dr. Ewald Endres, Hochschule Weihenstephan-Triesdorf Freising Forsting Forsting, Jagd, Fischerei, Fischerei',
+ 'Lawyeranwalt Ingo Glas, Bitburg Boden Recht',
+ 'Christiane Grass, Bonn Agrarzivil Recht',
+ 'Jens Haarstrich, Peine Redaktionär, Rostock',
+ 'Prof. Dr. Bernd von Garmissen, Göttingen Erb, Redaktion, Umwelt',
+ 'Ltdr. Jose Martinez, Georg-August-Universität Göttingen, Göttingen',
+ '',
+ '',
+ "Note: The column 'Role' contains the following values: 'Herausgeber', 'Redaktion', 'Beirat'"]

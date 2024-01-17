@@ -7,7 +7,7 @@ import os
 load_dotenv()
 
 API_KEY = os.getenv("HUGGINGFACEHUB_API_TOKEN")
-API_URL = "https://z8afrqamxvaaitmf.us-east-1.aws.endpoints.huggingface.cloud"
+API_URL = "https://gp8iviqlqee101a0.us-east-1.aws.endpoints.huggingface.cloud"
 headers = {
     "Accept" : "application/json",
     "Authorization": f"Bearer {API_KEY}",
@@ -17,11 +17,12 @@ headers = {
 def query(template, model_params = None, **params):
     if model_params  is None:
         model_params = {
-            "temperature": 0.1
+            "temperature": 0.1,
+            "max_new_tokens": 1000
         }
     prompt = template.format_map(params)
     payload = {
-        "inputs": f"<s>[INST] <<SYS>>You are a helpful assistant. You keep your answers short. When asked to provide data such as CSV data or JSON as response, do not return additional comments or notes.<</SYS>>{prompt}[/INST]",
+        "inputs": f"<s>[INST] <<SYS>>You are a helpful assistant. No comments or explanation, just answer the question.<</SYS>>{prompt}[/INST]",
         "parameters": model_params
     }
     response = requests.post(API_URL, headers=headers, json=payload)

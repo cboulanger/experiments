@@ -1,18 +1,14 @@
 ,lastname,firstname,title,position,affiliation,role
-0,Deutsche Gesellschaft für Agrarrecht, , ,Herausgeber, , 
-1,Regierungsdirektor,Dr. Christian, ,Redaktion,"Bundesministerium für Ernährung und Landwirtschaft, Bonn", 
-2,Prof. Dr.,Ewald, ,Redaktion,"Hochschule Weihenstephan-Triesdorf, Freising", 
-3,Rechtsanwalt,Dr. Matthias, ,Redaktion,Bitburg, 
-4,Rechtsanwalt,Dr. Bernd,von Garmissen,Redaktion,Göttingen, 
-5,Rechtsanwalt,Ingo, ,Redaktion,Rostock, 
-6,Rechtsanwältin,Christiane, ,Redaktion,Bonn, 
-7,Rechtsanwalt,Jens, ,Redaktion,Peine, 
-8,Ltd. Verwaltungsdirektor,Dr. Erich, ,Redaktion,"Sozialversicherung für Landwirtschaft, Forsten und Gartenbau, Kassel", 
-9,Ministerialrat,Dr. Christian, ,Redaktion,"Bayerisches Staatsministerium für Ernährung, Landwirtschaft und Forsten, München", 
-10,Prof. Dr.,Jose, ,Redaktion,"Institut für Landwirtschaftsrecht, Georg-August-Universitat Göttingen, Göttingen", 
-11,Ltd. Landwirtschaftsdirektor,Volkmar, ,Redaktion,"Landwirtschaftskammer NRW, Bonn", 
-12,Rechtsanwalt/Steuerberater,Ralf, ,Redaktion,Bonn, 
-13,Rechtsanwalt,Harald, ,Redaktion,"Landvolk Niedersachsen, Hannover", 
-14,Prof. Dr.,José, ,Schriftleitung,Institut für Landwirtschaftsrecht, 
-15,LLD,Volkmar, ,Schriftleitung, , 
-16,Irina Valeska,Schell, ,Assistenz der Schriftleitung, , 
+0,Busse,Christian,Dr.,Regierungsdirektor,"Bundesministerium für Ernährung und Landwirtschaft, Bonn",Redaktion
+1,Endres,Ewald,Prof. Dr.,,"Hochschule Weihenstephan-Triesdorf, Freising",Redaktion
+2,Francois,Matthias,Dr.,Rechtsanwalt,Bitburg,Redaktion
+3,von Garmissen,Bernd,Dr.,Rechtsanwalt,Göttingen,Redaktion
+4,Glas,Ingo,,Rechtsanwalt,Rostock,Redaktion
+5,Graß,Christiane,Rechtsanwältin,,Bonn,Redaktion
+6,Haarstrich,Jens,Rechtsanwalt,,Peine,Redaktion
+7,Koch,Erich,Dr.,Ltd. Verwaltungsdirektor,"Sozialversicherung für Landwirtschaft, Forsten und Gartenbau, Kassel",Redaktion
+8,Köpl,Christian,Dr.,Ministerialrat,"Bayerisches Staatsministerium für Ernährung, Landwirtschaft und Forsten, München",Redaktion
+9,Martinez,Jose,Prof. Dr.,,"Institut für Landwirtschaftsrecht, Georg-August-Universitat Göttingen, Göttingen",Redaktion
+10,Nies,Volkmar,Ltd. Landwirtschaftsdirektor,,"Landwirtschaftskammer NRW, Bonn",Redaktion
+11,Stephany,Ralf,Rechtsanwalt/Steuerberater,,Bonn,Redaktion
+12,Wedemeyer,Harald,Rechtsanwalt,,"Landvolk Niedersachsen, Hannover",Redaktion
