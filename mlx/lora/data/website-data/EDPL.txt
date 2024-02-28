@@ -1,0 +1,141 @@
+Rezension: European Data Protection Law Review - PLANIT//LEGAL
+Kanzlei
+Leistungen
+Team
+Karriere
+Blog
+Kontakt
+English
+Suchen
+Kanzlei
+Leistungen
+Team
+Karriere
+Blog
+Kontakt
+Blog
+Rezension: European Data Protection Law Review
+Von Dr. Bernhard Freund am 10. September 17
+Beitrag drucken
+Das Datenschutzrecht befindet sich mehr denn je im Umbruch. Die Einführung der EU-Datenschutzgrundverordnung (DSGVO) und neue Technologien werfen ungezählte Fragen auf. Wer über die neuesten Diskussionen, Trends und Urteile informiert sein will, benötigt hochwertige und aktuelle Quellen. Ein Angebot hierfür ist die European Data Protection Law Review (EDPL). Eine Rezension.
+Rezensierte Ausgabe: European Data Protection Law Review 1/2017 (lexxion), herausgegeben von Bart van der Sloot
+Aufbau und Inhalt
+Den Rubriken der Zeitschrift sind ein Editorial und mehrere Vorworte vorangestellt. Positiv fällt auf, dass sich diese keineswegs in den üblichen Danksagungen und Ankündigungen erschöpfen, sondern unmittelbar in die Diskussion einsteigen. So enthält das Editorial eine Fundamentalkritik des Konzepts der Interessenabwägung, welches in der Anwendung des Datenschutzrechts allgegenwärtig ist. Die erfrischende Offenheit, auch Grundsätzliches in Frage zu stellen, zieht sich auch durch die weiteren Beiträge.
+Die Vorworte, Beiträge und Berichte stammen von internationalen Experten und ausgewählten “Hochkarätern”. Zum Beispiel gibt passend zum Thema der Ausgabe 1/2017 – Big Data – der langjährige NSA-Analyst und Whistleblower William Binney einen Einblick in seine Methoden der Big-Data-Analyse. Das Vorwort von Paul de Hert  steht den anschließenden akademischen Beiträgen in nichts nach. Er fordert darin eindeutige Gesetze (bright line rules) und kritisiert den EuGH dafür, den Mitgliedstaaten keinen Spielraum für eine solche klare Rechtsetzung zu gewähren.
+Der Beitragsteil (Articles) ist das akademische Herz der Zeitschrift.  Ugo Pagallo  stellt am Beispiel der Herausforderungen von Big Data die Bedeutung von sekundären Regeln im Sinne von H. L. A. Hart unter der Datenschutzgrundverordnung heraus. Großartig ist dabei die Art und Weise, wie hier rechtsphilosophische Klassiker für die ganz konkreten Fragestellungen des neuen Datenschutzrechts fruchtbar gemacht werden.  Marc Rotenberg  setzt sich unter dem Titel “Urgent Mandate, Unhurried Response” kritisch mit dem bisherigen Wirken des unter dem Eindruck der Snowden-Enthüllungen eingesetzten UN-Sonderberichterstatters für die Privatsphäre ein. Er zeigt hier eindrücklich, dass der ernannte Berichterstatter noch viel Arbeit vor sich hat, wenn er die ihm gestellten Aufgaben erreichen will. Den Beitragsteil beschließen  Abu Bakar Muni, Siti Hajar Mohd Yasin  und  Siti Sarah Abu Bakar  mit einem Nachruf auf das vom EuGH im Dezember 2016 für unrechtmäßig erklärte britische Gesetz zur Vorratsdatenspeicherung, DRIPA, und einem Ausblick auf die Zukunft der Aufzeichnung von Verbindungsdaten.
+Der Berichtsteil (Reports) ist ein Highlight für jeden, der über den deutschen Tellerrand hinausblicken und sich kompakt über die wesentlichen Entwicklungen im europäischen Datenschutz informieren möchte. Die zwei- bis fünfseitigen Reports bieten kompaktes Wissen und kritische Anmerkungen zu aktuellen Themen:
+Big-Data-Guidelines der Datenschutz-Expertengruppe des Europarats ( Alessandro Mantelero )
+Working Paper 244 der Art.-29-Gruppe ( Sandra Schmitz )
+Stand der DSGVO-Umsetzung in Deutschland ( Dominic Broy )
+Einsatz von Body Cams durch die deutsche Polizei ( Dennis-Kenji Kipker )
+Investigatory Powers Act 2016 ( Lorna Woods )
+CG v Facebook ( Lorna Woods )
+Privacy Shield unter Trump ( Alan Butler )
+Der Datenschutzbeauftragter nach der DSGVO ( Miguel Recio )
+Recht auf Datenportabilität ( Lucio Scudiero )
+Herausragende Urteile werden in den anschließenden Case Notes erörtert, in der Ausgabe 1/2017 bespricht Tijmen Wisman eingehend die Entscheidung des EuGH zur Speicherung von IP-Adressen in der Rechtssache Breyer v Bundesrepublik Deutschland (C-582/14). Dabei werden alle relevanten Aspekte des Urteils beleuchtet und die Bedeutung für die Praxis der Webseitenbetreiber dargelegt. Abgerundet wird die Zeitschrift schließlich durch Rezensionen internationaler Buchneuheiten im Bereich des Datenschutzes und Datenschutzrechts.
+Fazit
+Die Vereinheitlichung des Rechts durch die DSGVO führt zwangsläufig – und erfreulicherweise – zu eine Europäisierung und Globalisierung der Debatten über den Datenschutz. Zum einen verlangt die DSGVO als europäisches Recht nach einer autonomen, europaweit einheitlichen Interpretation, um die im Detail zu ringen ist. Zum anderen gilt es, von Best Practices zu lernen und die im föderativen Ansatz der EU angelegte Konkurrenz zum Vorteil zu nutzen.
+Die EDPL füllt insofern eine bisher unzureichend bediente, schmerzliche Lücke. Sie ermöglicht eine europäische Debatte über den Datenschutz auf hohem Niveau und gegenseitiges Lernen. Auswahl und Breite der Themen und der qualitative Anspruch überzeugen. Die Zeitschrift EDPL ist jedem zu empfehlen, der sich für die Hintergründe und die laufenden Entwicklungen des europäischen Datenschutzrechts interessiert. Mit Blick auf die DSGVO ist sie auch für “nur” deutschlandweit tätige Datenschutzpraktiker hochrelevant.
+Voriger Beitrag
+Nächster Beitrag
+Suche
+Suche nach:
+Kategorien
+Arbeitnehmerdatenschutz
+Datenrecht
+Datenschutz International
+Datenschutz-Sanktionen
+Datenschutz-Specials
+Datenschutzgrundverordnung
+Datensicherheit
+EU-Vertreter
+Herausforderungen der Digitalisierung
+Individualsoftware entwickeln
+IT-Recht
+Legal Tech
+Telemedien
+Videoüberwachung
+Was tun, wenn…
+Schlagwörter Abmahngate
+Abmahnung
+Abnahme
+agile Projektentwicklung
+Auftragsverarbeitung
+B2C
+BDSG
+Bitcoin
+Bussgeld
+Cloud Computing
+Cookies
+Corona
+Datenhehlerei
+Datenschutz
+Datensicherheit
+Dokumentation
+DSGVO
+E-Commerce
+E-Mail
+ePrivacy-Richtlinie
+EuGH
+Facebook
+Influencer
+internationaler Datentransfer
+IT-Sicherheitsgesetz
+Kennzeichnungspflicht
+Kopieren
+Mandatsgeheimnis
+Marketing
+PAuswG
+Personalausweis
+Privacy Shield
+Safe-Harbor
+Scannen
+Scrum
+Telemediengesetz
+TMG
+Tracking
+Transparenz
+Verschlüsselung
+Videoüberwachung
+Vorratsdatenspeicherung
+Werkvertrag
+Wildkamera
+WordPress
+Autoren Ariane Jung
+Christian Putzar
+Claudia Bischof
+Dr. Anna-Kristina Roschek
+Dr. Bernd Schmidt
+Dr. Bernhard Freund
+Dr. Falk W. Müller
+Dr. Pillip Hofmann
+Dr. Sebastian Heep
+Jens Thurn
+Melissa Martins de Almeida
+Niklas Bauseneick
+Nils Eckert
+Prof. Dr. Lasse Dinter LL.M.
+Robin Schoss
+Sophie Winkler
+Svenja Bottke
+Rechtsanwaltsgesellschaft mbH
+Jungfernstieg 1
+20095 Hamburg
+mail@planit.legal
+Tel: +49 (0) 40 609 44 190
+Fax: +49 (0) 40 609 44 199
+Home
+Kanzlei
+Leistungen
+Team
+Karriere
+Blog
+Kontakt
+EU-DSGVO
+Impressum
+Datenschutzerklärung
+LinkedIn
+Twitter
+YouTube
+Xing
