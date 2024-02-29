@@ -12,6 +12,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import textwrap
 
+
 def download_website_content(url):
     try:
         response = requests.get(url)
@@ -83,14 +84,48 @@ def wrap_content_generator(content, width=80):
             for line2 in textwrap.wrap(line, width=width):
                 yield line2
 
+
 def clean_values(row):
     """Return a new dictionary with no NaN, None, or empty/whitespace-only values."""
     return {k: v for k, v in row.items() if pd.notna(v) and v is not None and v.strip()}
 
 
+def filter_content_with_context(content, keywords, lines_before=1, lines_after=1, max_chars=None):
+    lines = content.splitlines()
+    filtered_content = ""
+    keyword_threshold = 1  # Start with requiring at least 1 keyword to be present
+
+    while True:
+        matched_lines = set()
+        for i, line in enumerate(lines):
+            # Count how many keywords are present in the line
+            keywords_present = sum(bool(re.search(r'\b' + re.escape(keyword) + r'\b', line)) for keyword in keywords)
+            # If the number of present keywords meets or exceeds the threshold, include the line
+            if keywords_present >= keyword_threshold:
+                context_range = range(max(i - lines_before, 0), min(i + lines_after + 1, len(lines)))
+                matched_lines.update(list(context_range))
+
+        # Extract the matched lines and their context
+        filtered_lines = [lines[i] for i in sorted(matched_lines)]
+        filtered_content = "\n".join(filtered_lines)
+
+        # Check if the filtered content meets the max_chars condition or if there's no max_chars limit
+        if max_chars is None or len(filtered_content) <= max_chars:
+            break  # Condition met or no limit specified; stop filtering
+
+        # Increase the keyword threshold for stricter filtering if the content is too long
+        keyword_threshold += 1
+        # If every line requires more keywords than are available, it's impossible to meet the condition
+        if keyword_threshold > len(keywords):
+            return ""  # Return empty string as the condition cannot be fulfilled
+
+    return filtered_content
+
+
 def create_training_file(instruction, input_file, output_dir, website_dir,
                          cols_to_remove: list, column_to_filter_by: str,
-                         line_width=120, lines_before=2, lines_after=2, random_seed=None,
+                         max_chars=2048*4, max_gt_items=10,
+                         line_width=120, lines_before=1, lines_after=1, random_seed=None,
                          debug=True):
     # Load the input
     df = pd.read_csv(input_file)
@@ -102,14 +137,13 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
     # Prepare the output directory
     os.makedirs(output_dir, exist_ok=True)
 
-    # Split the DataFrame into training (80%) and test+validation (20%)
-    train_df, test_valid_df = train_test_split(df, test_size=0.2, random_state=random_seed)
-
-    # Further split the test+validation into test and validation (50% each of the 20%)
-    test_df, valid_df = train_test_split(test_valid_df, test_size=0.5, random_state=random_seed)
-
     def process_and_write_data(grouped_df, file, write_debug_file=False):
         for journal_abbr, group in grouped_df.groupby('journal_abbr'):
+
+            # use only the first 10 ground truth items so that the training record does not become too large
+            group = group.head(max_gt_items)
+
+            # load website content from the cache
             filename = f"{website_dir}/{re.sub(r'[. ]', '', str(journal_abbr))}.txt"
             try:
                 with open(filename, 'r', encoding='utf-8') as content_file:
@@ -117,22 +151,32 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
             except FileNotFoundError:
                 continue
 
-            # wrap content to decrease token window
-            lines = [line for line in wrap_content_generator(website_content, width=line_width)]
-            wrapped_content = '\n'.join(lines)
-
-            # filter rows
-            keyword_list = [x for x in group[column_to_filter_by].tolist() if pd.notnull(x)]
-            filtered_content = filter_content_with_context(wrapped_content, keywords=keyword_list,
-                                                          lines_before=lines_before, lines_after=lines_after)
-            if filtered_content.strip() == '':
-                continue
-
+            # Clean up data
             answer_df = group.drop(cols_to_remove, axis=1, errors='ignore').dropna(axis=1, how='all')
 
             # Convert DataFrame rows to dictionaries, cleaning NaN values
             cleaned_rows = answer_df.apply(lambda row: clean_values(row.to_dict()), axis=1)
             answer_yaml = yaml.dump(list(cleaned_rows), allow_unicode=True, sort_keys=False)
+
+            # wrap content to decrease token window
+            lines = [line for line in wrap_content_generator(website_content, width=line_width)]
+            wrapped_content = '\n'.join(lines)
+
+            # Determine how many characters are available for the content
+            max_chars_for_content = max_chars - len(instruction) - len(answer_yaml)
+
+            # Determine which keywords to filter by
+            keyword_list = [x for x in group[column_to_filter_by].tolist() if pd.notnull(x)]
+
+            # Filter rows, using keywords and a context window
+            filtered_content = filter_content_with_context(wrapped_content,
+                                                           keywords=keyword_list,
+                                                           lines_before=lines_before, lines_after=lines_after,
+                                                           max_chars=max_chars_for_content)
+
+            # Ignore if nothing was found
+            if filtered_content.strip() == '':
+                continue
 
             if write_debug_file:
                 prompt = [
@@ -156,54 +200,26 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
                 }
                 file.write(json.dumps(train_json) + '\n')
 
-    # Open files for writing
-    with open(f'{output_dir}/train.jsonl', 'w', encoding='utf-8') as train_file, \
-            open(f'{output_dir}/test.jsonl', 'w', encoding='utf-8') as test_file, \
-            open(f'{output_dir}/valid.jsonl', 'w', encoding='utf-8') as valid_file, \
-            open(f'{output_dir}/debug.txt', 'w', encoding='utf-8') as debug_file:
+    # Split the DataFrame into training (80%) and test+validation (20%)
+    train_df, test_valid_df = train_test_split(df, test_size=0.2, random_state=random_seed)
 
-        # Debug file for better readability of the result
+    # Further split the test+validation into test and validation (50% each of the 20%)
+    test_df, valid_df = train_test_split(test_valid_df, test_size=0.5, random_state=random_seed)
+
+    # Debug file for better readability of the result
+    if debug:
         instruction = instruction.replace('\n', '\n\n')
         instruction = "\n".join(textwrap.wrap(instruction, width=line_width))
-        debug_file.write(f'### INSTRUCTION\n\n{instruction}\n\n{"=" * line_width}\n\n')
-        if debug:
+        with open(f'{output_dir}/debug.txt', 'w', encoding='utf-8') as debug_file:
+            debug_file.write(f'### INSTRUCTION\n\n{instruction}\n\n{"=" * line_width}\n\n')
             process_and_write_data(df, debug_file, write_debug_file=True)
+
+    # Write train, test and validation files
+    with open(f'{output_dir}/train.jsonl', 'w', encoding='utf-8') as train_file, \
+            open(f'{output_dir}/test.jsonl', 'w', encoding='utf-8') as test_file, \
+            open(f'{output_dir}/valid.jsonl', 'w', encoding='utf-8') as valid_file:
 
         # Process and write data to each file
         process_and_write_data(train_df, train_file)
         process_and_write_data(test_df, test_file)
         process_and_write_data(valid_df, valid_file)
-
-
-def filter_content_with_context(content, keywords, lines_before=1, lines_after=1):
-    """
-    Filters website content to include lines containing any of the specified keywords as whole words,
-    along with a specified number of lines before and after for context. This version uses regular expressions
-    to ensure exact, whole word matching and respects case sensitivity.
-
-    Parameters:
-    - content: The full text content of the website.
-    - keywords: An array of strings to search for within the content.
-    - lines_before: Number of lines to include before a matching line.
-    - lines_after: Number of lines to include after a matching line.
-
-    Returns:
-    A string containing the filtered content with additional context.
-    """
-    lines = content.splitlines()
-    matched_lines = set()
-
-    for i, line in enumerate(lines):
-        for keyword in keywords:
-            # Use a regular expression to find whole word matches with exact case
-            if re.search(r'\b' + re.escape(keyword) + r'\b', line):
-                context_range = range(max(i - lines_before, 0), min(i + lines_after + 1, len(lines)))
-                matched_lines.update(context_range)
-
-    # Extract the matched lines and their context
-    filtered_lines = [lines[i] for i in sorted(matched_lines)]
-
-    # Join the filtered lines back into a single string
-    filtered_content = "\n".join(filtered_lines)
-
-    return filtered_content

@@ -31,6 +31,12 @@ def build_parser():
         help="The maximum number of tokens to generate",
     )
     parser.add_argument(
+        "--verbose",
+        "-v",
+        action="store_true",
+        help="Whether to print diagnostic messages"
+    )
+    parser.add_argument(
         "--temp", type=float, default=0.8, help="The sampling temperature"
     )
     parser.add_argument(
@@ -286,7 +292,8 @@ def train(model, train_set, val_set, optimizer, loss, tokenizer, args):
 
 
 def generate(model, prompt, tokenizer, args):
-    print(prompt, end="", flush=True)
+    if args.verbose:
+        print(prompt, end="", flush=True)
 
     prompt = mx.array(tokenizer.encode(prompt))
 
@@ -305,7 +312,7 @@ def generate(model, prompt, tokenizer, args):
             print(s[skip:-1], end="", flush=True)
             skip = len(s) - 1
     print(tokenizer.decode(tokens)[skip:], flush=True)
-    print("=" * 10)
+    #print("=" * 10)
     if len(tokens) == 0:
         print("No tokens generated for this prompt")
         return
@@ -317,7 +324,8 @@ if __name__ == "__main__":
 
     np.random.seed(args.seed)
 
-    print("Loading pretrained model")
+    if args.verbose:
+        print("Loading pretrained model")
     model, tokenizer, _ = lora_utils.load(args.model)
 
     # Freeze all layers other than LORA linears
@@ -328,12 +336,14 @@ if __name__ == "__main__":
         if hasattr(l, "block_sparse_moe"):
             l.block_sparse_moe.gate = LoRALinear.from_linear(l.block_sparse_moe.gate)
 
-    p = sum(v.size for _, v in tree_flatten(model.parameters())) / 10**6
-    print(f"Total parameters {p:.3f}M")
-    p = sum(v.size for _, v in tree_flatten(model.trainable_parameters())) / 10**6
-    print(f"Trainable parameters {p:.3f}M")
+    if args.verbose:
+        p = sum(v.size for _, v in tree_flatten(model.parameters())) / 10**6
+        print(f"Total parameters {p:.3f}M")
+        p = sum(v.size for _, v in tree_flatten(model.trainable_parameters())) / 10**6
+        print(f"Trainable parameters {p:.3f}M")
 
-    print("Loading datasets")
+        print("Loading datasets")
+
     train_set, valid_set, test_set = load(args)
 
     # Resume training the given adapters.
@@ -375,5 +385,6 @@ if __name__ == "__main__":
         print(f"Test loss {test_loss:.3f}, Test ppl {test_ppl:.3f}.")
 
     if args.prompt is not None:
-        print("Generating")
+        if args.verbose:
+            print("Generating")
         generate(model, args.prompt, tokenizer, args)
