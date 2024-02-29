@@ -1,8 +1,12 @@
 ### INSTRUCTION
 
-Below is the content of a website of a German law journal. For each member of the editorial board or the advisory board,
-extract the following information: lastname, firstname, title, position, affiliation, role. Return as a YAML list of
-dictionaries. Omit keys that you cannot find information for.
+Below is the content of a website of a German law journal. Find members of the editorial board (which can be
+"Herausgeber" or "Redakteur" or "Schriftleitung" in German) or the advisory board ("Beirat"). Extract the following
+information for each member: lastname, firstname, title, position, affiliation, role. `title` means the academic title,
+such as 'Dr.' or 'Prof. Dr.'. Merge title suffixes such as "LL.M." to the `title` field.  Infer the `role` of each
+member as either 'Herausgeber', 'Redaktion', 'Schriftleitung', 'Beirat' or '' if unknown.     Return as a YAML list of
+dictionaries. Omit dictionary entries for which you cannot find information or which are empty. Return only strictly
+valid YAML.
 
 ========================================================================================================================
 

@@ -231,7 +231,7 @@ def evaluate(model, dataset, loss, tokenizer, batch_size, num_batches):
     return np.sum(all_losses) / ntokens
 
 
-def train(model, train_set, val_set, optimizer, loss, tokenizer, args):
+def train(model, train_set: Dataset, val_set: Dataset, optimizer, loss, tokenizer, args):
     # Create value and grad function for loss
     loss_value_and_grad = nn.value_and_grad(model, loss)
 

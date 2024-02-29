@@ -122,9 +122,12 @@ def filter_content_with_context(content, keywords, lines_before=1, lines_after=1
     return filtered_content
 
 
-def create_training_file(instruction, input_file, output_dir, website_dir,
+def create_training_file(instruction: str,
+                         template_func: callable,
+                         input_file: str, output_dir: str, content_dir: str,
                          cols_to_remove: list, column_to_filter_by: str,
-                         max_chars=2048*4, max_gt_items=10,
+                         record_identifier_col: str,
+                         max_chars=2048 * 4, max_gt_items=10,
                          line_width=120, lines_before=1, lines_after=1, random_seed=None,
                          debug=True):
     # Load the input
@@ -137,17 +140,20 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
     # Prepare the output directory
     os.makedirs(output_dir, exist_ok=True)
 
+    # Keep track of the longest prompts
+    id_value_pairs = {}
+
     def process_and_write_data(grouped_df, file, write_debug_file=False):
-        for journal_abbr, group in grouped_df.groupby('journal_abbr'):
+        for id, group in grouped_df.groupby(record_identifier_col):
 
             # use only the first 10 ground truth items so that the training record does not become too large
             group = group.head(max_gt_items)
 
             # load website content from the cache
-            filename = f"{website_dir}/{re.sub(r'[. ]', '', str(journal_abbr))}.txt"
+            filename = f"{content_dir}/{re.sub(r'[. ]', '', str(id))}.txt"
             try:
                 with open(filename, 'r', encoding='utf-8') as content_file:
-                    website_content = content_file.read()
+                    content = content_file.read()
             except FileNotFoundError:
                 continue
 
@@ -159,7 +165,7 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
             answer_yaml = yaml.dump(list(cleaned_rows), allow_unicode=True, sort_keys=False)
 
             # wrap content to decrease token window
-            lines = [line for line in wrap_content_generator(website_content, width=line_width)]
+            lines = [line for line in wrap_content_generator(content, width=line_width)]
             wrapped_content = '\n'.join(lines)
 
             # Determine how many characters are available for the content
@@ -180,7 +186,7 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
 
             if write_debug_file:
                 prompt = [
-                    '### JOURNAL', journal_abbr,
+                    '### JOURNAL', id,
                     '### URL', group['website'].tolist()[0],
                     '### CONTENT', filtered_content,
                     '### ANSWER', answer_yaml,
@@ -189,16 +195,13 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
                 ]
                 file.write('\n\n'.join(prompt))
             else:
-                prompt = [
-                    '### INSTRUCTION', instruction,
-                    '### CONTENT', filtered_content,
-                    '### ANSWER', answer_yaml
-                ]
+                sequence = template_func(f'{instruction}\n\n{filtered_content}', answer_yaml)
                 train_json = {
-                    "id": journal_abbr,
-                    "text": '\n\n'.join(prompt)
+                    "id": id,
+                    "text": sequence
                 }
                 file.write(json.dumps(train_json) + '\n')
+                id_value_pairs[id] = len(sequence)
 
     # Split the DataFrame into training (80%) and test+validation (20%)
     train_df, test_valid_df = train_test_split(df, test_size=0.2, random_state=random_seed)
@@ -223,3 +226,14 @@ def create_training_file(instruction, input_file, output_dir, website_dir,
         process_and_write_data(train_df, train_file)
         process_and_write_data(test_df, test_file)
         process_and_write_data(valid_df, valid_file)
+
+    if debug:
+        print("Length of generated sequences:")
+        print(f" - max: {max(id_value_pairs.values())}")
+        print(f" - avg: {sum(id_value_pairs.values()) / len(id_value_pairs)}")
+
+        sorted_pairs = sorted(id_value_pairs.items(), key=lambda x: x[1], reverse=True)
+        highest_10_values = sorted_pairs[:10]
+        print("Longest sequences:")
+        for _id, value in highest_10_values:
+            print(f"{_id}: {value}")
