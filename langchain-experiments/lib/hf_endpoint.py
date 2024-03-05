@@ -18,7 +18,7 @@ def query(url, template, model_params = None, **params):
             "temperature": 0.1,
             "max_new_tokens": 2000
         }
-    inputs = template.format_map(**params)
+    inputs = template.format_map(params)
     payload = {
         "inputs": inputs,
         "parameters": model_params
