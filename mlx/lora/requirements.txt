@@ -1,0 +1,8 @@
+mlx>=0.0.7
+mlx-lm
+transformers
+numpy
+torch
+tensorflow>=2.0
+flax
+scikit-learn
