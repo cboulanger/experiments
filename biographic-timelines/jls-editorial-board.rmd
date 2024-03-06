@@ -13,7 +13,7 @@ library(htmlwidgets)
 vertical_stripes = "background: repeating-linear-gradient(to right, transparent, transparent 2px, lightgray 2px, lightgray 4px);"
 diagonal_stripes = "background: repeating-linear-gradient(135deg, transparent, transparent 2px, lightgray 2px, lightgray 4px);"
 
-editors <- read_excel("data/jls-editors.xlsx")  %>%
+editors <- read_excel("data/jls-editors.xlsx")  |>
   mutate(
     content = name,
     title = name,
@@ -30,6 +30,6 @@ hw <- timevis(editors,
         width = "1500px",
         options = list(start="1974-01-01", end = "2025-12-31", selectable=FALSE, showCurrentTime = FALSE))
 
-saveWidget(hw, "docs/jls-editors.html")
-unlink("docs/jls-editors_files", recursive = TRUE)
+saveWidget(hw, "jls-editors.html")
+unlink("jls-editors_files", recursive = TRUE)
 ```
