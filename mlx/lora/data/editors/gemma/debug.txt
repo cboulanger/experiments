@@ -1,0 +1,5316 @@
+### INSTRUCTION
+
+# instructions    You are a text processing agent. As instructed below, extract information from the provided content in
+a structured format without discussing reasoning or providing commentary. Only use source text given as input for data
+extraction unless specifically asked for inference.    # user    Analyze content from a German law journal's website.
+Your task is to identify members of the editorial board (terms to look for: 'Herausgeber', 'Redakteur',
+'Schriftleitung') and the advisory board ('Beirat'). For each identified member, extract and organize their information
+into the following categories: lastname, firstname, title (including academic titles like 'Dr.' or 'Prof. Dr.' and
+suffixes such as 'LL.M.'), position (their job title, if provided), affiliation, and role. For 'role', infer the role
+within the journal from the context (options 'Herausgeber', 'Redaktion', 'Schriftleitung', 'Beirat', or an empty string
+if the role is unknown).    - Format the output as a YAML list of dictionaries.  - Exclude any dictionary entries for
+which information is not available or relevant fields are empty.  - Ensure the YAML output is strictly valid. It must be
+a list of dictionaries.       Adhere to these guidelines to efficiently and accurately process the following content:"
+'
+
+========================================================================================================================
+
+### JOURNAL
+
+A&R
+
+### URL
+
+https://www.deutscher-apotheker-verlag.de/Arzneimittel-Recht/1860-5338.NORM
+
+### CONTENT
+
+Zeitschrift legt Wert auf komprimierte, fundierte und übersichtliche Artikel. Für Abonnenten stehen im Internet
+gesundheitsrechtliche Entscheidungen im Wortlaut zur Verfügung.
+Herausgeber: Dr. Christian Rotta, Professor Dr. Hilko Meyer, Dr. Peter Wigge, Dr. Ulrich Lau
+Zielgruppen: Juristen und Pharmazeuten - Pharmazeutische Industrie - Gerichte - Behörden - Verbände -
+Krankenhausverwaltungen
+Kirsten Plaßmann (Bearb.) ,
+Dorothea Prütting (Bearb.) ,
+Christian Rotta (Bearb.) ,
+Valentin Saalfrank (Bearb.) ,
+Arno Kloesel (Begr.) ,
+
+### ANSWER
+
+- lastname: Rotta
+  firstname: Christian
+  title: Dr.
+  affiliation: Arzneimittel & Recht
+  role: Herausgeber
+- lastname: Meyer
+  firstname: Hilko
+  title: Professor Dr.
+  affiliation: Arzneimittel & Recht
+  role: Herausgeber
+- lastname: Wigge
+  firstname: Peter
+  title: Dr.
+  affiliation: Arzneimittel & Recht
+  role: Herausgeber
+- lastname: Lau
+  firstname: Ulrich
+  title: Dr.
+  affiliation: Arzneimittel & Recht
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AG
+
+### URL
+
+https://www.die-aktiengesellschaft.de/herausgeber.html
+
+### CONTENT
+
+Herausgeber
+Die AG kann auf ein hochkarätiges Herausgeberteam aus Wissenschaft und Praxis zurückgreifen:
+Prof. Dr. Heinz-Dieter Assmann, LL.M.
+Prof. Dr. Mathias Habersack
+in Verbindung mit
+VorsRiBGH Manfred Born
+Prof. Dr. Volker Emmerich
+PräsBVerfG Prof. Dr. Stephan Harbarth, LL.M.
+Prof. Dr. Jens Koch
+Prof. Dr. Dr. h.c. Uwe H. Schneider
+
+### ANSWER
+
+- lastname: Assmann
+  firstname: Heinz-Dieter
+  title: Prof. Dr.
+  affiliation: LL.M.
+  role: Herausgeber
+- lastname: Habersack
+  firstname: Mathias
+  title: Prof. Dr.
+  role: Herausgeber
+- lastname: Born
+  firstname: Manfred
+  title: VorsRiBGH
+  role: Herausgeber
+- lastname: Emmerich
+  firstname: Volker
+  title: Prof. Dr.
+  role: Herausgeber
+- lastname: Harbarth
+  firstname: Stephan
+  title: PräsBVerfG Prof. Dr.
+  affiliation: LL.M.
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AL
+
+### URL
+
+https://www.adlegendum.de/web/team
+
+### CONTENT
+
+Zeitschrift Ad Legendum bezieht, können Sie gerne direkt mit unseren Mitarbeiter:innen der Redaktion oder der
+Verlagsorganisation Kontakt aufnehmen.
+Jan Dallaserra
+Vorsitzender
+Janka Goldschmidt
+Stellv. Vorsitzende
+Hannah Tekaat
+Vorständin für Finanzen
+Aufsichtsrat
+Johanna Scheiper
+Vorsitzende
+Thilo Nolting
+Rechnungsprüferin
+Herausgeber
+Moritz Wollert
+Herausgeber (ViSdP)
+Die Redaktion
+Lea Simmler
+Freie Mitarbeiterin
+Hannah Tekaat
+Redaktionsmitglied
+Nele Weber
+Redaktionsmitglied
+Fallbearbeitung
+Jan Dallaserra
+Redaktionsmitglied
+Caroline Fink
+Dominik Uryszek
+Freier Mitarbeiter
+Moritz Wollert
+Redaktionsmitglied
+Grundlagen
+Malte Gertz
+Freier Mitarbeiter - Buchhandlungen -
+Janka Goldschmidt
+Redaktionsmitglied
+Elisabeth Klingeler
+Redaktionsmitglied
+Internet
+Jan Dallaserra
+Redaktionsmitglied
+Unsere Partner
+
+### ANSWER
+
+- lastname: Wollert
+  firstname: Moritz
+  position: Herausgeber
+  affiliation: Ad Legendum
+  role: Herausgeber
+- lastname: Dallaserra
+  firstname: Jan
+  position: Vorsitzender
+  affiliation: Ad Legendum
+  role: Vorstand
+- lastname: Goldschmidt
+  firstname: Janka
+  position: Stellv. Vorsitzende
+  affiliation: Ad Legendum
+  role: Vorstand
+- lastname: Tekaat
+  firstname: Hannah
+  position: Vorständin für Finanzen
+  affiliation: Ad Legendum
+  role: Vorstand
+- lastname: Scheiper
+  firstname: Johanna
+  position: Vorsitzende
+  affiliation: Ad Legendum
+  role: Aufsichtsrat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ANA-ZAR
+
+### URL
+
+https://www.nomos.de/zeitschriften/zar/
+
+### CONTENT
+
+Die Zeitschrift ist auch über beck-online zu beziehen.
+Herausgeberkreis
+Nele Allenberg Deutsches Institut für Menschenrechte
+Prof. Dr. Jürgen Bast Justus-Liebig-Universität Gießen
+Prof. Dr. Jan Bergmann, LL.M.eur. Vorsitzender Richter am VGH, Mannheim
+Prof. Dr. Uwe Berlit Vorsitzender Richter am Bundesverwaltungsgericht
+Dr. Wolfgang Breidenbach Rechtsanwalt, Halle
+Prof. Dr. Anuscheh Farahat FAU Erlangen-Nürnberg
+Prof. Dr. Andreas Fischer-Lescano, LL.M. Universität Bremen
+Schriftleitung
+Prof. Dr. Winfried Kluth (V.i.S.d.P.)
+Prof. Dr. Jürgen Bast
+VPräsVG Andreas Pfersich
+Redaktionsanschriften
+Mail:  an.pfersich@googlemail.com
+Einsendung von Rezensionen:
+Prof. Dr. Jürgen Bast Justus-Liebig-Universität Gießen Professur für Öffentliches Recht und Europarecht Licher Str. 64
+35394 Gießen
+Mail:  jurgen.bast@recht.uni-giessen.de
+
+### ANSWER
+
+- lastname: Allenberg
+  firstname: Nele
+  affiliation: Deutsches Institut für Menschenrechte
+  role: Herausgeber
+- lastname: Bast
+  firstname: Jürgen
+  title: Prof. Dr.
+  affiliation: Justus-Liebig-Universität Gießen
+  role: Herausgeber
+- lastname: Bergmann
+  firstname: Jan
+  title: Prof. Dr.
+  position: Vorsitzender Richter am VGH
+  affiliation: Mannheim
+  role: Herausgeber
+- lastname: Berlit
+  firstname: Uwe
+  title: Prof. Dr.
+  position: Vorsitzender Richter am Bundesverwaltungsgericht
+  role: Herausgeber
+- lastname: Breidenbach
+  firstname: Wolfgang
+  title: Dr.
+  position: Rechtsanwalt
+  affiliation: Halle
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ARIEL
+
+### URL
+
+https://www.lehmanns.de/shop/schulbuch-lexikon-woerterbuch/43257345-9789004375079-austrian-review-of-international-and-european-law-volume-20-2015
+
+### CONTENT
+
+Austrian Review of International and European Law,… von Stephan Wittich | ISBN 978-90-04-37507-9 | Buch online kaufen -
+Lehmanns.de
+Anmeldung
+Filialen
+Austrian Review of International and European Law, Volume 20 (2015)
+Stephan Wittich , Jane A. Hofbauer , Gerhard Loibl (Herausgeber)
+Buch |                                                                          Hardcover
+456
+anniversary Volume 20 covers 2015 and hosts an Agora on “Court Generated State Practice” in the emergence of customary
+international law.
+Stephan Wittich, Professor, Section for International Law and International Relations, University of Vienna
+Jane Alice Hofbauer, postdoctoral researcher at Section for International Law and International Human Rights Law,
+Bundeswehr University Munich
+Gerhard Loibl, Vienna School of International Studies, Austria
+Erscheinungsdatum
+27.07.2018
+
+### ANSWER
+
+- lastname: Wittich
+  firstname: Stephan
+  position: Professor, Section for International Law and International Relations
+  affiliation: University of Vienna
+  role: Herausgeber
+- lastname: Hofbauer
+  firstname: Jane A.
+  position: postdoctoral researcher at Section for International Law and International
+    Human Rights Law
+  affiliation: Bundeswehr University Munich
+  role: Herausgeber
+- lastname: Loibl
+  firstname: Gerhard
+  affiliation: Vienna School of International Studies, Austria
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ARSP
+
+### URL
+
+https://www.steiner-verlag.de/series/0001-2343
+
+### CONTENT
+
+Internationale Vereinigung für Rechts- und Sozialphilosophie (IVR)
+Federführender Redakteur
+Prof. Dr. Klaus Günther
+Redaktion
+Dr. Annette Brockmöller (verantwortlich)
+c/o Franz Steiner Verlag Birkenwaldstr. 44 70191 Stuttgart DEUTSCHLAND annette.brockmoeller@t-online.de
+Vorschau
+
+### ANSWER
+
+- firstname: Internationale Vereinigung für Rechts- und Sozialphilosophie
+  affiliation: Franz Steiner Verlag
+  role: Herausgeber
+- lastname: Günther
+  firstname: Klaus
+  title: Prof. Dr.
+  position: Federführender Redakteur
+  role: Redaktion
+- lastname: Brockmöller
+  firstname: Annette
+  title: Dr.
+  position: Redakteurin
+  affiliation: Franz Steiner Verlag
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ASR
+
+### URL
+
+https://www.nomos.de/zeitschriften/asr/
+
+### CONTENT
+
+Arbeitsgemeinschaft Sozialrecht im Deutschen AnwaltVerein
+Redaktion und Kontakt
+Schriftleitung Prof. Dr. Torsten Schaumberg, RAin Anne Schröder, RA Nikolaos Penteridis, RA Volker Gerloff
+Redaktionsanschrift Prof. Dr. Torsten Schaumberg Weinberghof 4 99734 Nordhausen E-Mail: redaktion-asr@nomos.de
+www.asr.nomos.de
+Urheberrecht
+
+### ANSWER
+
+- lastname: Schaumberg
+  firstname: Torsten
+  title: Prof. Dr.
+  position: Schriftleitung
+  affiliation: Nomos Verlag
+  role: Schriftleitung
+- lastname: Schröder
+  firstname: Anne
+  title: RAin
+  position: Schriftleitung
+  affiliation: Nomos Verlag
+  role: Schriftleitung
+- lastname: Penteridis
+  firstname: Nikolaos
+  title: RA
+  position: Schriftleitung
+  affiliation: Nomos Verlag
+  role: Schriftleitung
+- lastname: Gerloff
+  firstname: Volker
+  title: RA
+  position: Schriftleitung
+  affiliation: Nomos Verlag
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AVR
+
+### URL
+
+https://www.mohrsiebeck.com/zeitschrift/archiv-des-voelkerrechts-avr
+
+### CONTENT
+
+Archiv des Völkerrechts (AVR)
+Mohr Siebeck
+Herausgegeben von Sigrid Boysen , Markus Kotzur und Robert Uerpmann-Wittzack in Verbindung mit Thomas Bruha, Philip
+Kunig und Daniel Thürer
+ISSN 0003-892X
+(Gedruckte Ausgabe)
+(S. 145-273)
+Herausgeber
+Sigrid Boysen Geboren 1972; 2005 Dr. iur. an der Universität Hamburg; 2011-14 Juniorprofessorin für Öffentliches Recht,
+Europa- und Völkerrecht an der Freien Universität Berlin; seit 2014 Lehrstuhl für Öffentliches Recht, Völker- und
+Europarecht an der Helmut-Schmidt-Universität/Universität der Bundeswehr Hamburg. E-Mail: boysen@hsu-hh.de Markus Kotzur
+Geboren 1968; 1994 Master of Law an der Duke University, Durham (North Carolina, USA); 2000 Dr. iur. und 2002
+Habilitation an der Universität Bayreuth; 2005-11 Lehrstuhl für Europarecht, Völkerrecht und Öffentliches Recht an der
+Universität Leipzig; seit 2012 Lehrstuhl für Völkerrecht und Europarecht an der Universität Hamburg sowie
+Studiengangsleiter "Master of European and European Legal Studies" am Europa-Kolleg Hamburg. E-Mail:
+markus.kotzur@jura.uni-hamburg.de Robert Uerpmann-Wittzack Geboren 1966; 1988 maîtrise en droit an der Université de
+droit, d'economie et des sciences d'Aix-Marseille in Frankreich; 1992 Dr. iur. und 1999 Habilitation an der Freien
+Universität Berlin; seit 2000 Lehrstuhl für Öffentliches Recht und Völkerrecht an der Universität Regensburg. E-Mail:
+Robert.Uerpmann@jura.uni-regensburg.de   In Verbindung mit: Thomas Bruha Geboren 1945; 1979 Dr. iur. an der Justus-
+Liebig-Universität Gießen; seit 1993 Professor für Öffentliches Recht, insbesondere Völker- und Europarecht an der
+Universität Hamburg, European Co-Dean der China-EU School of Law in Peking. E-Mail: t-bruha@europa-kolleg-hamburg.de
+Philip Kunig Geboren 1951; 1980 Dr. iur. und 1985 Habilitation an der Universität Hamburg; seit 1988 Professor für
+Öffentliches Recht und Völkerrecht an der Freien Universität Berlin. 1992-2000 Richter am VerfGH. des Landes Berlin,
+Vizepräsident des deutschen Hochschulkonsortiums für die Türkisch-deutsche Universität Istanbul, 2012 Ehrendoktorwürde
+Manuskripte
+Manuskripte und redaktionelle Anfragen werden an die Adresse der geschäftsführenden Herausgeberin erbeten: Prof. Dr.
+Sigrid Boysen, Helmut-Schmidt-Universität Holstenhofweg 85 22043 Hamburg E-Mail: avr@hsu-hh.de   Archiv des Völkerrechts
+Richtlinien für Autoren Die Annahme zur Veröffentlichung erfolgt schriftlich und unter dem Vorbehalt, dass das
+Manuskript nicht anderweitig veröffentlicht oder zur Veröffentlichung angeboten wurde. Mit der Annahme zur
+
+### ANSWER
+
+- lastname: Boysen
+  firstname: Sigrid
+  role: Herausgeber
+- lastname: Kotzur
+  firstname: Markus
+  role: Herausgeber
+- lastname: Uerpmann-Wittzack
+  firstname: Robert
+  role: Herausgeber
+- lastname: Bruha
+  firstname: Thomas
+- lastname: Kunig
+  firstname: Philip
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AW-Prax
+
+### URL
+
+https://shop.reguvis.de/online/aussenwirtschaftliche-praxis-aw-prax-online/
+
+### CONTENT
+
+Mit Hilfe der Suchfunktion finden Sie schnell und einfach die Informationen, die Sie für Ihre tägliche Arbeit benötigen.
+Das Expertenteam
+Unter der Schriftleitung von Prof. Dr. Hans-Michael Wolffgang übernimmt die jeweilige fachspezifische Redaktion die
+Verantwortung für Beiträge, Nachrichten, Rechtsprechungen sowie Änderungsgesetze in der AW-Prax und verfügt über ein
+hervorragendes Netzwerk in der Branche.
+Praktiker aus Wirtschaft, Industrie und Verwaltung liefern monatlich umfassende Informationen und Hintergründe zu allen
+außenwirtschaftlichen Themen.
+Redaktion Außenhandelsrecht: Prof. Dr. Christoph Graf von Bernstorff
+Redaktion Exportkontrollrecht: Dr. Klaus Pottmeyer
+Redaktion Nachhaltigkeit und Compliance: Dr. Lothar Harings
+Redaktion Zollrecht: Prof. Dr. Sandra Rinnert
+Preise
+Die Datenbank AW-Prax Online kostet 393,00 €/Jahr. Hierfür erhalten Sie eine Einzelplatzlizenz und Zugriff auf
+Mit Hilfe der Suchfunktion finden Sie schnell und einfach die Informationen, die Sie für Ihre tägliche Arbeit benötigen.
+Das Expertenteam
+Unter der Schriftleitung von Prof. Dr. Hans-Michael Wolffgang übernimmt die jeweilige fachspezifische Redaktion die
+Verantwortung für Beiträge, Nachrichten, Rechtsprechungen sowie Änderungsgesetze in der AW-Prax und verfügt über ein
+hervorragendes Netzwerk in der Branche.
+Praktiker aus Wirtschaft, Industrie und Verwaltung liefern monatlich umfassende Informationen und Hintergründe zu allen
+außenwirtschaftlichen Themen.
+Redaktion Außenhandelsrecht: Prof. Dr. Christoph Graf von Bernstorff
+Redaktion Exportkontrollrecht: Dr. Klaus Pottmeyer
+Redaktion Nachhaltigkeit und Compliance: Dr. Lothar Harings
+Redaktion Zollrecht: Prof. Dr. Sandra Rinnert
+Preise
+Die Datenbank AW-Prax Online kostet 393,00 €/Jahr. Hierfür erhalten Sie eine Einzelplatzlizenz und Zugriff auf
+
+### ANSWER
+
+- lastname: Wolffgang
+  firstname: Hans-Michael
+  title: Prof. Dr.
+  position: Schriftleitung
+  affiliation: AW-Prax
+  role: Schriftleitung
+- lastname: Graf von Bernstorff
+  firstname: Christoph
+  title: Prof. Dr.
+  position: Redaktion Außenhandelsrecht
+  affiliation: AW-Prax
+  role: Redaktion
+- lastname: Pottmeyer
+  firstname: Klaus
+  title: Dr.
+  position: Redaktion Exportkontrollrecht
+  affiliation: AW-Prax
+  role: Redaktion
+- lastname: Harings
+  firstname: Lothar
+  title: Dr.
+  position: Redaktion Nachhaltigkeit und Compliance
+  affiliation: AW-Prax
+  role: Redaktion
+- lastname: Rinnert
+  firstname: Sandra
+  title: Prof. Dr.
+  position: Redaktion Zollrecht
+  affiliation: AW-Prax
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AbfallR
+
+### URL
+
+https://www.lexxion.eu/zeitschriften/abfallr/
+
+### CONTENT
+
+Back to top
+Herausgeber
+Prof. Dr. Martin Beckmann , Rechtsanwalt, Münster
+Dr. Martin Dieckmann , Rechtsanwalt, Hamburg
+Dr. Christoph Klages , Verwaltungsgericht, Trier
+Stefan Kopp-Assenmacher , Rechtsanwalt, Kopp-Assenmacher Rechtsanwälte, Berlin
+Dr. Regina Michalke , Rechtsanwältin, Frankfurt (Main)
+MinR a. D. Dr. Frank Petersen , Bundesumweltministerium, Bonn
+Dr. Peter Queitsch , Städte- und Gemeindebund NRW e.V., Düsseldorf
+
+### ANSWER
+
+- lastname: Beckmann
+  firstname: Martin
+  title: Prof. Dr.
+  position: Rechtsanwalt
+  affiliation: Münster
+  role: Herausgeber
+- lastname: Dieckmann
+  firstname: Martin
+  title: Dr.
+  position: Rechtsanwalt
+  affiliation: Hamburg
+  role: Herausgeber
+- lastname: Klages
+  firstname: Christoph
+  title: Dr.
+  position: Verwaltungsgericht
+  affiliation: Trier
+  role: Herausgeber
+- lastname: Kopp-Assenmacher
+  firstname: Stefan
+  position: Rechtsanwalt
+  affiliation: Kopp-Assenmacher Rechtsanwälte, Berlin
+  role: Herausgeber
+- lastname: Michalke
+  firstname: Regina
+  title: Dr.
+  position: Rechtsanwältin
+  affiliation: Frankfurt (Main)
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AcP
+
+### URL
+
+https://www.mohrsiebeck.com/zeitschrift/archiv-fuer-die-civilistische-praxis-acp
+
+### CONTENT
+
+Archiv für die civilistische Praxis (AcP)
+Mohr Siebeck
+Herausgegeben von Marietta Auer, Reinhard Bork und Gerhard Wagner
+ISSN 0003-8997
+(Gedruckte Ausgabe)
+(S. 1-148)
+Herausgeber
+Marietta Auer Geboren 1972; Studium der Rechtswissenschaft, Philosophie und Soziologie in München und Harvard; 2003
+Promotion; 2012 Habilitation in München; seit 2013 o. Professorin für Bürgerliches Recht und Rechtsphilosophie an der
+Universität Gießen; seit 2020 Direktorin am Max-Planck-Institut für europäische Rechtsgeschichte in Frankfurt am
+Main.E-Mail: auer @ lhlt.mpg.de Reinhard Bork Geboren 1956; 1984 Dr. jur. und 1988 Habilitation an der Westfälischen
+Wilhelms-Universität in Münster; Lehrstuhlvertretungen an den Universitäten Bielefeld und Bonn; 1989 Professur für
+Bürgerliches Recht an der Rheinischen Friedrich-Wilhelms-Universität Bonn; 1990 Auszeichnung der Habilitationsschrift
+mit dem 1990 erstmals verliehenen Harry-Westermann-Preis; 1990 Professur für Zivilprozessrecht und Allgemeines
+Prozessrecht an der Universität Hamburg; 1992-98 Nebenamtlicher Richter am Hanseatischen Oberlandesgericht Hamburg.
+E-Mail: bork@uni-hamburg.de Gerhard Wagner Geboren 1962; 1989 Dr. jur. an der Georg-August-Universität Göttingen; 1995
+LL.M., University of Chicago; 1997 Habilitation an der Georg-August-Universität Göttingen. 1999 Professor für Deutsches
+und Europäisches Privat- und Prozessrecht, Internationales Privatrecht und Rechtsvergleichung an der Rechts- und
+Berlin.E-Mail: wagner@rewi.hu-berlin.de
+Manuskripte
+Manuskripte und redaktionelle Anfragen werden an einen der Herausgeber erbeten: Professorin Dr. Marietta Auer Max-
+Planck-Institut für Rechtsgeschichte u. Rechtstheorie Hansaallee 41 60323 FrankfurtE-Mail:  auer @ lhlt.mpg.de  
+Professor Dr. Reinhard Bork Seminar für Zivilprozessrecht Fakultät Rechtswissenschaft Rothenbaumchaussee 33 20148
+Hamburg E-Mail: bork@uni-hamburg.de   Professor Dr. Gerhard Wagner Humboldt-Universität zu Berlin Juristische Fakultät
+Unter den Linden 9 10099 Berlin E-Mail: sekretariat.wagner@rewi.hu-berlin.de Archiv für die civilistische Praxis
+Richtlinien für Autoren Das AcP veröffentlicht nur Originalbeiträge. Die Annahme zur Veröffentlichung erfolgt
+
+### ANSWER
+
+- lastname: Auer
+  firstname: Marietta
+  title: Professorin
+  position: Direktorin
+  affiliation: Max-Planck-Institut für europäische Rechtsgeschichte in Frankfurt am
+    Main
+  role: Herausgeber
+- lastname: Bork
+  firstname: Reinhard
+  title: Professor
+  position: Professor
+  affiliation: Universität Hamburg
+  role: Herausgeber
+- lastname: Wagner
+  firstname: Gerhard
+  position: Professor
+  affiliation: Humboldt-Universität zu Berlin
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AfP
+
+### URL
+
+https://rsw.beck.de/zeitschriften/enwz/herausgeber-beirat-redaktion
+
+### CONTENT
+
+Kostenloses Schnupper-Abo
+Herausgeber
+RA Prof. Dr. Christian Theobald, Mag. rer. publ., geb. 1966. Nach der Ausbildung zum Bankkaufmann Studium der Rechts-
+und Verwaltungswissenschaften in Freiburg, Speyer und London. Referendariat in Freiburg; zeitgleich von 1989-1994
+wissenschaftlicher Mitarbeiter am Max-Planck-Institut für internationales und ausländisches Strafrecht in Freiburg.
+Öffentliches Recht, Europäisches Informations- und Infrastrukturrecht an der Universität Freiburg i. Brsg.
+Redaktion
+RA  Prof. Dr. Christian Theobald,  Mag. rer. publ.
+RA  Dr. Peter Gussone , geb. 1976. Studium der Rechtswissenschaften, Politikwissenschaften und Geschichte in Bonn,
+Lausanne und Köln, Referendariat in Berlin. Zuvor Promotion 2004 an der Universität zu Köln zu einem europarechtlichen
+
+### ANSWER
+
+- lastname: Theobald
+  firstname: Christian
+  title: RA Prof. Dr.
+  position: Herausgeber
+  affiliation: C. H. Beck Verlag
+  role: Herausgeber
+- lastname: Theobald
+  firstname: Christian
+  title: RA Prof. Dr.
+  position: Schriftleiter
+  affiliation: C. H. Beck Verlag
+  role: Schriftleitung
+- lastname: Becker
+  firstname: Carsten
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: Bundeskartellamt
+  role: Herausgeber
+- lastname: Franke
+  firstname: Peter
+  position: Herausgeber
+  affiliation: Bundesnetzagentur
+  role: Herausgeber
+- lastname: Mögelin
+  firstname: Chris
+  title: Dr.
+  position: Herausgeber
+  affiliation: Bundesnetzagentur
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AfS
+
+### URL
+
+https://www.fes.de/afs
+
+### CONTENT
+
+Kontakt
+Redaktion
+Geschäftsführender Herausgeber Philipp Kufferath 0228 883-8057 Forschungsberichte und Rezensionsanfragen Nikolai Wehrs
+0228 883-8042 Abteilung Archiv der sozialen Demokratie
+Das Archiv für Sozialgeschichte wird herausgegeben von Dr. Claudia Gatzka Prof. Dr. Kirsten Heinsohn Prof. Dr. Friedrich
+Lenger Prof. Dr. Thomas Kroll Dr. Anja Kruke Dr. Philipp Kufferath Prof. Dr. Ute Planert Prof. Dr. Dietmar Süß Dr.
+Nikolai Wehrs Dr. Meik Woyke
+Call for Papers
+Partizipation und Repräsentation – eine demokratische Liebesgeschichte?Deadline: 10. Februar 2024 weitere Informationen
+
+### ANSWER
+
+- lastname: Kufferath
+  firstname: Philipp
+  position: Geschäftsführender Herausgeber
+  affiliation: Archiv für Sozialgeschichte
+  role: Herausgeber
+- lastname: Wehrs
+  firstname: Nikolai
+  affiliation: Archiv für Sozialgeschichte
+  role: Redaktion
+- lastname: Gatzka
+  firstname: Claudia
+  title: Dr.
+  affiliation: Archiv für Sozialgeschichte
+  role: Herausgeber
+- lastname: Heinsohn
+  firstname: Kirsten
+  title: Prof. Dr.
+  affiliation: Archiv für Sozialgeschichte
+  role: Herausgeber
+- lastname: Lenger
+  firstname: Friedrich
+  title: Prof. Dr.
+  affiliation: Archiv für Sozialgeschichte
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AfkKR
+
+### URL
+
+https://www.kaththeol.lmu.de/de/forschung/archiv-fuer-katholisches-kirchenrecht/index.html
+
+### CONTENT
+
+Kanonistischen Institut der Universität München herausgegeben, das seit 1. Juli 2001 die Bezeichnung „Klaus-Mörsdorf-
+Studium für Kanonistik“ trägt. Herausgeber der Zeitschrift sind die im aktiven Dienst stehenden Professoren des
+Instituts. Bislang waren in München als Herausgeber tätig Klaus Mörsdorf (†) (unter Mitwirkung von Karl Weinzierl (†),
+Audomar Scheuermann (†), Heribert Schmitz (†), Walter Doskocil (†)) Winfried Aymans (†) (unter Mitwirkung von Heribert
+Schmitz (†), Richard A. Strigl (†), Karl-Theodor Geringer (†)) und Stephan Haering OSB (†) (unter Mitwirkung von Elmar
+Güthoff, Helmuth Pree). Nach dem unerwarteten Tod von Stephan Haering OSB übernahm bis Herbst 2023 dankenswerterweise
+
+### ANSWER
+
+- lastname: Mörsdorf
+  firstname: Klaus
+  position: Professor
+  affiliation: Universität München
+  role: Herausgeber
+- lastname: Weinzierl
+  firstname: Karl
+  affiliation: Universität München
+  role: Herausgeber
+- lastname: Scheuermann
+  firstname: Audomar
+  affiliation: Universität München
+  role: Herausgeber
+- lastname: Schmitz
+  firstname: Heribert
+  affiliation: Universität München
+  role: Herausgeber
+- lastname: Doskocil
+  firstname: Walter
+  affiliation: Universität München
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AnwBl
+
+### URL
+
+https://anwaltsblatt.anwaltverein.de/de/anwaltsblatt/redaktion
+
+### CONTENT
+
+anwaltsblatt@anwaltverein.de
+Unser Team
+Rechtsanwalt Swen Walentowski
+Redaktionsleitung Anwaltsblatt
+Berlin
+Klaus Kohnen
+Chefredakteur Anwaltsblatt
+Anja Jönsson
+Redakteurin
+Rechtsanwalt Manfred Aranowski
+Mitglied der Redaktion Anwaltsblatt
+Ass. jur. Selina Adelberger
+Mitglied der Redaktion Anwaltsblatt
+Kerstin Günther
+
+### ANSWER
+
+- lastname: Walentowski
+  firstname: Swen
+  title: Rechtsanwalt
+  position: Redaktionsleitung Anwaltsblatt
+  affiliation: Deutscher Anwaltverein
+  role: Redaktion
+- lastname: Kohnen
+  firstname: Klaus
+  position: Chefredakteur Anwaltsblatt
+  affiliation: Deutscher Anwaltverein
+  role: Redaktion
+- lastname: Jönsson
+  firstname: Anja
+  position: Redakteurin
+  affiliation: Deutscher Anwaltverein
+  role: Redaktion
+- lastname: Aranowski
+  firstname: Manfred
+  title: Rechtsanwalt
+  position: Mitglied der Redaktion Anwaltsblatt
+  affiliation: Deutscher Anwaltverein
+  role: Redaktion
+- lastname: Adelberger
+  firstname: Selina
+  title: Ass. jur.
+  position: Mitglied der Redaktion Anwaltsblatt
+  affiliation: Deutscher Anwaltverein
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ArbR
+
+### URL
+
+https://beck-online.beck.de/Modul/53848/Inhalt/ArbR-Arbeitsrecht-Aktuell/474
+
+### CONTENT
+
+Fachdienst Arbeitsrecht
+Das kompetente Autorenteam der Kanzlei Gleiss Lutz erschließt Ihnen die wichtigsten Entscheidungen im Arbeitsrecht.
+Herausgeber Prof. Dr. Jobst-Hubertus Bauer:
+Rechtsanwalt und Fachanwalt für Arbeitsrecht. Vorsitzender des
+Geschäftsführenden Ausschusses der Arbeitsgemeinschaft Arbeitsrecht im
+
+### ANSWER
+
+- lastname: Bauer
+  firstname: Jobst-Hubertus
+  title: Prof. Dr.
+  position: Rechtsanwalt und Fachanwalt für Arbeitsrecht
+  affiliation: Eberhard Karls Universität Tübingen
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ArchKrim
+
+### URL
+
+https://www.archivfuerkriminologie.de/
+
+### CONTENT
+
+Wissenschaftssprache zu pflegen und die Möglichkeit zu bieten, Themen, die auf nationaler Ebene, so z. B. für die
+deutsche Justiz, hochrelevant sind, zu publizieren. Ich wünsche Ihnen allzeit eine kurzweilige und bereichernde Lektüre
+und hoffe, dass Sie interessante Beiträge einreichen werden. Mit besten Grüßen Prof. Dr. Marcel A. Verhoff
+(Rechtsmedizin,  Frankfurt am Main)  Herausgeber Prof. Dr. med.  Marcel A. Verhoff ÜBER DIE ZEITSCHRIFT Im Jahr 2018
+wurde das „Archiv für Kriminologie“ 120 Jahre alt und ist somit die älteste kriminologische Fachzeitschrift der Welt -
+die Publikationsplattform für die Rechtsmedizin als interdisziplinäres Fach mit den Schwerpunkten Morphologie,
+abonniert werden. Als Abonnent können Sie die App auf bis zu drei Endgeräten Ihrer Wahl nutzen. Zahlreiche
+Zusatzfunktionen und Zugriff auf ältere Ausgaben sind inklusive. Weiterführende Informationen finden Sie unter
+„Downloads“. Editorial Board Priv.-Doz. Dr. Dr. Christian Bachhiesl (Graz) Prof. Dr. Davide Ferrara (Padova) Prof. Dr.
+Dr. h. c. Bertrand Ludes (Paris) Prof. Dr. Burkhard Madea (Bonn) Prof. Dr. Hitoshi Maeda (Osaka) Prof. Dr. Heidi
+Pfeiffer (Münster) Prof. Dr. Michael Pollanen (Toronto) Prof. Dr. Klaus Püschel (Hamburg) Prof. Dr. Dr. h. c. Pekka
+Saukko (Turku) Prof. Dr. Gisela Skopp (München) Prof. Dr. Annette Thierauf-Emberger (Freiburg/Br.) Prof. Dr. Martin
+drei Endgeräte nach Wahl € 268,50 Bestellen Lizenzen für Institute, Bibliotheken u.a. Preis auf Anfrage Anfrage
+DOWNLOADS Anleitung - PC - Archiv für Kriminologie App-Zugang für Print-Abonnenten (PDF) Umgang mit dem Verdacht auf
+COVID-19 (PDF) Brief an den Herausgeber (PDF) Essay Ramsthaler, Verhoff (PDF) Buschmann Corona-Suizid (PDF) Hinweise für
+die Autoren (PDF) „Reerdigung“ – alternative Bestattung oder beschleunigte Kompostierung? (PDF) Iudex non calculat? Teil
+2 Non quidem … sed tamen – Was ist der Sachverständige wert? (PDF) So erreichen Sie uns: So erreichen Sie uns: Max
+
+### ANSWER
+
+- lastname: Verhoff
+  firstname: Marcel A.
+  title: Prof. Dr.
+  position: Rechtsmedizin
+  affiliation: Frankfurt am Main
+  role: Herausgeber
+- lastname: Bachhiesl
+  firstname: Christian
+  title: Priv.-Doz. Dr.
+  affiliation: Graz
+  role: Editorial Board
+- lastname: Ferrara
+  firstname: Davide
+  title: Prof. Dr.
+  affiliation: Padova
+  role: Editorial Board
+- lastname: Ludes
+  firstname: Bertrand
+  title: Prof. Dr. Dr. h. c.
+  affiliation: Paris
+  role: Editorial Board
+- lastname: Madea
+  firstname: Burkhard
+  title: Prof. Dr.
+  affiliation: Bonn
+  role: Editorial Board
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AuA
+
+### URL
+
+https://de.wikipedia.org/wiki/Arbeit_und_Arbeitsrecht
+
+### CONTENT
+
+( IVW  Q07/2023)
+Chefredakteur
+Andreas Krabel
+Herausgeber
+Christoph Huss, Wolfgang Huss
+Weblink
+arbeit-und-arbeitsrecht.de
+seit 1999
+Arbeit und Arbeitsrecht ( AuA ) ist eine deutschsprachige Fachzeitschrift für das Personalmanagement . Sie erscheint
+monatlich im Berliner Verlag HUSS-MEDIEN GmbH (Teil der Huss Unternehmensgruppe ) und verbindet Trends in der
+Personalwirtschaft mit umfassenden Informationen zu aktueller Rechtsprechung und neuen Vorschriften. Wichtige
+Themenfelder sind das Arbeitsrecht, die Vergütung sowie Management, Führung und Organisation.
+Erstmals arbeiteten Verlage aus Ost und West auf dem Gebiet des Arbeitsrechts zusammen. 1991 gründeten die beiden
+Verlage die Arbeit und Arbeitsrecht – AuA GmbH .
+Der Münchner Verleger Wolfgang Huss kaufte im September 1991 von der Treuhandanstalt den ReWi Verlag für Recht und
+Wirtschaft (ehemals Staatsverlag der DDR ), den Verlag Die Wirtschaft , den Verlag für Bauwesen sowie den Verlag Technik
+. [4] Seit 1996 erschien Arbeit und Arbeitsrecht im Verlag Die Wirtschaft GmbH , seit 1998 wird sie auf Initiative von
+Wolfgang Hromadka und Rainer Sieg von einem Publizistischen Beirat unterstützt, der sich aus Unternehmenspraktikern,
+Wissenschaftlern, Bundesrichtern und Vertretern des Bundesarbeitsministeriums ( BMAS ) zusammensetzt.
+Seit 1999 erscheint die Zeitschrift bei der HUSS-MEDIEN GmbH, nachdem der Verlag Die Wirtschaft am 19. Dezember 1998 mit
+2001–2006 Kristina Hornung
+2006–2020 Volker Hassel
+seit 2020 Andreas Krabel
+Beirat [ Bearbeiten | Quelltext bearbeiten ]
+Zusammensetzung des Redaktionsbeirats 1970
+Gertrud Viertel, Mitarbeiterin beim Bundesverband des FDGB
+Publizistischer Beirat 2023
+Wolfgang Hromadka , Sprecher des Beirats, Universität Passau und Karls-Universität Prag
+Deniz C. Akitürk, Rheinmetall Waffe Munition GmbH, Rheinmetall Landsysteme GmbH, Senior Vice President Human Resources,
+Unterlüß/Kiel
+
+### ANSWER
+
+- lastname: Huss
+  firstname: Christoph
+  affiliation: HUSS-MEDIEN GmbH
+  role: Herausgeber
+- lastname: Huss
+  firstname: Wolfgang
+  affiliation: HUSS-MEDIEN GmbH
+  role: Herausgeber
+- lastname: Krabel
+  firstname: Andreas
+  position: Chefredakteur
+  affiliation: HUSS-MEDIEN GmbH
+  role: Redaktion
+- lastname: Hromadka
+  firstname: Wolfgang
+  position: Sprecher des Beirats
+  affiliation: Universität Passau und Karls-Universität Prag
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AuAS
+
+### URL
+
+https://shop.wolterskluwer-online.de/rechtsgebiete/verwaltungsrecht/auslaender-asylrecht/04109500-schnelldienst-auas-auslaender-und-asylrecht.html
+
+### CONTENT
+
+Schnelldienst AuAS - Ausländer- und Asylrecht, Ausländerrecht, Fritz, 0942-4571, Fachliteratur, Carl Heymanns Verlag |
+Wolters Kluwer Online Shop Um Wolters Kluwer Online Shop in vollem Umfang nutzen zu können, empfehlen wir Ihnen
+Javascript in Ihrem Browser zu aktiveren.
+Notare Zum Bereich Öffentlicher Sektor 02233 3760 7060 Anfrage an den Kundenservice Häufige Fragen (FAQ) Informationen
+AGB & Leistungsbeschreibung Impressum Versandkosten und Lieferinformationen Widerrufsrecht Datenschutzhinweise Cookie-
+Einstellungen Kontakt Hilfe Freischaltcode einlösen Schnelldienst AuAS - Ausländer- und Asylrecht Fritz Ausländer- und
+asylrechtlicher Rechtsprechungsdienst (AuAS) 30%-Ersparnis* Online Jahresabo 29,25 € pro Monat zzgl. MwSt Online
+Monatsabo 42,01 € pro Monat zzgl. MwSt Printausgabe 379,00 € inkl. MwSt Jahresabonnement *ggü. dem Monatsabo
+Verfahrensvorschriften. Dazu kommen materielles Asyl- und Asylverfahrensrecht. Zu jedem Urteil werden die amtlichen oder
+redaktionellen Leitsätze, Schlagworte sowie die Entscheidungsgründe veröffentlicht. Der Herausgeber: Prof. Dr. Roland
+Fritz , Präsident des VG Frankfurt Mehr lesen Modulempfehlungen Das Werk Schnelldienst AuAS - Ausländer- und Asylrecht
+ist in folgenden Modulen enthalten: Luchterhand Ausländer- und Asylrecht Kommunales Rechtsamt Weitere Module
+Kurzinformationen Verlag Luchterhand ISSN 0942-4571 Letztes Heft 27.02.2024 Anzahl Hefte p.a. 24 Empfehlungen für Sie
+Gemeinschaftskommentar zum Asylgesetz... Fritz / Vormeier 256,00 € ² Printausgabe Handbuch des Ausländerrechts der
+Bundesrepublik... Wollenschläger / Wollenschläger 260,00 € ² Printausgabe AsylbLG - Kommentar Hohm ab 55,08 € ¹ Online-
+Abo 299,00 € ² Printausgabe Gemeinschaftskommentar zum... Berlit ab 20,92 € ¹ Online-Abo 170,00 € ² Printausgabe
+
+### ANSWER
+
+- lastname: Fritz
+  firstname: Roland
+  title: Prof. Dr.
+  position: Präsident des VG Frankfurt
+  affiliation: Schnelldienst AuAS - Ausländer- und Asylrecht
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AuR
+
+### URL
+
+https://www.bund-verlag.de/zeitschriften/arbeit-und-recht/redaktion
+
+### CONTENT
+
+Redaktion
+Redaktion »Arbeit und Recht«
+Frank Siebens
+Ass. jur., Studium der Rechtswissenschaften in Münster, Referendariat in Dortmund. Ab 1999 Rechtssekretär bei der DGB
+Rechtsschutz GmbH in Rheine. Von 2000 bis 2017 beim Hauptvorstand der IG Medien und Bundesvorstand von ver.di als
+Referent für Betriebliche Mitbestimmung und Europäische Betriebsräte tätig. Seit September 2017 verantwortlicher
+Redakteur bei »Arbeit und Recht«. Frank Siebens ist ehrenamtlicher Richter am Bundesarbeitsgericht. E-Mail:
+frank.siebens@dgb.de
+Dr. Till Bender
+Ass. jur., Studium der Rechtswissenschaften und Promotion in Göttingen. Referendariat in Hildesheim. Anschließend
+wissenschaftlicher Mitarbeiter in Hannover. Von 2012 bis 2021 Rechtschutzsekretär bei der DGB Rechtsschutz GmbH in
+E-Mail: till.bender@dgbrechtsschutz.de
+(© DGB Rechtsschutz GmbH)
+Andrea Baczyk
+Redaktionsassistentin bei "Arbeit und Recht". Studium der Rechtswissenschaften in Frankfurt a. M.  c/o DGB Rechtsschutz
+GmbH Wilhelm-Leuschner-Str. 81, 60329 Frankfurt E-Mail: Andrea.Baczyk@dgbrechtsschutz.de Tel. 069-35 35 171 58 | Fax.
+069-35 35 171-71
+Leslie Schilling
+Koordination im Verlag Ass. jur., Studium der Rechtswissenschaften und Referendariat in Gießen. Abgeschlossene
+Fachanwaltsausbildung im Arbeitsrecht an der Hagen Law School. E-Mail: leslie.schilling@bund-verlag.de Tel. 069-79 50
+
+### ANSWER
+
+- lastname: Siebens
+  firstname: Frank
+  title: Ass. jur.
+  position: Redakteur
+  role: Redaktion
+- lastname: Bender
+  firstname: Till
+  title: Dr.
+  position: Redakteur
+  role: Redaktion
+- lastname: Baczyk
+  firstname: Andrea
+  position: Redaktionsassistentin
+  role: Redaktion
+- lastname: Schilling
+  firstname: Leslie
+  title: Ass. jur.
+  position: Koordinatorin
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Aufsichtsrat
+
+### URL
+
+https://www.fachmedien.de/beirat-und-aufsichtsrat
+
+### CONTENT
+
+Beirat und Aufsichtsrat
+Herausgeber:
+Dr. Christoph Achenbach
+Dr. Frederik Gottschalck
+Herausgeber
+Praxisberichte aus dem Mittelstand
+Teil 1: Einführung in die Thematik
+Beiräte im Mittelstand – eine kompakte Einführung [Seite 17]
+Von Dr. Christoph Achenbach, Gründer BfUN GmbH, Köln
+und Dr. Frederik Gottschalck, Partner BfUN GmbH, Köln
+Teil 2: Praxisberichte der Autoren
+Vielfalt der Beiratsarbeit im Vergleich zur Aufsichtsratsarbeit
+
+### ANSWER
+
+- lastname: Achenbach
+  firstname: Christoph
+  title: Dr.
+  affiliation: BfUN GmbH
+  role: Herausgeber
+- lastname: Gottschalck
+  firstname: Frederik
+  title: Dr.
+  affiliation: BfUN GmbH
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+AöR
+
+### URL
+
+https://www.mohrsiebeck.com/zeitschrift/archiv-des-oeffentlichen-rechts-aoer
+
+### CONTENT
+
+Archiv des öffentlichen Rechts (AöR)
+Mohr Siebeck
+In Verbindung mit Rüdiger Breuer ⋅ Udo Di Fabio ⋅ Jochen Abr. Frowein ⋅ Peter Häberle ⋅ Gerhard Robbers
+Herausgegeben von Martin Eifert, Annette Guckelberger, Peter M. Huber und Frank Schorkopf
+ISSN 0003-8911
+S. I (1)
+Abhandlungen
+Peter Häberle, Markus Kotzur
+Gibt es ein Menschenrecht auf Kultur?
+S. 467 - 495 (29)
+
+### ANSWER
+
+- lastname: Breuer
+  firstname: Rüdiger
+  role: Herausgeber
+- lastname: Di Fabio
+  firstname: Udo
+  role: Herausgeber
+- lastname: Frowein
+  firstname: Jochen Abr.
+  role: Herausgeber
+- lastname: Häberle
+  firstname: Peter
+  role: Herausgeber
+- lastname: Robbers
+  firstname: Gerhard
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BB
+
+### URL
+
+https://betriebs-berater.ruw.de/service/kontakt
+
+### CONTENT
+
+Verlagsleitung Marion Gertzen (V.i.S.d.P.) Tel. 069/7595-2711 Fax 069/7595-2770 E-Mail  marion.gertzen@dfv.de
+Wirtschaftsrecht
+RAin Uta Wichering  (Ressortleitung) Tel. 069/7595-2742 Fax 069/7595-2780 E-Mail  uta.wichering@dfv.de
+Steuerrecht RA StB Prof. Dr. iur. Michael Stahlschmidt M.R.F., LL.M., MBA (Ressortleitung) Tel. 069/7595-2864 Fax
+069/7595-2780 E-Mail michael.stahlschmidt@dfv.de
+Bilanzrecht und Betriebswirtschaft Diplom-Ökonomin Gabriele Bourgon (Ressortleitung) Tel. 069/7595-2761 Fax
+069/7595-2780 E-Mail gabriele.bourgon@dfv.de
+Arbeitsrecht
+Sonja Baur (Leitung) Tel. 069/7595-2755 Fax 069/7595-2780 E-Mail  sonja.baur@dfv.de
+StB | Der Steuerberater
+RA StB Prof. Dr. iur. Michael Stahlschmidt M.R.F., LL.M., MBA (Chefredakteur, (V.i.S.d.P.) Tel. 069/7595-2864 Fax
+069/7595-2780 E-Mail  michael.stahlschmidt@dfv.de
+RIW | Recht der Internationalen Wirtschaft
+Tel. 069/7595-2703 Fax 069/7595-2780 E-Mail christian.pelke@dfv.de
+RdF | Recht der Finanzinstrumente RdZ | Recht der Zahlungsdienste
+Diplom-Ökonomin Gabriele Bourgon (Leitende Redakteurin Finance der Zeitschriften RdF und RdZ) Tel. 069/7595-2761 Fax
+069/7595-2780 E-Mail gabriele.bourgon@dfv.de
+EWS | Europäisches Wirtschafts- und Steuerrecht
+115 E-Mail thorsten.petersen@wallnerweiss.de
+WRP | Wettbewerb in Recht und Praxis
+Herausgeber: Prof. Dr. Helmut Köhler, Prof. Dr. Christian Alexander Redaktion: Chefredakteurin RAin Uta Wichering Tel.
+0228/33610-289 Fax 0228/33610-209 E-Mail wrp@wichering.com
+K&R | Kommunikation und Recht
+Maximilian Leicht (Redakteur) E-Mail Maximilian.Leicht@dfv.de
+N&R | Netzwirtschaften und Recht
+Andreas Neumann (Schriftleiter) und Dr. Alexander Koch (stellv. Schriftleiter) Institut für das Recht der
+Netzwirtschaften, Informations- und Kommunikationstechnologie (IRNIK)
+Tel. 0228/850-7997 Fax 0228/850-7995 E-Mail schriftleitung@netzwirtschaftsrecht.de
+RA Dr. Carlo Piltz (Chefredakteur) Telefon: +49 30/814 53 50 00 Fax +49 30/814 53 50 09 E-Mail C arlo.Piltz@datenschutz-
+berater.de
+RA Dr. Alexander Golland Alexander.Golland@datenschutz-berater.de
+Philipp Quiel, LL.M. Philipp.Quiel@datenschutz-berater.de
+RA Tilman Herbrich Tilman.Herbrich@datenschutz-berater.de
+
+### ANSWER
+
+- lastname: Köhler
+  firstname: Helmut
+  title: Prof. Dr.
+  affiliation: Betriebs-Berater
+  role: Herausgeber
+- lastname: Alexander
+  firstname: Christian
+  title: Prof. Dr.
+  affiliation: Betriebs-Berater
+  role: Herausgeber
+- lastname: Wichering
+  firstname: Uta
+  title: RAin
+  affiliation: Betriebs-Berater
+  role: Redaktion
+- lastname: Stahlschmidt
+  firstname: Michael
+  title: Prof. Dr. iur.
+  position: RA StB M.R.F., LL.M., MBA
+  affiliation: Betriebs-Berater
+  role: Redaktion
+- lastname: Bourgon
+  firstname: Gabriele
+  title: Diplom-Ökonomin
+  affiliation: Betriebs-Berater
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BJM
+
+### URL
+
+https://basler-juristenverein.ch/home
+
+### CONTENT
+
+Übersicht sämtlicher Vortragsprogramme des aktuellen und der vergangenen Vereinsjahre. Zum Vortragsprogramm 2023/2024
+BJV Basler Juristenverein Postfach 329 4010 Basel E-Mail BJM - Redaktion Basler Juristische Mitteilungen  Prof. Dr.
+Daniela Thurnherr, LL.M. Universität Basel | Juristische Fakultät Peter Merian-Weg 8 | Postfach 4002 Basel E-Mail BJM -
+Verlag und Druckerei Stämpfli AG E-Mail Webseite
+
+### ANSWER
+
+- lastname: Thurnherr
+  firstname: Daniela
+  title: Prof. Dr.
+  position: LL.M.
+  affiliation: Universität Basel | Juristische Fakultät
+  role: Redaktion
+- firstname: ' ""'
+  title: ' ""'
+  position: ' ""'
+  affiliation: ' "BJV Basler Juristenverein"'
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BKK
+
+### URL
+
+https://www.bkk-dachverband.de/bkk-dv/struktur/vorstand
+
+### CONTENT
+
+Leichte Sprache
+Zur Startseite BKK DV Wer wir sind. Was wir machen. Vorstand
+© BKK Dachverband / Markus Altmann Franz Knieps (Vorstandsvorsitzender), Anne-Kathrin Klemm (Vorständin) © BKK
+Dachverband / Markus Altmann Franz Knieps (Vorstandsvorsitzender) © BKK Dachverband / Markus Altmann Anne-Kathrin Klemm
+(Vorständin)
+Lebenslauf Franz Knieps
+VolljuristGeboren: 10.07.1956 in AhrweilerFamilienstand: verwitwet, 2 erwachsene Kinder  Seit 1.07.2013 Vorstand BKK
+Dachverband e.V. 3/2013 - 6/2013 Partner bei WMP HealthCare GmbH, Berlin 2010 - 2012 Managing Partner bei der Strategie-
+Europäische Union, die Bundesregierung und die Gesellschaft für internationale Zusammenarbeit in Osteuropa, Asien und
+Südafrika Seit 1992 Mitherausgeber der Zeitschrift „Gesundheits- und Sozialpolitik“
+Lebenslauf Anne-Kathrin Klemm
+Diplom VolkswirtinGeboren: 13.12.1966 in Frankenberg an der EderFamilienstand: verheiratet  Seit 1.07.2022 Vorständin,
+BKK Dachverband e.V. 7/2022 - 1/2023 Vorständin sowie Leiterin Abteilung Politik und Kommunikation, BKK Dachverband e.V.
+10/2008 Lehrbeauftragte der Gottfried Wilhelm Leibnitz Universität Hannover im Diplomstudiengang des Instituts für
+Versicherungsbetriebslehre 7/2000 - 9/2005 Beraterin ausländischer Delegationen beim AOK-Bundesverband, Bonn sowie
+Consultant für Gesundheitsreformen in Südkorea und für die GTZ in IndonesienKontakt Franz Knieps
+Vorstandsvorsitzender
++49 30 2700 406 - 105
+Nachricht schreiben Visitenkarte herunterladen Zur PersonFranz Knieps leitet den BKK Dachverband seit dem 1. Juli 2013.
+Der 1956 geborene Jurist, Politik- und Literaturwissenschaftler kennt das deutsche und internationale Gesundheits- und
+Sozialwesen seit Jahrzehnten: unter anderem als Geschäftsführer Politik beim AOK-Bundesverband, bevor er als Leiter der
+Abteilung Gesundheitsversorgung, Gesetzliche Krankenversicherung, Pflegesicherung zum Bundesministerium für Gesundheit
+wechselte. Franz Knieps arbeitete als Berater für Sozialpolitik und Gesundheitssystementwicklung für die WHO und die
+Europäische Union. Er ist Herausgeber der Zeitschrift „Gesundheits- und Sozialpolitik“. Kontakt Anne-Kathrin Klemm
+Vorständin
++49 30 2700 406 - 200
+Nachricht schreiben Zur PersonAnne-Kathrin Klemm ist seit dem 1. Juli 2022 Vorständin beim BKK Dachverband. Die
+1966 geborene Bankkaufrau und Dipl. Volkswirtin arbeitet seit 26 Jahren im deutschen Gesundheitssystem: unter anderem
+als Leiterin Politik und Kommunikation beim BKK Dachverband, als Fachbereichsleiterin für die Thematik Wahltarife bei
+
+### ANSWER
+
+- lastname: Knieps
+  firstname: Franz
+  position: Vorstandsvorsitzender
+  affiliation: BKK Dachverband e.V.
+  role: Herausgeber
+- lastname: Klemm
+  firstname: Anne-Kathrin
+  position: Vorständin
+  affiliation: BKK Dachverband e.V.
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BLJ
+
+### URL
+
+https://law-journal.de/uber-uns/wissenschaftlicher-beirat/
+
+### CONTENT
+
+Zeitschrift stellen.
+PROFESSOR DR. MICHAEL FEHLING LL.M.
+Prof. Dr. Michael Fehling hält seit 2001 den Lehrstuhl für Öffentliches Recht mit Rechtsvergleichung an der Bucerius Law
+School.
+Zur Lehrstuhl  von Prof. Dr. Fehling.
+PROFESSORIN DR. ANNE RÖTHEL
+Prof. Dr. Anne Röthel hält seit 2004 den Lehrstuhl für Bürgerliches Recht, Europäisches und Internationales Privatrecht
+an der Bucerius Law School.
+Zur Lehrstuhl von Prof. Dr. Röthel.
+PROFESSOR DR. FRANK SALIGER
+Prof. Dr. Frank Saliger hielt von März 2005 bis März 2014 den Lehrstuhl für Strafrecht, Strafprozessrecht und
+Rechtsphilosophie an der Bucerius Law School. Von April 2014 bis März 2016 war er Professor an der Eberhard Karls
+Universität Tübingen. Seit April 2016 hält er den Lehrstuhl für Strafrecht, Strafprozessrecht, Wirtschaftsstrafrecht und
+Rechtsphilosophie an der Ludwigs-Maximilians-Universität München.
+Zur Lehrstuhl von Prof. Dr. Saliger.
+Deutsch
+English
+
+### ANSWER
+
+- lastname: Fehling
+  firstname: Michael
+  title: Professor Dr. LL.M.
+  position: Lehrstuhl für Öffentliches Recht mit Rechtsvergleichung
+  affiliation: Bucerius Law School
+  role: Beirat
+- lastname: Röthel
+  firstname: Anne
+  title: Professorin Dr.
+  position: Lehrstuhl für Bürgerliches Recht, Europäisches und Internationales Privatrecht
+  affiliation: Bucerius Law School
+  role: Beirat
+- lastname: Saliger
+  firstname: Frank
+  title: Professor Dr.
+  position: Lehrstuhl für Strafrecht, Strafprozessrecht, Wirtschaftsstrafrecht und
+    Rechtsphilosophie
+  affiliation: Ludwigs-Maximilians-Universität München
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BRAK-Mitt
+
+### URL
+
+https://www.brak-mitteilungen.de/redaktion.htm
+
+### CONTENT
+
+Redaktion & Beirat
+Redaktion
+RAin Dr. Tanja Nitschke, Mag. rer. publ. (Schriftleitung)
+RA Christian Dahns (Rechtsprechung)
+Frauke Karlstedt (sachbearbeitend)
+Beirat
+Der Redaktion der BRAK-Mitteilungen steht ein Beirat mit Mitgliedern aus Wissenschaft, anwaltlicher Praxis,
+Anwaltsgerichtsbarkeit und Rechtsanwaltskammern beratend zur Seite. Ihm gehören an:
+RA Prof. Dr. Christian Kirchberg, Karlsruhe (Vorsitzender)
+RAin Melanie Theus, Koblenz
+Prof. Dr. Matthias Kilian, Köln
+RA Prof. Dr. Christoph Knauer, München
+
+### ANSWER
+
+- lastname: Nitschke
+  firstname: Tanja
+  title: Dr. RAin
+  position: Schriftleitung
+  affiliation: Bundesrechtsanwaltskammer
+  role: Schriftleitung
+- lastname: Dahns
+  firstname: Christian
+  title: RA
+  position: Rechtsprechung
+  affiliation: Bundesrechtsanwaltskammer
+  role: Redaktion
+- lastname: Karlstedt
+  firstname: Frauke
+  position: sachbearbeitend
+  affiliation: Bundesrechtsanwaltskammer
+  role: Redaktion
+- lastname: Kirchberg
+  firstname: Christian
+  title: Prof. Dr. RA
+  position: Vorsitzender
+  affiliation: Karlsruhe
+  role: Beirat
+- lastname: Theus
+  firstname: Melanie
+  title: RAin
+  affiliation: Koblenz
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Bank
+
+### URL
+
+https://de.wikipedia.org/wiki/Die_Bank_(Zeitschrift)
+
+### CONTENT
+
+6090 Exemplare
+Chefredakteur
+Wilhelm Niehoff
+Herausgeber
+Bank-Verlag GmbH
+
+### ANSWER
+
+- lastname: Niehoff
+  firstname: Wilhelm
+  position: Chefredakteur
+  affiliation: Die Bank
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BewertungsPraktiker
+
+### URL
+
+https://www.fachmedien.de/bewertungspraktiker
+
+### CONTENT
+
+Kanzleien, die sich mit der Wertermittlung von Unternehmen bzw. Unternehmensteilen beschäftigen.
+Die Qualität der Veröffentlichungen im BewertungsPraktiker wird durch die Europäische Vereinigung der
+Unternehmensbewerter (EACVA) als Herausgeber gewährleistet. Die Beiträge werden darüber hinaus durch einen Fachbeirat
+begutachtet..
+Abonnements und Einzelausgaben
+
+### ANSWER
+
+- lastname: EACVA
+  position: Europäische Vereinigung der Unternehmensbewerter
+  role: Herausgeber
+- lastname: Broekema
+  firstname: Marc
+  role: Redaktion
+- lastname: Perepechko
+  firstname: Olesya
+  role: Redaktion
+- lastname: Rabel
+  firstname: Klaus
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+BtPrax
+
+### URL
+
+https://shop.reguvis.de/printausgabe-archiv/betreuungsrechtliche-praxis/
+
+### CONTENT
+
+Autor:in
+Herausgegeben in Verbindung mit dem Betreuungsgerichtstag e.V.
+Verantwortliche Redakteurin: Prof. Dr. Anna Schwedler, Professur für rechtliche Grundlagen Sozialer Professionen,
+Katholische Hochschule für Sozialwesen, Berlin
+Redakteur des Rechtsprechungsteils: Dr. Szymon Mazur, Richter am Amtsgericht Fulda
+Bibliografische Angaben
+ISSN :
+
+### ANSWER
+
+- lastname: Schwedler
+  firstname: Anna
+  title: Prof. Dr.
+  position: Verantwortliche Redakteurin
+  affiliation: Katholische Hochschule für Soziale Arbeit
+  role: Redaktion
+- lastname: Mazur
+  firstname: Szymon
+  title: Dr.
+  position: Redakteur des Rechtsprechungsteils
+  affiliation: Amtsgericht Fulda
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CB
+
+### URL
+
+https://compliance.ruw.de/service/kontakt
+
+### CONTENT
+
+Verlagsleitung Marion Gertzen (V.i.S.d.P.) Tel. 069/7595-2711 Fax 069/7595-2770 E-Mail  marion.gertzen@dfv.de
+Wirtschaftsrecht
+RAin Uta Wichering  (Ressortleitung) Tel. 069/7595-2742 Fax 069/7595-2780 E-Mail  uta.wichering@dfv.de
+Steuerrecht RA StB Prof. Dr. iur. Michael Stahlschmidt M.R.F., LL.M., MBA (Ressortleitung) Tel. 069/7595-2864 Fax
+069/7595-2780 E-Mail michael.stahlschmidt@dfv.de
+ZVglRWiss@uni-hamburg.de
+Sanb | Der Sanierungsberater
+Schriftleitung RA Sascha Borowski Tel. 0211/828 977-200 E-Mail borowski@bbr-law.de RA Thorsten Petersen Tel. 040/300 94
+115 E-Mail thorsten.petersen@wallnerweiss.de
+WRP | Wettbewerb in Recht und Praxis
+Herausgeber: Prof. Dr. Helmut Köhler, Prof. Dr. Christian Alexander Redaktion: Chefredakteurin RAin Uta Wichering Tel.
+0228/33610-289 Fax 0228/33610-209 E-Mail wrp@wichering.com
+K&R | Kommunikation und Recht
+Maximilian Leicht (Redakteur) E-Mail Maximilian.Leicht@dfv.de
+N&R | Netzwirtschaften und Recht
+Andreas Neumann (Schriftleiter) und Dr. Alexander Koch (stellv. Schriftleiter) Institut für das Recht der
+Netzwirtschaften, Informations- und Kommunikationstechnologie (IRNIK)
+Tel. 0228/850-7997 Fax 0228/850-7995 E-Mail schriftleitung@netzwirtschaftsrecht.de
+RA Dr. Carlo Piltz (Chefredakteur) Telefon: +49 30/814 53 50 00 Fax +49 30/814 53 50 09 E-Mail C arlo.Piltz@datenschutz-
+berater.de
+RA Dr. Alexander Golland Alexander.Golland@datenschutz-berater.de
+Philipp Quiel, LL.M. Philipp.Quiel@datenschutz-berater.de
+RA Tilman Herbrich Tilman.Herbrich@datenschutz-berater.de
+
+### ANSWER
+
+- lastname: Köhler
+  firstname: Helmut
+  title: Prof. Dr.
+  affiliation: WRP | Wettbewerb in Recht und Praxis
+  role: Herausgeber
+- lastname: Alexander
+  firstname: Christian
+  title: Prof. Dr.
+  affiliation: WRP | Wettbewerb in Recht und Praxis
+  role: Herausgeber
+- lastname: Wichering
+  firstname: Uta
+  title: RAin
+  position: Chefredakteurin
+  affiliation: WRP | Wettbewerb in Recht und Praxis
+  role: Redaktion
+- lastname: Borowski
+  firstname: Sascha
+  affiliation: Der Sanierungsberater
+  role: Schriftleitung
+- lastname: Petersen
+  firstname: Thorsten
+  affiliation: Der Sanierungsberater
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CCLR
+
+### URL
+
+https://cclr.lexxion.eu/
+
+### CONTENT
+
+CCLR 2/2023 (Vol. 17)
+Editorial
+Kate McKenzie
+Reparations For Climate Harm and The Role of The Loss and Damage Mechanism: Lessons from Other Areas of Law
+Oscar Davison
+
+### ANSWER
+
+- lastname: McKenzie
+  firstname: Kate
+  position: Managing Editor
+  affiliation: University of Strathclyde, Glasgow, Scotland
+  role: Redaktion
+- lastname: Mehling
+  firstname: Michael
+  position: Editor-in-Chief
+  affiliation: Massachusetts Institute of Technology Cambridge, USA
+  role: Herausgeber
+- lastname: Bausch
+  firstname: Camilla
+  position: Associate Editor
+  affiliation: Ecologic-Institute, Berlin, Germany
+  role: Redaktion
+- lastname: Burnette
+  firstname: Amelia
+  position: Associate Editor
+  affiliation: University of Strathclyde, Glasgow, UK
+  role: Redaktion
+- lastname: Gilder
+  firstname: Andrew
+  position: Associate Editor
+  affiliation: Climate Legal, Johannesburg, South Africa
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CCZ
+
+### URL
+
+https://rsw.beck.de/zeitschriften/ccz
+
+### CONTENT
+
+CCZ Heft 1-2/2024
+15.02.2024
+HERAUSGEBER: Dr. Konstantin von Busekist, Prof. Dr. Dr. h.c. Dr. h.c. Holger Fleischer, Dipl.-Kfm., LL.M., RA Dr.
+Christoph E. Hauschka, RA Prof. Dr. Thomas Grützner, RA Prof. Dr. Thomas Klindt, RA Dr. Thomas Lösler, RA Dr. Philip
+Matthey, LL.M., RAin Dr. Birte Mössner, RA Dr. Klaus Moosmayer, Dipl.-Kfm. Meinhard Remberg, Prof. Dr. Volker Rieble,
+RAin Dr. Anita Schieffer, Prof. Dr. Dr. h. c. Uwe H. Schneider, RAin Prof. Dr. Birgit Spießhofer, Dipl.-Oec., RA Michael
+
+### ANSWER
+
+- lastname: Busekist
+  firstname: Konstantin
+  title: Dr.
+  affiliation: Corporate Compliance Zeitschrift
+  role: Herausgeber
+- lastname: Fleischer
+  firstname: Holger
+  title: Prof. Dr. Dr. h.c. Dr. h.c.
+  affiliation: Corporate Compliance Zeitschrift
+  role: Herausgeber
+- lastname: Hauschka
+  firstname: Christoph E.
+  title: Dipl.-Kfm., LL.M., RA Dr.
+  affiliation: Corporate Compliance Zeitschrift
+  role: Herausgeber
+- lastname: Grützner
+  firstname: Thomas
+  title: RA Prof. Dr.
+  affiliation: Corporate Compliance Zeitschrift
+  role: Herausgeber
+- lastname: Klindt
+  firstname: Thomas
+  title: RA Prof. Dr.
+  affiliation: Corporate Compliance Zeitschrift
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CFL
+
+### URL
+
+https://de.wikipedia.org/wiki/Corporate_Finance_Law
+
+### CONTENT
+
+Investmentbankern, Wirtschaftsprüfern und Steuerberatern zusammen.
+Herausgeber [ Bearbeiten | Quelltext bearbeiten ]
+CFL wurde von Andreas Cahn , Roger Kiem, Andreas Meyer, Christoph H. Seibt , Michael Schlitt , Stefan Simon und Rüdiger
+Theiselmann (Schriftleiter) herausgegeben. [1]
+Weblinks [ Bearbeiten | Quelltext bearbeiten ]
+
+### ANSWER
+
+- lastname: Cahn
+  firstname: Andreas
+  role: Herausgeber
+- lastname: Kiem
+  firstname: Roger
+  role: Herausgeber
+- lastname: Meyer
+  firstname: Andreas
+  role: Herausgeber
+- lastname: Seibt
+  firstname: Christoph H.
+  role: Herausgeber
+- lastname: Schlitt
+  firstname: Michael
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+COVuR
+
+### URL
+
+https://rsw.beck.de/zeitschriften/covur
+
+### CONTENT
+
+COVuR Heft 3/2023
+15.08.2023
+Schriftleiter: Dr. Marc Ruttloff und Prof. Dr. Eric Wagner
+Editorial
+COVUR Jahr 2023 Seite Rolle rückwärts bei den Überbrückungshilfen COVUR Jahr 2023 Seite 151
+Beiträge
+COVUR Jahr 2023 Seite Dr. Stephan Wagner: Leben in der Abwägung COVUR Jahr 2023 Seite 152
+Rechtsprechung
+Zivilrecht
+
+### ANSWER
+
+- lastname: Ruttloff
+  firstname: Marc
+  title: Dr.
+  affiliation: COVuR
+  role: Schriftleitung
+- lastname: Wagner
+  firstname: Eric
+  title: Prof. Dr.
+  affiliation: COVuR
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CR
+
+### URL
+
+https://de.wikipedia.org/wiki/Computer_und_Recht
+
+### CONTENT
+
+.
+Schriftleiter [ Bearbeiten | Quelltext bearbeiten ]
+Michael Bartsch
+Malte Grützmacher
+Niko Härting
+Sven-Erik Heun
+Thomas Heymann
+Jochen Schneider
+Fabian Schuster
+
+### ANSWER
+
+- lastname: Bartsch
+  firstname: Michael
+  affiliation: Computer und Recht
+  role: Schriftleitung
+- lastname: Grützmacher
+  firstname: Malte
+  affiliation: Computer und Recht
+  role: Schriftleitung
+- lastname: Härting
+  firstname: Niko
+  affiliation: Computer und Recht
+  role: Schriftleitung
+- lastname: Heun
+  firstname: Sven-Erik
+  affiliation: Computer und Recht
+  role: Schriftleitung
+- lastname: Heymann
+  firstname: Thomas
+  affiliation: Computer und Recht
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CSR
+
+### URL
+
+https://causasport.org/impressum/
+
+### CONTENT
+
+Search for:
+Impressum
+Gesamtverantwortung Prof. Dr. iur. Urs Scherrer Sport Science Dr. Scherrer CH-8706 Meilen ZH urs.scherrer@sport-science-
+scherrer.com
+Redaktion und Mitarbeitende
+Prof. Dr. Urs Scherrer, Meilen ZH (Redaktionsleitung) (err.) Prof. Dr. Margareta Baddeley, Genf (mab.) Dr. Rafael
+Brägger, Zürich (rb.) Dr. Jean-Pierre Bringhen, Visp (jpb.) Dr. Michael Bürkle, Freiburg i.Br. (mb.) Dr. Marco Del
+Fabro, Zürich (mdf.) Prof. Dr. Lamiss Khakzadeh, Innsbruck (lk.) Dr. Heinrich Andreas Müller, Zürich (ham.) Prof. Dr.
+Roger Rudolph, Zürich (ror.) Werner Stocker, Zürich (ws.) Prof. Dr. Hans-Ueli Vogt, Zürich (huv.) Prof. Dr. Dr.
+Christian Werner, München (cw.)
+Erscheinungsort CH-8706 Meilen ZH
+Redaktionsadresse Prof. Dr. Urs Scherrer Causa Sport CH-8706 Meilen ZH urs.scherrer@sport-science-scherrer.com
+Zugang / Bestellungen Vgl. Rubrik Aktuelles / Archiv
+Rechte © Causa Sport, CH-8706 Meilen ZH
+
+### ANSWER
+
+- lastname: Scherrer
+  firstname: Urs
+  title: Prof. Dr. iur.
+  position: Sport Science Dr. Scherrer
+  affiliation: CH-8706 Meilen ZH
+  role: Herausgeber
+- lastname: Scherrer
+  firstname: Urs
+  title: Prof. Dr.
+  position: '-'
+  affiliation: Meilen ZH
+  role: Redaktion
+- lastname: Baddeley
+  firstname: Margareta
+  title: Prof. Dr.
+  position: '-'
+  affiliation: Genf
+  role: Redaktion
+- lastname: Brägger
+  firstname: Rafael
+  title: Dr.
+  position: '-'
+  affiliation: Zürich
+  role: Redaktion
+- lastname: Bringhen
+  firstname: Jean-Pierre
+  title: Dr.
+  position: '-'
+  affiliation: Visp
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CuA
+
+### URL
+
+https://www.bund-verlag.de/zeitschriften/computer-und-arbeit/redaktion
+
+### CONTENT
+
+Redaktion
+Redaktion »Computer und Arbeit«
+Carolin Thomsen
+Verantwortliche Redaktion Ass. jur., Studium der Rechtswissenschaften und Referendariat in Heidelberg
+E-Mail: redaktion@cua-web.de Telefon: 069 / 79 50 10 – 603
+Dr. Peter Wedde
+Fachliche Beratung Professor für Arbeitsrecht und Recht der Informationsgesellschaft an der Fachhochschule Frankfurt
+a.M.. Mitglied in den Datenschutzbeiräten der Deutschen Telekom AG und der Deutschen Bahn AG sowie in der
+
+### ANSWER
+
+- lastname: Thomsen
+  firstname: Carolin
+  title: Ass. jur.
+  position: Verantwortliche Redaktion
+  affiliation: Computer und Arbeit
+  role: Redaktion
+- lastname: Wedde
+  firstname: Peter
+  title: Dr.
+  position: Fachliche Beratung
+  affiliation: Computer und Arbeit
+  role: Beratung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+CuR
+
+### URL
+
+https://bodak.de/cur-contracting-und-recht/
+
+### CONTENT
+
+CuR ist das zentrale Publikationsorgan für die Rechtsprechung im Bereich des Contracting und bietet Autoren einen Platz,
+rechtliche und steuerliche Aspekte des Contracting in Fachbeiträgen zu vertiefen.
+HerausgeberDr. Andreas Klemm Gronvald Rechtsanwälte, Düsseldorf
+SchriftleitungVerlag Bodak GmbH Lortzingstraße 15 | 04105 LeipzigTelefon: 0341 – 35 20 29 00 Telefax: 0341 – 35 20 29 09
+E-Mail: schriftleitung@bodak.de
+
+### ANSWER
+
+- lastname: Klemm
+  firstname: Andreas
+  title: Dr.
+  position: Rechtsanwalt
+  affiliation: Gronvald Rechtsanwälte, Düsseldorf
+  role: Herausgeber
+- lastname: Klemm
+  firstname: Andreas
+  position: Chefredakteur
+  affiliation: Contracting und Recht
+  role: Redaktion
+- lastname: Baumgart
+  firstname: Caspar
+  affiliation: Forum Contracting e. V.
+  role: Herausgeber
+- lastname: Otting
+  firstname: Olaf
+  affiliation: Forum Contracting e. V.
+  role: Herausgeber
+- lastname: Stein
+  firstname: Roland M.
+  affiliation: Forum Contracting e. V.
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DB
+
+### URL
+
+https://der-betrieb.de/ueber-der-betrieb/herausgeber-fachbeirat/
+
+### CONTENT
+
+Hier finden Sie Informationen zu den Herausgebern von DER BETRIEB sowie eine Übersicht der Fachbeiräte.
+Herausgeber
+Prof. Dr. Dr. h.c. Wolfgang Ballwieser
+Prof. Dr. Dr. h.c. Dr. h.c. Holger Fleischer
+Prof. Dr. Johanna Hey
+Prof. Dr. h.c. Rudolf Mellinghoff
+Prof. Dr. Katharina Uffmann
+Dr. Thomas Wachter †
+Prof. Dr. Franceska Werth
+
+### ANSWER
+
+- lastname: Ballwieser
+  firstname: Wolfgang
+  title: Prof. Dr. Dr. h.c.
+  position: emeritierter Professor für Betriebswirtschaftslehre, insb. Rechnungswesen
+    und Prüfung
+  affiliation: Ludwig-Maximilians-Universität München
+  role: Herausgeber
+- lastname: Fleischer
+  firstname: Holger
+  title: Prof. Dr. Dr. h.c. Dr. h.c.
+  position: Direktor
+  affiliation: Max-Planck-Institut für ausländisches und internationales Privatrecht
+    in Hamburg
+  role: Herausgeber
+- lastname: Hey
+  firstname: Johanna
+  title: Prof. Dr.
+  position: Direktorin des Instituts für Steuerrecht
+  affiliation: Universität zu Köln
+  role: Herausgeber
+- lastname: Mellinghoff
+  firstname: Rudolf
+  title: Prof. Dr. h.c.
+  position: Bisheriger Präsident des Bundesfinanzhofs
+  affiliation: Bundesfinanzhof
+  role: Herausgeber
+- lastname: Uffmann
+  firstname: Katharina
+  title: Prof. Dr.
+  position: Inhaberin des Lehrstuhls für Bürgerliches Recht, Unternehmensrecht und
+    Recht der Familienunternehmen
+  affiliation: Ruhr-Universität Bochum
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DJZ
+
+### URL
+
+https://de.wikipedia.org/wiki/Deutsche_Juristen-Zeitung
+
+### CONTENT
+
+Zur Suche springen
+Die Deutsche Juristen-Zeitung war eine juristische Fachzeitschrift, die am 1. Januar 1896 erstmals im Verlag Otto
+Liebmann Berlin erschien und 1936 eingestellt wurde. Herausgeber waren neben dem Verleger Liebmann, der auch als
+Schriftleiter amtierte, der Staatsrechtslehrer Paul Laband , Reichsgerichtsrat Melchior Stenglein und Rechtsanwalt
+Hermann Staub . Die Zeitschrift war eine wissenschaftlich besonders hoch angesehene Veröffentlichung. [1]
+Inhaltsverzeichnis
+1 Geschichte der Zeitschrift bis zum Nationalsozialismus
+Geschichte der Zeitschrift bis zum Nationalsozialismus [ Bearbeiten | Quelltext bearbeiten ]
+Die DJZ sollte eine allgemeine, alle Rechtsgebiete und juristischen Berufe übergreifende Zeitschrift sein. Hauptthemen
+waren nach Laband die allgemeine Richtung, welche die deutsche Wissenschaft des Rechts einschlägt, grundlegende
+Gerichtsentscheidungen, die allgemeines Interesse verdienen, wichtige Gesetzvorhaben und gemeinsame Standesinteressen.
+[1]
+Geschichte der Zeitschrift ab 1933 [ Bearbeiten | Quelltext bearbeiten ]
+Deutsche Juristen-Zeitung, 1. August 1934 – mit dem Anfang von Carl Schmitts Aufsatz „Der Führer schützt das Recht“.
+Ende 1933 arisierte der Verlag C. H. Beck den Verlag des als Juden verfolgten Otto Liebmann. [2] Der
+nationalsozialistische Funktionär Hans Frank hatte sich des Blattes bemächtigt und setzte im Mai 1934 Carl Schmitt als
+Herausgeber ein. Bis 1936 erschien die DJZ im Verlag C.H. Beck und wurde dann nach der Entmachtung Carl Schmitts zu
+
+### ANSWER
+
+- lastname: Liebmann
+  firstname: Otto
+  title: Dr.
+  position: Verleger
+  affiliation: Deutsche Juristen-Zeitung
+  role: Herausgeber
+- lastname: Liebmann
+  firstname: Otto
+  title: Dr.
+  position: Verleger
+  affiliation: Deutsche Juristen-Zeitung
+  role: Schriftleitung
+- lastname: Laband
+  firstname: Paul
+  position: Staatsrechtslehrer
+  role: Herausgeber
+- lastname: Stenglein
+  firstname: Melchior
+  position: Reichsgerichtsrat
+  role: Herausgeber
+- lastname: Staub
+  firstname: Hermann
+  position: Rechtsanwalt
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DLR
+
+### URL
+
+https://de.wikipedia.org/wiki/Deutsche_Lebensmittel-Rundschau
+
+### CONTENT
+
+1.050 (Abo) Exemplare
+Chefredakteur
+Gabriele Lauser
+Herausgeber
+Alfred Hagen Meyer
+Weblink
+www.dlr-online.de
+1947–1957: Valentin Gerlach
+1957–2003: Karl Gustav Bergner
+2018: Alfred Hagen Meyer
+Weblinks [ Bearbeiten | Quelltext bearbeiten ]
+Website der DLR
+
+### ANSWER
+
+- lastname: Meyer
+  firstname: Alfred Hagen
+  position: Herausgeber
+  affiliation: Deutsche Lebensmittel-Rundschau
+  role: Herausgeber
+- lastname: Lauser
+  firstname: Gabriele
+  position: Chefredakteur
+  affiliation: Deutsche Lebensmittel-Rundschau
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DRiZ
+
+### URL
+
+https://rsw.beck.de/driz/%C3%BCber-driz
+
+### CONTENT
+
+Magazin auch als Mobilausgabe für den Tablet-Computer erhältlich.
+Redaktion
+Sven Rebehn (Chefredakteur, ViSdP), Matthias Schröter (Chef vom Dienst), Dr. Ralf Geis (PrVG, Rechtsprechungsteil),
+Ralph Neumann (RAG a. D.), Claudia Rach (Büro Berlin), Dr. Christine Schröder (RLG), Joachim Vetter (PrLAG), Dr. Ingo
+Werner (VPrLG), Dr. Sebastian Wußler (DirAG).
+Herausgeber
+
+### ANSWER
+
+- lastname: Rebehn
+  firstname: Sven
+  position: Chefredakteur, ViSdP
+  affiliation: Deutsche Richterzeitung
+  role: Redaktion
+- lastname: Schröter
+  firstname: Matthias
+  position: Chef vom Dienst
+  affiliation: Deutsche Richterzeitung
+  role: Redaktion
+- lastname: Geis
+  firstname: Ralf
+  title: Dr.
+  position: PrVG, Rechtsprechungsteil
+  affiliation: Deutsche Richterzeitung
+  role: Redaktion
+- lastname: Neumann
+  firstname: Ralph
+  position: RAG a. D.
+  affiliation: Deutsche Richterzeitung
+  role: Redaktion
+- lastname: Rach
+  firstname: Claudia
+  position: Büro Berlin
+  affiliation: Deutsche Richterzeitung
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DSB
+
+### URL
+
+https://www.datenschutz-berater.de/
+
+### CONTENT
+
+Praxis | Recht | Innovati on 11. - 13. September 2024
+Düsseldorf Weitere Informationen +++  Vor Ort oder digital teilnehmen  +++ Alle Beiträge Aktuelle Beiträge Laurenz
+Strassemeyer 11. Feb. Schadenersatz nach Art. 82 DSGVO hoch vier Sehr geehrte Leserinnen und Leser, noch kurz vor der
+Jahreswende hat der EuGH ein wahres Feuerwerk an Entscheidungen zum Datenschutzrecht... Philipp Quiel 10. Jan. Auf ein
+gutes Datenschutzjahr 2024 Sehr geehrte Leserinnen und Leser, ich wünsche Ihnen allen ein gutes Datenschutzjahr 2024.
+Die hohe Anzahl an Veröffentlichungen der... Tilman Herbrich 21. Dez. 2023 Die Cookie-Richtlinie ist gekommen, um zu
+bleiben! Sehr geehrte Leserinnen und Leser, mit großen Erwartungen gestartet, sollte die ePrivacy-VO die DSGVO ergänzen
+und spezifische Regelungen... Prof. Dr. Alexander Golland 18. Nov. 2023 Fragen ragen über Klagen Seit Mitte Oktober ist
+sie da: Die Abhilfeklage, liebevoll auch – in Anlehnung an ihr US-Pendant – „Sammelklage“ genannt. Die... Dr. Carlo
+Piltz 26. Okt. 2023 Arbeitgeber und Betriebsrat – Konflikt bei Art. 15 DSGVO? Wenn ein Betriebsratsmitglied als
+Arbeitnehmer einen Auskunftsanspruch nach Art. 15 DSGVO gegen den Arbeitgeber geltend macht, stellt... Philipp Quiel 13.
+Sept. 2023 Welche Datenverarbeitungen werden vernünftigerweise erwartet? Sehr geehrte Leserinnen und Leser, im Rahmen
+der Interessenabwägung nach Art. 6 Abs. 1 lit. f DSGVO spielen die vernünftigen Erwartungen... Anzeige
+
+### ANSWER
+
+- lastname: Piltz
+  firstname: Carlo
+  title: Dr.
+  position: Chefredakteur
+  affiliation: Datenschutz-Berater
+  role: Redaktion
+- lastname: Golland
+  firstname: Alexander
+  title: Prof. Dr.
+  position: Schriftleitung
+  affiliation: Datenschutz-Berater
+  role: Schriftleitung
+- lastname: Herbrich
+  firstname: Tilman
+  position: Schriftleitung
+  affiliation: Datenschutz-Berater
+  role: Schriftleitung
+- lastname: Quiel
+  firstname: Philipp
+  title: LL.M.
+  position: Schriftleitung
+  affiliation: Datenschutz-Berater
+  role: Schriftleitung
+- lastname: Strassemeyer
+  firstname: Laurenz
+  position: Schriftleitung
+  affiliation: Datenschutz-Berater
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DStR
+
+### URL
+
+https://rsw.beck.de/zeitschriften/dstr/dstrk
+
+### CONTENT
+
+24.02.2024
+Herausgegeben von:
+Prof. Dr. Klaus-Dieter Drüen
+RA, FASt Prof. Dr. Stephan Eilers
+RD a. D. Johann Glaser
+RiBFH Dr. Ulrich Schallmoser
+Rechtsprechung
+Internationales Steuerrecht
+
+### ANSWER
+
+- lastname: Drüen
+  firstname: Klaus-Dieter
+  title: Prof. Dr.
+  affiliation: Deutsches Steuerrecht
+  role: Herausgeber
+- lastname: Eilers
+  firstname: Stephan
+  title: Prof. Dr.
+  position: RA, FASt
+  affiliation: Deutsches Steuerrecht
+  role: Herausgeber
+- lastname: Glaser
+  firstname: Johann
+  title: RD a. D.
+  affiliation: Deutsches Steuerrecht
+  role: Herausgeber
+- lastname: Schallmoser
+  firstname: Ulrich
+  title: Dr.
+  position: RiBFH
+  affiliation: Deutsches Steuerrecht
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DivRuW
+
+### URL
+
+https://www.ruw.de/suche/?OK=1&i_ffsource=divruw&i_ffdokutyp=Sonstiges&i_sortfl=docdatetime&i_sortd=desc&i_accuracy=3
+
+### CONTENT
+
+****
+DivRuW 2023, Heft 04 vom 06.12.2023
+Wittlich/Suhr/Hofbauer/Moir/Bauer-Glück Herzlich willkommen zur 4. Ausgabe von “Diversity in Recht und Wirtschaft”
+(DivRuW)  125 | Devey/Cornelius Neurodynamische Vielfalt am Arbeitsplatz fördern  128 | Vettermann Die
+“mehrgeschlechtliche Bezeichnung im Wortinnern”: Ein Überblick zum sächsischen Gender-“Verbot” unter besonderer
+authentischen Erfolgsweg positiv beeinflussen  134 | Mayer Der Einbürgerungshandschlag – Ein Beitrag zur Einordnung in
+die deutschen Lebensverhältnisse  138 | Köppel Vielfalt statt Homogenität: Diversity Management für technische
+Unternehmen des Mittelstands  143 | Wittlich Außerordentliche fristlose Kündigung bei sexueller Belästigung ohne
+vorherige einschlägige Abmahnung  147 | Suhr Interview: Interview mit Rechtsanwält*in Ronska Grimm  149 | Resmerowski
+Die Ablösung des Transsexuellengesetzes durch das Selbstbestimmungsgesetz: Interview mit Tessa Ganserer  153 |
+Hillermann Rezension: Dr. Sarah Gölzer: Die Absprache zwischen dem Bundesamt für Migration und Flüchtlinge und den
+Kirchen zum Kirchenasyl  156 | Bauer-Glück Konfuzius sagt “A great man is hard on himself; a small man is hard on
+others.”  160
+DivRuW 2023, Heft 04 vom 06.12.2023
+****
+DivRuW 2023, Heft 03 vom 02.10.2023
+Wittlich/Suhr/Hofbauer/Moir/Bauer-Glück Herzlich willkommen zur 3. Ausgabe von “Diversity in Recht und Wirtschaft”
+(DivRuW)  81 | Beirat  82 | Ziegler-Hussenet/Spachtholz Diversity in der Rechtsabteilung – Buzz-Word oder echter Wandel?
+ 86 | Fimian Raum für Diversität & Inklusion in Ihrer Lieferkette  88 | Scholz Geschlechtliche Transition im
+Unternehmen – Pflicht und Chance  106 | Willy Blinde Menschen im Schöff*innenamt – Urteil des Europäischen Gerichtshofs
+vom 21. Oktober 2021  110 | Godau HIV im zahnmedizinischen Studium  112 | Thiele Europäischer Gerichtshof für
+Menschenrechte: Trans-Personen und Elternschaft – mater semper certa est?  115 | Suhr/Willy Blindheit und Richteramt –
+Interview mit Ulrich Badde, Vorsitzender Richter am Landgericht Münster  119 | Krzikalla Homosexualität im Profisport
+ 124
+****
+DivRuW 2023, Heft 02 vom 14.06.2023
+Wittlich/Suhr/Hofbauer/Moir/Bauer-Glück Herzlich Willkommen zur 2. Ausgabe von “Diversity in Recht und Wirtschaft”
+(DivRuW)  41 | Beirat  42 | Hördt Die Schwerbehindertenvertretung – ein Praxisleitfaden  48 | Schön Diversitytrainings
+und -coachings in Kanzleien  52 | Wernecke/Heinen Handlungsanweisungen “Equal Pay”  54 | Keller “Vom Saulus zum Paulus?”
+– Die Novellierung der Grundordnung des kirchlichen Dienstes  58 | Suhr Der Diversitätskompass der Kulturstiftung des
+Bundes  62 | Moir Rechtsprechung: Erfolglose Klage auf Entfernung von Kreuzen in bayerischen Behörden  66 | Braham
+Rechtsprechung: Kein Anspruch auf barrierefreien Zugang zu einem kommunalen Bezirksamt?  68 | Männig Interview mit
+Robert Heller, Zalando, zur rechtskonformen Gestaltung von Diversity-Umfragen  71 | Voll Ein Feuerwerk von Anregungen
+****
+DivRuW 2023, Heft 01 vom 22.03.2023
+Wittlich/Suhr/Hofbauer/Moir/Bauer-Glück/Kutschke Herzlich Willkommen zur 1. Ausgabe von “Diversity in Recht und
+Wirtschaft” (DivRuW)  1 | Redaktion  2 | Lehmann Grußwort  3 | Bauer-Glück Unconscious Bias – Eine Hürde der Diversität
+ 7 | Walter 100 Jahre Frauen in juristischen Berufen – ein historischer Rückblick auf den langen Weg zur Berufszulassung
+ 13 | Wittlich Diskriminierungsbeschwerde – und jetzt? Ein Handlungsleitfaden für Arbeitgeber*innen  16 | Ludin Kann
+Diversität als Markenzeichen einer Schule gesehen werden? – Diversitäts- und Antidiskriminierungskonzepte an Schulen  21
+| Hofbauer Argumente für die Verwendung geschlechtergerechter Sprache und widerlegte Mythen  25 | Valentiner
+Disziplinarmaßnahme wegen Datingprofil einer Soldatin  29 | Suhr Kein Recht darauf, in Bezug auf gendersensible Sprache
+in Ruhe gelassen zu werden  30 | Bechtolf Fehlende Zustimmung des Integrationsamts bei einer Kündigung – Diskriminierung
+im Sinne des AGG?  32 | Ramos Neue Gleichstellungsgesetzgebung in Spanien  34 | Anders Ich hab' meine Sexualität am
+
+### ANSWER
+
+- lastname: Wittlich
+  role: Herausgeber
+- lastname: Suhr
+  role: Herausgeber
+- lastname: Hofbauer
+  role: Herausgeber
+- lastname: Moir
+  role: Herausgeber
+- lastname: Bauer-Glück
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DuD
+
+### URL
+
+https://www.springer.com/journal/11623
+
+### CONTENT
+
+Die DuD ist die am häufigsten zitierte Fachzeitschrift zum Thema Datenschutz und Datensicherheit.
+Hauptherausgeber
+Helmut Reimer,
+Benedikt Buchner,
+Dirk Fox,
+Britta Alexandra Mester
+Downloads
+119,160 (2022)
+
+### ANSWER
+
+- lastname: Reimer
+  firstname: Helmut
+  role: Herausgeber
+- lastname: Buchner
+  firstname: Benedikt
+  role: Herausgeber
+- lastname: Fox
+  firstname: Dirk
+  role: Herausgeber
+- lastname: Mester
+  firstname: Britta Alexandra
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DÖD
+
+### URL
+
+https://www.mohrsiebeck.com/buch/der-oeffentliche-dienst-nach-corona-9783161632921?no_cache=1
+
+### CONTENT
+
+Bibliographie exportieren
+Der öffentliche Dienst »nach Corona«
+Herausgegeben von Margrit Seckelmann und Veith Mehde
+2023. VII, 97 Seiten .
+59,00 €
+rechtsvergleichenden Überlegungen zur Unterstützung der politischen Entscheidungen. Dabei geht es um die Analyse der
+Erfahrungen, aber auch um Zukunftsperspektiven. Die Beiträge gehen auf Vorträge zurück, die auf einem Symposium aus
+Anlass des 85. Geburtstags von Hans Peter Bull gehalten wurden.InhaltsübersichtVorwort der Herausgeber – Veith Mehde
+»Corona« als verwaltungspolitisches Argument – Andreas Dressel Die Hamburgische Verwaltung in der Corona-Krise – Margrit
+Seckelmann »Digitalisierung als Antwort?« – Was folgt aus der COVID-19-Pandemie für die öffentliche Verwaltung? – Hans-
+Heinrich Trute Follow the Science? Zum Verhältnis von Wissenschaft und Politik/Verwaltung in der COVID-19-Pandemie –
+Hans Peter Bull Nachwort: Erfolge und Defizite der Corona-Bekämpfung durch Politik und Verwaltung
+rechtsvergleichenden Überlegungen zur Unterstützung der politischen Entscheidungen. Dabei geht es um die Analyse der
+Erfahrungen, aber auch um Zukunftsperspektiven. Die Beiträge gehen auf Vorträge zurück, die auf einem Symposium aus
+Anlass des 85. Geburtstags von Hans Peter Bull gehalten wurden.InhaltsübersichtVorwort der Herausgeber – Veith Mehde
+»Corona« als verwaltungspolitisches Argument – Andreas Dressel Die Hamburgische Verwaltung in der Corona-Krise – Margrit
+Seckelmann »Digitalisierung als Antwort?« – Was folgt aus der COVID-19-Pandemie für die öffentliche Verwaltung? – Hans-
+Heinrich Trute Follow the Science? Zum Verhältnis von Wissenschaft und Politik/Verwaltung in der COVID-19-Pandemie –
+Hans Peter Bull Nachwort: Erfolge und Defizite der Corona-Bekämpfung durch Politik und Verwaltung
+Teilen
+Personen
+Margrit Seckelmann ist Professorin für Öffentliches Recht und das Recht der digitalen Gesellschaft an der Leibniz
+Universität Hannover. https://orcid.org/0000-0001-8831-5178 Veith Mehde ist Professor für Öffentliches Recht und
+Verwaltungswissenschaft an der Leibniz Universität Hannover.
+Rezensionen
+Für diesen Titel liegen noch keine Rezensionen vor.
+Personen
+Personen Margrit Seckelmann ist Professorin für Öffentliches Recht und das Recht der digitalen Gesellschaft an der
+Leibniz Universität Hannover. https://orcid.org/0000-0001-8831-5178 Veith Mehde ist Professor für Öffentliches Recht und
+Verwaltungswissenschaft an der Leibniz Universität Hannover.
+Rezensionen
+Mehr vom Autor / Herausgeber
+Mehr zum Thema
+Margrit Seckelmann ist Professorin für Öffentliches Recht und das Recht der digitalen Gesellschaft an der Leibniz
+Universität Hannover. https://orcid.org/0000-0001-8831-5178 Veith Mehde ist Professor für Öffentliches Recht und
+Verwaltungswissenschaft an der Leibniz Universität Hannover.
+Für diesen Titel liegen noch keine Rezensionen vor.
+
+### ANSWER
+
+- lastname: Seckelmann
+  firstname: Margrit
+  position: Professorin für Öffentliches Recht und das Recht der digitalen Gesellschaft
+  affiliation: Juristische Fakultät der Leibniz Universität Hannover
+  role: Herausgeber
+- lastname: Mehde
+  firstname: Veith
+  position: Professor für Öffentliches Recht und Verwaltungswissenschaft
+  affiliation: Juristische Fakultät der Leibniz Universität Hannover
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+DÖV
+
+### URL
+
+https://www.doev.de/impressum/
+
+### CONTENT
+
+Impressum
+Herausgeber
+Univ.-Prof. Dr. Peter Badura â  , MÃỳnchen;
+Univ.-Prof. Dr. Hartmut Bauer, Potsdam;
+Univ.-Prof. Dr. Frauke Brosius-Gersdorf , LL.M., Potsdam;
+Helmut Dedy, GeschÃĊftsfÃỳhrendes PrÃĊsidialmitglied und HauptgeschÃĊftsfÃỳhrer des Deutschen StÃĊdtetages, KÃ¶ln;
+Prof. Jochen Dieckmann, Staatsminister a.D., Rechtsanwalt, Bonn;
+Univ.-Prof. Dr. Horst Dreier, WÃỳrzburg;
+Marion Eckertz-HÃ¶fer, PrÃĊsidentin des Bundesverwaltungsgerichts a.D., Leipzig;
+Univ.-Prof. Dr. Werner Thieme â  , Celle.
+Schriftleitung
+Univ.-Prof. Dr. Hartmut Bauer
+UniversitÃĊt Potsdam, Juristische FakultÃĊt
+August-Bebel-Str. 89, 14482 Potsdam
+
+### ANSWER
+
+- lastname: Badura
+  firstname: Peter
+  title: Univ.-Prof. Dr.
+  affiliation: München
+  role: Herausgeber
+- lastname: Bauer
+  firstname: Hartmut
+  title: Univ.-Prof. Dr.
+  affiliation: Potsdam
+  role: Herausgeber
+- lastname: Brosius-Gersdorf
+  firstname: Frauke
+  title: Univ.-Prof. Dr.
+  affiliation: Potsdam
+  role: Herausgeber
+- lastname: Dedy
+  firstname: Helmut
+  position: Geschäftsführendes Präsidialmitglied und Hauptgeschäftsführer des Deutschen
+    Städtetages
+  affiliation: Köln
+  role: Herausgeber
+- lastname: Dieckmann
+  firstname: Jochen
+  title: Prof.
+  position: Staatsminister a.D., Rechtsanwalt
+  affiliation: Bonn
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ECFR
+
+### URL
+
+https://www.degruyter.com/journal/key/ecfr/html?lang=de
+
+### CONTENT
+
+ISSN:
+1613-2556
+Editors-in-Chief: Pierre-Henri Conac, Christoph Teichmann
+Managing Editors: Claartje D.J. Bulten, Holger Fleischer, Jesper Lau Hansen, Hanno Merkt, Andres Recalde Castells,
+Edmund Schuster, Marco Ventoruzzo, Marieke Wyckaert
+Übersicht
+Einreichen
+Einreichen
+Accompanied by an abstract of not more than 200 words, please address manuscripts to Pierre-Henri Conac and to Christoph
+Teichmann , who act on behalf of the editorial board, by using the following email-address: ecfr@jura.uni-wuerzburg.de .
+Manuscripts will only be subject to peer review on the condition that they have not previously been published or
+accepted or submitted for publication elsewhere. The editorial board may make exceptions to this rule if the previous or
+Editorial
+ECFR is published and directed by the publishers of Zeitschrift für Unternehmens- und Gesellschaftsrecht (ZGR). Chief
+Management Pierre-Henri Conac, Université du Luxembourg, Max Planck Institute Luxembourg Christoph Teichmann, Julius-
+Maximilians-Universität Würzburg Managerial Board Claartje Bulten, Radboud University Nijmegen Holger Fleischer, Max
+Planck Institute for Comparative and International Private Law, Hamburg Jesper Lau Hansen, Københavns Universitet Hanno
+Merkt, Albert-Ludwigs-Universität Freiburg Andrés Recalde Castells, Universidad Autonoma de Madrid Edmund Schuster,
+London School of Economics and Political Science Marco Ventoruzzo, Università commerciale Luigi Bocconi, Milano Marieke
+
+### ANSWER
+
+- lastname: Conac
+  firstname: Pierre-Henri
+  position: Editor-in-Chief
+  affiliation: European Company and Financial Law Review
+  role: Herausgeber
+- lastname: Teichmann
+  firstname: Christoph
+  position: Editor-in-Chief
+  affiliation: European Company and Financial Law Review
+  role: Herausgeber
+- lastname: Bulten
+  firstname: Claartje D.J.
+  position: Managing Editor
+  affiliation: European Company and Financial Law Review
+  role: Redaktion
+- lastname: Fleischer
+  firstname: Holger
+  position: Managing Editor
+  affiliation: European Company and Financial Law Review
+  role: Redaktion
+- lastname: Hansen
+  firstname: Jesper Lau
+  position: Managing Editor
+  affiliation: European Company and Financial Law Review
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ECLR
+
+### URL
+
+https://www.nomos.de/zeitschriften/euclr/
+
+### CONTENT
+
+ISSN Print 2191-7442, ISSN Online 2193-5505. Drei Ausgaben jährlich.
+Herausgeberkreis
+Prof. Dr. Thomas Elholm University of Copenhagen, Dänemark
+Prof. Dr. Luigi Foffani Universität Modena und Reggio Emilia, Italien
+Prof. Dr. Maria Kaiafa-Gbandi Aristoteles Universität Thessaloniki, Griechenland
+Prof. Dr. Helmut Satzger (editor in chief / ViSdP) Ludwig-Maximilians-Universität München, Deutschland
+Prof. Dr. Ingeborg Zerbes Universität Bremen, Deutschland
+Beirat
+Petter Asp (Sweden)
+Frank Zimmermann (Germany)
+Schriftleitung
+Prof. Dr. Helmut Satzger  (V.i.S.d.P.)
+Redaktionsanschrift: LMU München Professor-Huber-Platz 2 80539 München
+Telefon: +49-89-2180-2734 Mail:  euclr@nomos-journals.de
+
+### ANSWER
+
+- lastname: Elholm
+  firstname: Thomas
+  title: Prof. Dr.
+  affiliation: University of Copenhagen, Dänemark
+  role: Herausgeber
+- lastname: Foffani
+  firstname: Luigi
+  title: Prof. Dr.
+  affiliation: Universität Modena und Reggio Emilia, Italien
+  role: Herausgeber
+- lastname: Kaiafa-Gbandi
+  firstname: Maria
+  title: Prof. Dr.
+  affiliation: Aristoteles Universität Thessaloniki, Griechenland
+  role: Herausgeber
+- lastname: Satzger
+  firstname: Helmut
+  title: Prof. Dr.
+  position: editor in chief / ViSdP
+  affiliation: Ludwig-Maximilians-Universität München, Deutschland
+  role: Herausgeber
+- lastname: Zerbes
+  firstname: Ingeborg
+  title: Prof. Dr.
+  affiliation: Universität Bremen, Deutschland
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+EDPL
+
+### URL
+
+https://planit.legal/rezension-european-data-protection-law-review/
+
+### CONTENT
+
+will, benötigt hochwertige und aktuelle Quellen. Ein Angebot hierfür ist die European Data Protection Law Review (EDPL).
+Eine Rezension.
+Rezensierte Ausgabe: European Data Protection Law Review 1/2017 (lexxion), herausgegeben von Bart van der Sloot
+Aufbau und Inhalt
+Den Rubriken der Zeitschrift sind ein Editorial und mehrere Vorworte vorangestellt. Positiv fällt auf, dass sich diese
+
+### ANSWER
+
+- lastname: Sloot
+  firstname: Bart
+  title: van der
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ER
+
+### URL
+
+https://www.esv.info/z/ER/zeitschriften.html
+
+### CONTENT
+
+Zeitschrift für die gesamte Energierechtspraxis
+Herausgeber:
+Prof. Dr. jur. Tilman Cosack
+Beirat:
+Dr. Markus Appel, Karsten Bourwieg, Prof. Dr.-Ing. Martin Faulstich, Prof. Dr. jur. Walter Frenz, Dr. Michael Koch,
+Prof. Dr. Jürgen Kühling, Dr. Franziska Lietz, Dr. Sebastian Lovens-Cronemeyer, Thorsten Müller, Margarete von Oppen,
+Dr. Christoph Richter, Katrin van Rossum, Dr. Christian Schneller, Dr. Boris Scholtka, Prof. Dr. Dr. h. c. Thomas
+Einzelheft bestellen
+Smart vernetzen
+ER EnergieRecht , herausgegeben von Prof. Dr. Tilman Cosack, versorgt Sie mit Insiderinformationen der Meinungsführer.
+Verfolgen Sie die aktuelle Debatte,
+positionieren Sie sich in einem der dynamischsten Rechts- und Praxisfelder dieser Zeit!
+
+### ANSWER
+
+- lastname: Cosack
+  firstname: Tilman
+  title: Prof. Dr.
+  position: Schriftleitung und Herausgeber
+  affiliation: IREK – Institut für das Recht der Erneuerbaren Energien, Energieeffizienzrecht
+    und Klimaschutzrecht, Hochschule Trier, Umwelt-Campus Birkenfeld
+  role: Herausgeber
+- lastname: Cosack
+  firstname: Tilman
+  title: Prof. Dr.
+  position: Schriftleitung und Herausgeber
+  affiliation: IREK – Institut für das Recht der Erneuerbaren Energien, Energieeffizienzrecht
+    und Klimaschutzrecht, Hochschule Trier, Umwelt-Campus Birkenfeld
+  role: Schriftleitung
+- lastname: Appel
+  firstname: Markus
+  title: Dr.
+  position: Rechtsanwalt
+  affiliation: Linklaters LLP, Berlin
+  role: Beirat
+- lastname: Bourwieg
+  firstname: Karsten
+  position: Referatsleiter Energierecht
+  affiliation: Bundesnetzagentur, Bonn
+  role: Beirat
+- lastname: Engelsing
+  firstname: Felix
+  title: Dr.
+  position: Vorsitzender 8. Beschlussabteilung
+  affiliation: Bundeskartellamt, Bonn
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ERCL
+
+### URL
+
+https://www.juris.de/jportal/nav/produkte/werk/european-review-of-contract-law-(ercl).jsp
+
+### CONTENT
+
+zur Bestellung
+European Review of Contract Law (ERCL)
+Die Zeitschrift ERCL wird von Prof. Dr. Dr. Stefan Grundmann, LL.M., Berlin, herausgegeben. Sie enthält Aufsätze,
+Anmerkungen zur EU-Rechtsprechung sowie EU-Gesetzgebung in englischer Sprache. Die Zeitschrift ist ab Jahrgang 2005 bei
+juris online recherchierbar.
+
+### ANSWER
+
+- lastname: Grundmann
+  firstname: Stefan
+  title: Prof. Dr. Dr. LL.M.
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+EU-UStB
+
+### URL
+
+https://www.juris.de/jportal/nav/produkte/juris-umsatzsteuerrecht.jsp
+
+### CONTENT
+
+juris PraxisReport Steuerrecht
+von
+Prof. Dr. Franz Dötsch,
+Prof. Dr. Peter Fischer
+Zum Produkt
+Umsatz-Steuerberater (UStB)
+Stollfuß Verlag
+von
+Ferdinand Huschens,
+Michael Langer
+Zum Produkt
+360° UStG eKommentar
+von
+Frank Fritsch,
+Ferdinand Huschens,
+David Koisiak
+Zum Produkt
+Prof. Dr. jur. Wolfram Reiß,
+Jörg Kraeusel,
+Michael Langer
+Zum Produkt
+Umsatzsteuergesetz
+von
+Dr. Carsten Höink,
+Ferdinand Huschens
+Zum Produkt
+Körperschaftsteuer-, Gewerbesteuer-, Umsatzsteuer-Erklärung
+nationalen Umsatzsteuerrecht sowie den europäischen Richtlinien und der EuGH-Rechtsprechung. Mit einer einzigen
+Stichwortsuche erhalten Sie das differenzierte Meinungsbild renommierter Klassiker wie Rau/Dürrwächter,
+Reiß/Kraeusel/Langer, Offerhaus/Söhn/Lange oder Hartmann/Metzenmacher. Mit juris können Sie Ihre Argumentation
+bestmöglich absichern.Umfassend und vollständig inklusive EU-RechtDa die Umsetzung des Gemeinschaftsrechts eine
+fortlaufende Anpassung des nationalen Rechts bedingt, wird das in der EU harmonisierte Umsatzsteuerrecht sowie die
+
+### ANSWER
+
+- lastname: Dötsch
+  firstname: Franz
+  title: Prof. Dr.
+  affiliation: juris PraxisReport Steuerrecht
+  role: Herausgeber
+- lastname: Fischer
+  firstname: Peter
+  title: Prof. Dr.
+  affiliation: juris PraxisReport Steuerrecht
+  role: Herausgeber
+- lastname: Huschens
+  firstname: Ferdinand
+  affiliation: 360° MwStSystRL eKommentar
+  role: Herausgeber
+- lastname: Langer
+  firstname: Michael
+  affiliation: 360° MwStSystRL eKommentar
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+EWS
+
+### URL
+
+https://de.wikipedia.org/wiki/Europ%C3%A4isches_Wirtschafts-_und_Steuerrecht
+
+### CONTENT
+
+Autoren/ Redaktion [ Bearbeiten | Quelltext bearbeiten ]
+Autoren der EWS sind zumeist Universitätsprofessoren, Rechtsanwälte, Steuerberater oder sonstige Spezialisten des
+europäischen Wirtschafts- und Steuerrecht. Zuständige Redakteurin ist Maria Wolfer.
+Erscheinungsweise/ Herausgeber [ Bearbeiten | Quelltext bearbeiten ]
+Die EWS erscheint zweimonatlich. Herausgegeben wurde sie vom Verlag Recht und Wirtschaft GmbH , welcher zur
+
+### ANSWER
+
+- lastname: Wolfer
+  firstname: Maria
+  position: Redakteurin
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+EuR
+
+### URL
+
+https://www.nomos.de/zeitschriften/eur/
+
+### CONTENT
+
+Herausgeberkreis
+In Verbindung mit der Wissenschaftlichen Gesellschaft für Europarecht
+Dr. Ingo Brinker LL.M. Rechtsanwalt München, Deutschland
+Prof. Dr. Claus Dieter Classen Universität Greifswald, Deutschland
+Prof. Dr. Dr. h.c. Claus-Dieter Ehlermann ehem. Generaldirektor der EU-Kommission, Rechtsanwalt, Brüssel, Belgien
+Prof. Dr. Armin Hatje Universität Hamburg, Deutschland
+Prof. Dr. Meinhard Hilf Bucerius Law School, Hamburg, Deutschland
+Prof. Dr. Koen Lenaerts Präsident des Gerichtshofs der Europäischen Union
+Prof. Dr. Dr. h.c. Peter-Christian Müller-Graff Universität Heidelberg, Deutschland
+Prof. Dr. Ulrich Wölker Juristischer Dienst der EU-Kommission, Brüssel, Belgien
+Redaktion
+Prof. Dr. Armin Hatje, Universität Hamburg
+RA Dr. Ingo Brinker, Rechtsanwalt München
+unter Mitarbeit von
+Prof. Dr. Jörg-Philipp Terhechte
+
+### ANSWER
+
+- lastname: Brinker
+  firstname: Ingo
+  title: Dr.
+  position: Rechtsanwalt
+  affiliation: München, Deutschland
+  role: Herausgeber
+- lastname: Claasen
+  firstname: Claus Dieter
+  title: Prof. Dr.
+  affiliation: Universität Greifswald, Deutschland
+  role: Herausgeber
+- lastname: Ehlermann
+  firstname: Claus-Dieter
+  title: Prof. Dr. Dr. h.c.
+  position: ehem. Generaldirektor der EU-Kommission, Rechtsanwalt,
+  affiliation: Brüssel, Belgien
+  role: Herausgeber
+- lastname: Hatje
+  firstname: Armin
+  title: Prof. Dr.
+  affiliation: Universität Hamburg, Deutschland
+  role: Herausgeber
+- lastname: Hilf
+  firstname: Meinhard
+  title: Prof. Dr.
+  affiliation: Bucerius Law School, Hamburg, Deutschland
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+EuZA
+
+### URL
+
+https://rsw.beck.de/zeitschriften/euza
+
+### CONTENT
+
+01.01.2024
+Herausgeber
+Prof. Dr. Martin Franzen, München
+Prof. Dr. Felix Hartmann, Berlin
+Prof. Dr. Abbo Junker, München
+Prof. Dr. Sebastian Krebber, Freiburg
+Prof. Dr. Volker Rieble, München
+Prof. Dr. Monika Schlachter, Trier
+Schriftleitung
+Prof. Dr. Abbo Junker, Ludwig-Maximilians-Universität München, Zentrum für Arbeitsbeziehungen und Arbeitsrecht (ZAAR),
+Destouchesstraße 68, 80796 München, Tel. 089/205088330, Fax 089/205088332, E-Mail: junker@zaar.uni-muenchen.de
+Verantwortlich für den Textteil: Prof. Dr. Abbo Junker, Redaktionsassistentin: Cornelia Sebode
+Für weitere Informationen: http://www.euza.eu, ISSN 1865-3030
+Editorial
+EUZA Jahr 2024 Seite Prof. Dr. Abbo Junker: Im Fokus: Entgeltbenachteiligung wegen des Geschlechts EUZA Jahr 2024 Seite
+1
+Aufsätze
+EUZA Jahr 2024 Seite Prof. Dr. Martin Franzen: Die EU-Mindestlohnrichtlinie 2022/2041 EUZA Jahr 2024 Seite 3
+EUZA Jahr 2024 Seite Wencke Salmen: Arbeitsgerichtliche Beweisaufnahmen im Ausland – Erfahrungen aus Großbritannien EUZA
+Jahr 2024 Seite 22
+Nationale Gerichte – Im Fokus
+EUZA Jahr 2024 Seite Supreme Court 21.11.2023 : Vereinigtes Königreich: Keine Arbeitnehmereigenschaft von Lieferkurieren
+(Abbo Junker) EUZA Jahr 2024 Seite 111
+EUZA Jahr 2024 Seite Supreme Court 06.07.2022 : Vereinigtes Königreich: Diplomatische Immunität trotz Ausbeutung einer
+Hausangestellten? (Johanna Elsen) EUZA Jahr 2024 Seite 112
+
+### ANSWER
+
+- lastname: Franzen
+  firstname: Martin
+  title: Prof. Dr.
+  affiliation: München
+  role: Herausgeber
+- lastname: Hartmann
+  firstname: Felix
+  title: Prof. Dr.
+  affiliation: Berlin
+  role: Herausgeber
+- lastname: Junker
+  firstname: Abbo
+  title: Prof. Dr.
+  affiliation: München
+  role: Herausgeber
+- lastname: Krebber
+  firstname: Sebastian
+  title: Prof. Dr.
+  affiliation: Freiburg
+  role: Herausgeber
+- lastname: Rieble
+  firstname: Volker
+  title: Prof. Dr.
+  affiliation: München
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+EuZW
+
+### URL
+
+https://rsw.beck.de/zeitschriften/euzw/aktuelles-heft
+
+### CONTENT
+
+26.02.2024
+In Zusammenarbeit mit der Neuen Juristischen Wochenschrift herausgegeben von:
+Rechtsanwalt Dr. Andreas von Bonin, Brüssel – Prof. Dr. Dr. h. c. Susanne Kalss, Wien – Rechtsanwalt Dr. Ulrich
+Karpenstein, Berlin – Dr. Manuel Kellerbauer, Europäische Kommission, Brüssel – Johannes Laitenberger, Richter am EuG,
+Luxemburg – Prof. Dr. Katja Langenbucher, Frankfurt a. M. – Dr. Luigi Malferrari, Europäische Kommission, Brüssel –
+Prof. Dr. Dr. h. c. Ingolf Pernice, Berlin – Prof. Dr. Dr. h. c. Uwe H. Schneider, Darmstadt/Mainz – Dr. Dominik
+
+### ANSWER
+
+- lastname: Basedow
+  firstname: Jürgen
+  title: Prof. Dr. Dr. h. c. mult.
+  affiliation: Hamburg
+  role: Herausgeber
+- lastname: von Bonin
+  firstname: Andreas
+  title: Rechtsanwalt Dr.
+  affiliation: Brüssel
+  role: Herausgeber
+- lastname: Kalss
+  firstname: Susanne
+  title: Prof. Dr. Dr. h. c.
+  affiliation: Wien
+  role: Herausgeber
+- lastname: Karpenstein
+  firstname: Ulrich
+  title: Rechtsanwalt Dr.
+  affiliation: Berlin
+  role: Herausgeber
+- lastname: Kellerbauer
+  firstname: Manuel
+  title: Dr.
+  affiliation: Europäische Kommission, Brüssel
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FAR
+
+### URL
+
+https://www.degruyter.com/journal/key/fa/20/1/html?lang=de
+
+### CONTENT
+
+Lizenziert
+20. Januar 2016
+Dr. Siegfried Mennemeyer im Beirat von FA
+Seiten: 13-13
+Zitieren
+
+### ANSWER
+
+- lastname: Mennemeyer
+  firstname: Siegfried
+  title: Dr.
+  affiliation: Fachanwalt Arbeitsrecht
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FLF
+
+### URL
+
+https://www.kreditwesen.de/service/zeitschriften/flf.html
+
+### CONTENT
+
+Deutscher Factoring-Verband e.V., Berlin www.factoring.de
+Redaktionsbeirat
+Dr. Claudia Conen, Berlin
+Prof. Dr. Thomas Hartmann-Wendels, Köln
+Dr. Alexander M. Moseschus, Berlin
+Michael Prüfer, Berlin
+Dr. Martin Starck, Stuttgart
+Prof. Dr. Frank Stenner, Pullach
+Jens Loa, Berlin
+
+### ANSWER
+
+- lastname: Conen
+  firstname: Claudia
+  title: Dr.
+  affiliation: Berlin
+  role: Beirat
+- lastname: Hartmann-Wendels
+  firstname: Thomas
+  title: Prof. Dr.
+  affiliation: Köln
+  role: Beirat
+- lastname: Moseschus
+  firstname: Alexander M.
+  title: Dr.
+  affiliation: Berlin
+  role: Beirat
+- lastname: Prüfer
+  firstname: Michael
+  affiliation: Berlin
+  role: Beirat
+- lastname: Starck
+  firstname: Martin
+  title: Dr.
+  affiliation: Stuttgart
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FMP
+
+### URL
+
+https://www.inkassoakademie.de/de/sachkunde/skl/details/sachkunde-update-2024.html
+
+### CONTENT
+
+des BDIU e.V. gilt.
+Dozenten
+Goebel, Frank-Michael
+Frank-Michael Goebel
+×
+Vorsitzender Richter am OLG Koblenz und dort u.a. Vorsitzender des Kostenrechtssenates, ist Herausgeber und Autor
+Kongressen, Seminarveranstaltungen, Inhouse-Seminaren und als Lehrgangsleiter, Dozent und Prüfungsvorsitzender im
+Sachkundelehrgang des Bundesverbandes Deutscher Inkasso-Unternehmen (BDIU) e. V. bekannt.
+Theis, Franz-Josef
+Franz-Josef Theis
+×
+Leitender Regierungsdirektor Franz-Josef Theis ist Geschäftsbereichsleiter Personal, Organisation, Recht und IT im
+Landesbetrieb Mobilität Rheinland-Pfalz. Er unterrichtet zum Zivil- sowie zum Zivilprozessrecht und angrenzenden
+Rechtsmaterien, u.a. für die „Frankfurt School of Finance & Management“ und das „Kommunale Studieninstitut Koblenz“.
+Theis ist Dozent und Prüfer im Sachkundelehrgang des BDIU und ständiger Autor des IWW-Informationsdienstes
+„Forderungsmanagement professionell“.
+Wagener-Neef, Claudia
+
+### ANSWER
+
+- lastname: Goebel
+  firstname: Frank-Michael
+  title: Vorsitzender Richter
+  position: Vorsitzender des Kostenrechtssenates, OLG Koblenz
+  affiliation: Forderungsmanagement professionell
+  role: Herausgeber
+- lastname: Goebel
+  firstname: Frank-Michael
+  title: Vorsitzender Richter
+  position: Vorsitzender des Kostenrechtssenates, OLG Koblenz
+  affiliation: Forderungsmanagement professionell
+  role: Schriftleitung
+- lastname: Theis
+  firstname: Franz-Josef
+  title: Leitender Regierungsdirektor
+  position: Geschäftsbereichsleiter Personal, Organisation, Recht und IT, Landesbetrieb
+    Mobilität Rheinland-Pfalz
+  affiliation: Forderungsmanagement professionell
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FS
+
+### URL
+
+https://forum-strafvollzug.de/impressum/
+
+### CONTENT
+
+Hessisches Ministerium der Justiz
+Luisenstraße 13, 65185 Wiesbaden
+Tobias Reimann
+Tobias.Reimann(at)hmdj.hessen.de
+Versandgeschäftsstelle
+Mittelberg 1, 71296 Heimsheim
+Vorstand
+Vorsitz
+Torsten Kunze
+Generalstaatsanwaltschaft Frankfurt am Main
+Stellvertretender Vorsitz
+Peter Holzner
+Bayerisches Staatsministerium der Justiz
+Martin Finckh
+Justizministerium Baden-Württemberg
+Jörn Goeckenjan
+Sächsisches Staatsministerium der Justiz
+Caroline Ströttchen
+
+### ANSWER
+
+- lastname: Reimann
+  firstname: Tobias
+  position: Geschäftsstelle
+  affiliation: Hessisches Ministerium der Justiz
+  role: Herausgeber
+- lastname: Kunze
+  firstname: Torsten
+  position: Vorsitz
+  affiliation: Generalstaatsanwaltschaft Frankfurt am Main
+  role: Redaktion
+- lastname: Holzner
+  firstname: Peter
+  position: Stellvertretender Vorsitz
+  affiliation: Bayerisches Staatsministerium der Justiz
+  role: Redaktion
+- lastname: Finckh
+  firstname: Martin
+  position: Vorstand
+  affiliation: Justizministerium Baden-Württemberg
+  role: Redaktion
+- lastname: Goeckenjan
+  firstname: Jörn
+  position: Vorstand
+  affiliation: Sächsisches Staatsministerium der Justiz
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FamFR
+
+### URL
+
+https://www.juris.de/jportal/nav/produkte/werk/handbuch-familien-und-familienverfahrensrecht.jsp
+
+### CONTENT
+
+Rahm/Künkel: Handbuch Familien- & Familienverfahrensrecht
+Produkte
+zurück
+insbesondere zum Sozialrecht und Steuerrecht.
+Herausgeber/Autoren:
+Bernd Künkel
+(Richter am Oberlandesgericht a. D.) ,
+Walter Rahm
+Der Rahm/Künkel setzt von jeher den Standard im Familienrecht. Hier werden das materielle Familienrecht, das
+Familienverfahrensrecht sowie die einschlägigen Nebengebiete bedient. Dem immer bedeutsameren europäischen und
+internationalen Familienrecht ist ein eigener umfänglicher Teil des Handbuchs gewidmet. Er liefert alle Informationen
+
+### ANSWER
+
+- lastname: Künkel
+  firstname: Bernd
+  position: Richter am Oberlandesgericht a. D.
+  role: Herausgeber
+- lastname: Rahm
+  firstname: Walter
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FamRB
+
+### URL
+
+https://www.famrb.de/finger.html
+
+### CONTENT
+
+zur Übersicht
+Rechtsanwalt
+Dr. Peter Finger
+Fachanwalt fÃ¼r Familienrecht
+Privatdozent an der Uni in Frankfurt
+
+### ANSWER
+
+- lastname: Finger
+  firstname: Peter
+  title: Dr.
+  position: Rechtsanwalt
+  role: Redaktion
+- lastname: Hauß
+  firstname: Jörn
+  position: Fachanwalt für Familienrecht
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FoR
+
+### URL
+
+https://stiftung-forum-recht.de/stiftungsorgane/stiftungsbeirat/
+
+### CONTENT
+
+Stiftungsbeirat
+Hier stellen wir Ihnen die Mitglieder des Stiftungsbeirats vor!
+Prof.'in Dr. Dr. h.c. Susanne Baer, Vorsitzende des Stiftungsbeirat, Richterin des Bundesverfassungsgerichts a.D.
+Prof.‘in Dr. Susanne Baer, LL.M. (Michigan), war von Februar 2011 bis Februar 2023 Richterin des
+Bundesverfassungsgerichts im Ersten Senat in Karlsruhe. Sie hat eine Professur für Öffentliches Recht und
+Geschlechterstudien an der Humboldt-Universität zu Berlin und ist Bates Global Law Professor der University of Michigan
+und die Humboldt Law Clinic Grund- und Menschenrechte. Seit Jahren setzt sie sich für Rechtsbildung ein, u. a. für das
+bundesweite Forum Recht, die klinische Ausbildung an juristischen Fakultäten oder mit #rechtreal.Bild: Britney Majure
+Prof. Dr. Matthias Bruhn, Stellvertretender Vorsitzender des Stiftungsbeirats, Hochschule für Gestaltung Karlsruhe
+Matthias Bruhn ist Professor für Kunstwissenschaft und Medientheorie an der Staatlichen Hochschule für Gestaltung
+Karlsruhe. Nach dem Studium der Kunstgeschichte und Philosophie in Hamburg (Promotion 1997) war er als
+Wissenschaftlicher Mitarbeiter am dortigen Warburg-Haus tätig, gefolgt von mehreren Fellowships und einer Tätigkeit als
+Funktionen von Bildern, die Geschichte visueller Medien sowie vergleichende kunstwissenschaftlich Ansätze.        
+Copyright: Michelle Mantel
+Prof.’in. Dr. Sabine Achour, Freie Universität Berlin
+Sabine Achour, Politikwissenschaftlerin und Latinistin, ist Professorin für Politikdidaktik und Politische Bildung am
+Otto-Suhr-Institut für Politikwissenschaft an der Freien Universität Berlin. Im Rahmen ihrer Forschung beschäftigt sie
+sich mit Herausforderungen für die politische Bildung in einer immer diverser werdenden Gesellschaft. Im Zentrum steht
+Lernende sowie Lehrende darauf vorbereiten kann.Ihre Forschungsergebnisse fließen u. a. in ihre Tätigkeit als
+Mitherausgeberin der Zeitschrift Politikum und „Wochenschau für den Politikunterricht“ des Wochenschau-Verlages in
+Frankfurt a.M. Sabine Achour gehört zu den Gründungsmitgliedern des Interdisziplinären Zentrums für Inklusionsforschung
+Berlin (ZfIB) an der Humboldt-Universität zu Berlin.Copyright: Sabine Achour
+Prof.’in Dr. Pascale Cancik, Universität Osnabrück
+Pascale Cancik ist Inhaberin des Lehrstuhls für Öffentliches Recht, Geschichte des europäischen öffentlichen Rechts und
+Verwaltungswissenschaften an der Universität Osnabrück. Nach dem rechtswissenschaftlichen Studium in Tübingen und an der
+Freien Universität Berlin war sie von 1997 bis 2000 als Rechtsanwältin für Wirtschaftsverwaltungsrecht für eine
+Düsseldorfer Kanzlei tätig. 1999 promovierte sie mit einer Arbeit zum Verfassungs- und Parlamentsrecht an der
+Universität Tübingen, 2006 folgte dort die Habilitation. Ab 2007 war Prof.‘in Cancik als Wissenschaftliche Mitarbeiterin
+am Bundesverfassungsgericht in Karlsruhe tätig, bevor im April 2008 der Ruf an die Universität Osnabrück erfolgte.Als
+Fellow des Kulturwissenschaftlichen Kollegs Konstanz arbeitete sie 2014/2015 im Exzellenzcluster „Kulturelle Grundlagen
+von Integration“, im Wissenschaftsjahr 2017/2018 war sie Fellow des Wissenschaftskollegs zu Berlin. Seit 2020 ist
+Professorin Cancik Mitglied im Vorstand der Vereinigung der Deutschen Staatsrechtslehrer e.V.Copyright: Pascale Cancik
+Prof. Dr. Karim Fereidooni, Universität Bochum
+Prof. Dr. Karim Fereidooni, Jahrgang 1983, studierte Germanistik, Politikwissenschaft, Geschichte, Deutsch als
+
+### ANSWER
+
+- lastname: Baer
+  firstname: Susanne
+  title: Prof.'in Dr. Dr. h.c.
+  position: Vorsitzende des Stiftungsbeirat
+  affiliation: Richterin des Bundesverfassungsgerichts a.D.
+  role: Beirat
+- lastname: Bruhn
+  firstname: Matthias
+  title: Prof. Dr.
+  position: Stellvertretender Vorsitzender des Stiftungsbeirats
+  affiliation: Hochschule für Gestaltung Karlsruhe
+  role: Beirat
+- lastname: Achour
+  firstname: Sabine
+  title: Prof.'in. Dr.
+  position: Mitglied des Stiftungsbeirats
+  affiliation: Freie Universität Berlin
+  role: Beirat
+- lastname: Cancik
+  firstname: Pascale
+  title: Prof.'in Dr.
+  position: Mitglied des Stiftungsbeirats
+  affiliation: Universität Osnabrück
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FoVo
+
+### URL
+
+https://www.yumpu.com/de/document/view/22446392/forderung-vollstreckung-deutscher-anwaltverlag
+
+### CONTENT
+
+Empfehlungen
+Info
+www.anwaltverlag.de FORDERUNG & VOLLSTRECKUNG 77503 | Seiten 1–20 Redaktion: Sabine Jungbauer Frank-Michael Goebel
+(Vollstreckungsrecht) Reform der Sachaufklärung: Das Wichtigste für die Praxis auf einen Blick Aus den Rubriken Beiträge
+& Reform der Sachaufklärung Editorial Grundsätze der Vollstreckung und Regelbefugnisse des Gerichtsvollziehers Gütliche
+
+### ANSWER
+
+- lastname: Jungbauer
+  firstname: Sabine
+  affiliation: Forderung & Vollstreckung
+  role: Redaktion
+- lastname: Goebel
+  firstname: Frank-Michael
+  position: Vollstreckungsrecht
+  affiliation: Forderung & Vollstreckung
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Forderungs-Praktiker
+
+### URL
+
+https://www.fch-gruppe.de/ForderungsPraktiker
+
+### CONTENT
+
+Steffen Beck Rechtsanwalt/Fachanwalt für Insolvenz und Sanierungsrecht, Geschäftsführer, PLUTA Rechtsanwalts GmbH Dr.
+Friedrich Cranshaw Rechtsanwalt, vorm. Banksyndikus und Leiter Recht Mannheim
+Frank Dehnke Vorsitzender des Vorstandes, Sparkasse Oberhessen Dr. Karsten Geiersbach Bereichsleiter Interne Revision,
+Kasseler Sparkasse
+Christoph Hoeren Senior Risk Manager, DEG Deutsche Investitions- und Entwicklungsgesellschaft mbH Michael Jander Leiter
+
+### ANSWER
+
+- lastname: Blatz
+  firstname: Jürgen
+  position: Chefredakteur
+  affiliation: ForderungsPraktiker
+  role: Redaktion
+- lastname: Viereck
+  firstname: Kristin
+  position: stellvertretende Chefredakteurin
+  affiliation: ForderungsPraktiker
+  role: Redaktion
+- lastname: Günther
+  firstname: Frank
+  affiliation: ForderungsPraktiker
+  role: Redaktion
+- lastname: Martinek
+  firstname: Christoph
+  affiliation: ForderungsPraktiker
+  role: Redaktion
+- lastname: Geiersbach
+  firstname: Karsten
+  title: Dr.
+  position: Bereichsleitung Interne Revision
+  affiliation: Kasseler Sparkasse
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Forum Kriminalpräv.
+
+### URL
+
+https://www.forum-kriminalpraevention.de/impressum.html
+
+### CONTENT
+
+Stiftung Deutsches Forum für Kriminalprävention (DFK) Graurheindorfer Straße 198 | 53117 Bonn Tel 0228-99681-13190 Fax
+0228-99681-53190
+verantwortlich für den Inhalt: Wolfgang Kahl E-Mail wolfgang.kahl@bmi.bund.de Web www.kriminalpraevention.de
+Copyright
+Die Urheberrechte für alle auf dieser Website verwendeten Fotos, Grafiken und Texte liegen, soweit nicht anders
+
+### ANSWER
+
+- lastname: Kahl
+  firstname: Wolfgang
+  position: verantwortlich für den Inhalt
+  affiliation: Stiftung Deutsches Forum für Kriminalprävention
+  role: Herausgeber
+- lastname: Kahl
+  firstname: Wolfgang
+  position: verantwortlich für den Inhalt
+  affiliation: Stiftung Deutsches Forum für Kriminalprävention
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Freilaw
+
+### URL
+
+https://freilaw.de/ausgaben/
+
+### CONTENT
+
+Staatsorganisationsrecht“ von Ipsen/Kaufhold/Wischmeyer und „Allgemeiner Teil des BGB“ von Brox/Walker und geben ihre
+Einschätzungen ab, ob sich ein Kauf lohnt.An dieser Stelle möchten wir zudem über einen Wechsel in der Chefredaktion
+informieren und freuen uns, Sophia Braig ab dem kommenden Jahr als Teil des Chefredaktionsteams willkommen heißen zu
+dürfen.Und nun wünschen wir Ihnen viel Freude beim Lesen!Ihre Chefredaktion
+2022
+wird die Ausgabe in traditioneller Weise mit der Freilaw-üblichen Rezensionsrubrik. In dieser teilt Milan Walbaum seine
+Einschätzung zum Lehrbuch „Kartellrecht“ von Tobias Lettl mit und gibt darüber Auskunft, ob sich ein Kauf lohnt.An
+dieser Stelle möchten wir zudem über einen Wechsel in der Chefredaktion informieren und freuen uns, Levin Schmieder ab
+dem kommenden Jahr als Teil des Chefredaktionsteams willkommen heißen zu dürfen.Und nun wünschen wir Ihnen viel Freude
+beim Lesen!Ihre Chefredaktion
+
+### ANSWER
+
+- lastname: Braig
+  firstname: Sophia
+  position: Chefredaktion
+  affiliation: Freilaw
+  role: Redaktion
+- lastname: Schmieder
+  firstname: Levin
+  position: Chefredaktion
+  affiliation: Freilaw
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+FuR
+
+### URL
+
+https://www.abebooks.co.uk/Familie-Recht-Festausgabe-Rechtswissenschaftlichen-Fakult%C3%A4t-Universit%C3%A4t/17912274305/bd
+
+### CONTENT
+
+Familie und Recht. Festausgabe der Rechtswissenschaftlichen Fakultõt der Universitõt Freiburg f³r Bernhard Schnyder zum
+65. Geburtstag. Famille et Droit. by Peter Gauch (Herausgeber, Vorwort), J÷rg Schmid (Herausgeber, Vorwort), Paul H
+Steinauer (Herausgeber, Vorwort), Pierre Tercier (Herausgeber): Gut Hardcover (1995) | suspiratio - online b³cherstube
+Skip to main content
+abebooks.co.uk
+Items related to Familie und Recht. Festausgabe der Rechtswissenschaftlichen...
+Home
+Peter Gauch (Herausgeber, Vorwort), J÷rg Schmid (Herausgeber, ...
+Familie und Recht. Festausgabe der Rechtswissenschaftlichen ...
+Stock Image
+Familie und Recht. Festausgabe der Rechtswissenschaftlichen Fakultõt der Universitõt Freiburg f³r Bernhard Schnyder zum
+65. Geburtstag. Famille et Droit.
+Peter Gauch (Herausgeber, Vorwort), J÷rg Schmid (Herausgeber, Vorwort), Paul H Steinauer (Herausgeber, Vorwort), Pierre
+Tercier (Herausgeber)
+0 ratings by Goodreads
+ISBN 10:
+
+### ANSWER
+
+- lastname: Gauch
+  firstname: Peter
+  position: Herausgeber
+  affiliation: Universität Freiburg
+  role: Herausgeber
+- lastname: Schmid
+  firstname: Jörg
+  position: Herausgeber
+  affiliation: Universität Freiburg
+  role: Herausgeber
+- lastname: Steinauer
+  firstname: Paul H
+  position: Herausgeber
+  affiliation: Universität Freiburg
+  role: Herausgeber
+- lastname: Tercier
+  firstname: Pierre
+  position: Herausgeber
+  affiliation: Universität Freiburg
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GLJ
+
+### URL
+
+https://de.wikipedia.org/wiki/German_Law_Journal
+
+### CONTENT
+
+achtmal jährlich
+Chefredakteur
+Klaas Eller, Jen Hendry, Russell A. Miller , Jule Mulder, Clara Rigoni, Emanuel V. Towfigh
+Herausgeber
+German Law Journal e.V.
+4 Einzelnachweise
+Geschichte [ Bearbeiten | Quelltext bearbeiten ]
+Das German Law Journal wurde im Jahr 1999 von den heutigen Rechtsprofessoren Russell A. Miller und Peer C. Zumbansen
+gegründet, die sich als Wissenschaftliche Mitarbeiter am Bundesverfassungsgericht kennengelernt hatten. [1]
+Ursprünglich versandten sie alle zwei Wochen einen Newsletter mit englischsprachigen Anmerkungen zu Urteilen zum
+gewidmet ist. [2] Außerdem erschien eine Festschrift mit einer Auswahl aus den bis dahin erschienenen Beiträgen als Buch
+im Verlag der Oxford University Press . [3]
+Peer C. Zumbansen beendete 2013 seine Mitarbeit als Herausgeber der Zeitschrift; sie wurde seitdem von Russel A. Miller
+fortgeführt, der dabei von einem Team unterstützt wird. Ende 2018 wird die Zeitschrift getragen vom German Law Journal
+e.V., einem eingetragenen Verein mit Sitz an der Goethe-Universität Frankfurt am Main . Herausgegeben wird sie von Klaas
+Eller, Jen Hendry, Russell A. Miller , Jule Mulder, Clara Rigoni und Emanuel V. Towfigh . [4]
+Anfangs erschienen die Ausgaben des GLJ monatlich, seit 2014 in der Regel zweimonatlich; daneben gibt es Sonderausgaben
+zu bestimmten Themen, beispielsweise erschien 2016 ein „Brexit Supplement“, in dem die Auswirkungen der Volksabstimmung
+Daniel Hürlimann (Hrsg.): Open Access in der Rechtswissenschaft. Nomos, Baden-Baden 2019, ISBN 978-3-8487-6257-6 , S.  
+112–122 , doi : 10.5771/9783748903659-118 .
+Russel A. Miller, Peer C. Zumbansen (Hrsg.): Comparative law as transnational law. A decade of the German law journal.
+Oxford University Press, Oxford [u. a.] 2012, ISBN 978-0-19-979520-8 .
+Weblinks [ Bearbeiten | Quelltext bearbeiten ]
+↑ GLJ@TEN: Volume 10 No 10. In: German Law Journal. 1. Oktober 2009, abgerufen am 7. Februar 2018 (amerikanisches
+Englisch).
+↑ Russel A. Miller, Peer C. Zumbansen (Hrsg.): Comparative law as transnational law. A decade of the German law journal.
+Oxford University Press, Oxford [u. a.] 2012, ISBN 978-0-19-979520-8 .
+↑ Team. In: German Law Journal. September 2023, archiviert vom Original ; abgerufen am 24. September 2023
+
+### ANSWER
+
+- lastname: Eller
+  firstname: Klaas
+  position: Chefredakteur
+  affiliation: German Law Journal
+  role: Herausgeber
+- lastname: Hendry
+  firstname: Jen
+  position: Chefredakteur
+  affiliation: German Law Journal
+  role: Herausgeber
+- lastname: Miller
+  firstname: Russell A.
+  position: Chefredakteur
+  affiliation: German Law Journal
+  role: Herausgeber
+- lastname: Mulder
+  firstname: Jule
+  position: Chefredakteur
+  affiliation: German Law Journal
+  role: Herausgeber
+- lastname: Rigoni
+  firstname: Clara
+  position: Chefredakteur
+  affiliation: German Law Journal
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GRUR
+
+### URL
+
+https://rsw.beck.de/zeitschriften/grur
+
+### CONTENT
+
+15.02.2024
+Zeitschrift herausgegeben von der Deutschen Vereinigung für gewerblichen Rechtsschutz und Urheberrecht
+Schriftleitung: Klaus Bacher, Matthias Leistner und Ansgar Ohly
+Aufsätze
+GRUR Jahr 2024 Seite Professor Dr. Benjamin Raue: Die Systematik des urheberrechtlichen Bearbeitungsrechts GRUR Jahr
+später widerrufenem Patent? (Marco Stief, Christian Meyer) GRUR Jahr 2024 Seite 182
+GRUR Jahr 2024 Seite EPG 10.10.2023 - UPC_CFI_17/2023 : Zu den Grenzen von einstweiligen Verfügungen vor dem EPG
+(Matthias Leistner, Sebastian Berns) GRUR Jahr 2024 Seite 184
+GRUR Jahr 2024 Seite LG München I 17.05.2023 - 7 O 2693/22 : Zurechnung von Teilakten im Ausland (Constanze Krenz) GRUR
+Jahr 2024 Seite 187
+
+### ANSWER
+
+- lastname: Bacher
+  firstname: Klaus
+  position: Schriftleitung
+  affiliation: Deutsche Vereinigung für gewerblichen Rechtsschutz und Urheberrecht
+  role: Schriftleitung
+- lastname: Leistner
+  firstname: Matthias
+  position: Schriftleitung
+  affiliation: Deutsche Vereinigung für gewerblichen Rechtsschutz und Urheberrecht
+  role: Schriftleitung
+- lastname: Ohly
+  firstname: Ansgar
+  position: Schriftleitung
+  affiliation: Deutsche Vereinigung für gewerblichen Rechtsschutz und Urheberrecht
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GRUR Int.
+
+### URL
+
+https://www.grur.org/de/publikationen/informationen-fuer-autoren.html
+
+### CONTENT
+
+Autoren der GRUR-Zeitschriften sowie Autoreninteressenten haben folgende Möglichkeiten der Kontaktaufnahme: GRUR-
+Redaktion: Frau Rechtsanwältin Birgit Rhaese; grur@beck-frankfurt.de
+Herausgeber GRUR: Prof. Dr. Ansgar Ohly; ansgar.ohly@jura.uni-muenchen.de Dr. Klaus Bacher; grur@kbacher.de Prof. Dr.
+iur. Matthias Leistner, LL.M. (Cambridge); leistner@jura.uni-muenchen.de   GRUR-International Redaktion: Dr. Tian Lu;
+Tian.lu@ip.mpg.de Dr. Maria Jose Schmidt-Kessen; maria.schmidt-kessen@ip.mpg.de
+Herausgeber GRUR-International: Prof. Dr. Reto Hilty; Hilty@ip.mpg.de Prof. Dr. Josef Drexl; josef.drexl@ip.mpg.de GRUR-
+RR / GRUR-RS Redaktion : Frau Rechtsanwältin Cristine Manz und Frau Rechtsanwältin Birgit Rhaese; grur@beck-frankfurt.de
+GRUR-Prax-Redaktion: Herr Dr. Sebastian Pech und Herr Jürgen Gille; grur-prax@beck.de
+
+### ANSWER
+
+- lastname: Ohly
+  firstname: Ansgar
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: GRUR
+  role: Herausgeber
+- lastname: Bacher
+  firstname: Klaus
+  title: Dr.
+  position: Herausgeber
+  affiliation: GRUR
+  role: Herausgeber
+- lastname: Leistner
+  firstname: Matthias
+  title: Prof. Dr. iur.
+  position: Herausgeber
+  affiliation: GRUR
+  role: Herausgeber
+- lastname: Hilty
+  firstname: Reto
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: GRUR-International
+  role: Herausgeber
+- lastname: Drexl
+  firstname: Josef
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: GRUR-International
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GRUR-Int
+
+### URL
+
+https://rsw.beck.de/zeitschriften/grur
+
+### CONTENT
+
+15.02.2024
+Zeitschrift herausgegeben von der Deutschen Vereinigung für gewerblichen Rechtsschutz und Urheberrecht
+Schriftleitung: Klaus Bacher, Matthias Leistner und Ansgar Ohly
+Aufsätze
+GRUR Jahr 2024 Seite Professor Dr. Benjamin Raue: Die Systematik des urheberrechtlichen Bearbeitungsrechts GRUR Jahr
+später widerrufenem Patent? (Marco Stief, Christian Meyer) GRUR Jahr 2024 Seite 182
+GRUR Jahr 2024 Seite EPG 10.10.2023 - UPC_CFI_17/2023 : Zu den Grenzen von einstweiligen Verfügungen vor dem EPG
+(Matthias Leistner, Sebastian Berns) GRUR Jahr 2024 Seite 184
+GRUR Jahr 2024 Seite LG München I 17.05.2023 - 7 O 2693/22 : Zurechnung von Teilakten im Ausland (Constanze Krenz) GRUR
+Jahr 2024 Seite 187
+
+### ANSWER
+
+- lastname: Bacher
+  firstname: Klaus
+  position: Schriftleitung
+  affiliation: Gewerblicher Rechtsschutz und Urheberrecht - International
+  role: Schriftleitung
+- lastname: Leistner
+  firstname: Matthias
+  position: Schriftleitung
+  affiliation: Gewerblicher Rechtsschutz und Urheberrecht - International
+  role: Schriftleitung
+- lastname: Ohly
+  firstname: Ansgar
+  position: Schriftleitung
+  affiliation: Gewerblicher Rechtsschutz und Urheberrecht - International
+  role: Schriftleitung
+- firstname: ' ""'
+  title: ' ""'
+  position: ' "Herausgeber"'
+  affiliation: ' "Deutschen Vereinigung für gewerblichen Rechtsschutz und Urheberrecht"'
+  role: ' "Herausgeber"'
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GRUR-RR
+
+### URL
+
+https://rsw.beck.de/zeitschriften/grur/grur-rr
+
+### CONTENT
+
+06.02.2024
+Zeitschrift herausgegeben von der Deutschen Vereinigung für gewerblichen Rechtsschutz und Urheberrecht
+Schriftleitung: Klaus Bacher, Matthias Leistner und Ansgar Ohly
+Rechtsprechungsbericht
+GRUR-RR Jahr 2024 Seite Jan Malte Wachsmuth: Die Rechtsprechung der Instanzgerichte zum Recht des unlauteren Wettbewerbs
+
+### ANSWER
+
+- lastname: Bacher
+  firstname: Klaus
+  position: Schriftleitung
+  affiliation: GRUR - Gewerblicher Rechtsschutz und Urheberrecht Rechtsprechungsreport
+  role: Schriftleitung
+- lastname: Leistner
+  firstname: Matthias
+  position: Schriftleitung
+  affiliation: GRUR - Gewerblicher Rechtsschutz und Urheberrecht Rechtsprechungsreport
+  role: Schriftleitung
+- lastname: Ohly
+  firstname: Ansgar
+  position: Schriftleitung
+  affiliation: GRUR - Gewerblicher Rechtsschutz und Urheberrecht Rechtsprechungsreport
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GWR
+
+### URL
+
+https://rsw.beck.de/zeitschriften/gwr
+
+### CONTENT
+
+22.02.2024
+Geschäftsführender Herausgeber:
+Dr. Wolfgang Weitnauer, Rechtsanwalt in München
+Herausgegeben von:
+Professor Dr. Wulf Goette, Vorsitzender Richter am BGH a. D.
+Professor Dr. Mathias Habersack, LMU München
+Dr. Hildegard Ziemons, Rechtsanwältin beim BGH, Karlsruhe
+Beiträge
+GWR Jahr 2024 Seite Professor Dr. Stephan Arens: Zur Wirksamkeit von Wettbewerbsverboten für Gesellschafter und
+
+### ANSWER
+
+- lastname: Weitnauer
+  firstname: Wolfgang
+  title: Dr.
+  position: Rechtsanwalt in München
+  role: Herausgeber
+- lastname: Goette
+  firstname: Wulf
+  title: Professor Dr.
+  position: Vorsitzender Richter am BGH a. D.
+  role: Herausgeber
+- lastname: Habersack
+  firstname: Mathias
+  title: Professor Dr.
+  affiliation: LMU München
+  role: Herausgeber
+- lastname: Ziemons
+  firstname: Hildegard
+  title: Dr.
+  position: Rechtsanwältin beim BGH
+  affiliation: Karlsruhe
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GewArch
+
+### URL
+
+https://rsw.beck.de/zeitschriften/gewa
+
+### CONTENT
+
+GewArch Heft 3/2024
+01.03.2024
+Herausgeber: Dr. Frank Hüpers
+Unter Mitwirkung von: Prof. Dr. Martin Burgi – Dr. Ulla Held-Daab – Dr. Sabine Hepperle – Niels Lau – Prof. Dr. Dr. h.c.
+Klaus Rennert – Ulrich Schönleiter – Holger Schwannecke – Prof. Dr. Andreas Voßkuhle – Dr. Martin Wansleben
+Schriftleitung: Dr. Frank Rieger
+Editorial
+GEWA Jahr 2024 Seite Prof. Dr. Johann-Christian Pielow: Rechtsrahmen kommunaler Energie- und Klimawende: Fit für 2045?
+
+### ANSWER
+
+- lastname: Hüpers
+  firstname: Frank
+  title: Dr.
+  role: Herausgeber
+- lastname: Rieger
+  firstname: Frank
+  title: Dr.
+  affiliation: Schriftleitung
+- lastname: Burgi
+  firstname: Martin
+  title: Prof. Dr.
+- lastname: Held-Daab
+  firstname: Ulla
+  title: Dr.
+- lastname: Hepperle
+  firstname: Sabine
+  title: Dr.
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GoJIL
+
+### URL
+
+https://de.wikipedia.org/wiki/Goettingen_Journal_of_International_Law
+
+### CONTENT
+
+Redaktion ein Advisory Board aus Professoren und Praktikern zur Seite, die für den hohen wissenschaftlichen Standard
+Sorge tragen sollen. Mitglieder des Advisory Boards der Zeitschrift sind
+Kai Ambos , Thomas Buergenthal , Christian Calliess , Georg Nolte , Angelika Nußberger , Andreas L. Paulus , Dietrich
+Rauschning , Walter Reese-Schäfer , Frank Schorkopf , Bruno Simma und Peter-Tobias Stoll .
+Abgerufen von „ https://de.wikipedia.org/w/index.php?title=Goettingen_Journal_of_International_Law&oldid=209039434 “
+
+### ANSWER
+
+- lastname: Ambos
+  firstname: Kai
+  role: Beirat
+- lastname: Buergenthal
+  firstname: Thomas
+  role: Beirat
+- lastname: Calliess
+  firstname: Christian
+  role: Beirat
+- lastname: Nolte
+  firstname: Georg
+  role: Beirat
+- lastname: Nußberger
+  firstname: Angelika
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GuG
+
+### URL
+
+https://de.wikipedia.org/wiki/Grundst%C3%BCcksmarkt_und_Grundst%C3%BCckswert
+
+### CONTENT
+
+Grundstücksmarkt und Grundstückswert, Zeitschrift für Immobilienwirtschaft, Bodenpolitik und Wertermittlung ( GuG ) ist
+eine Fachzeitschrift für den Immobilienmarkt . Der erste Jahrgang der GuG erschien 1990.
+Herausgeber sind Daniela Schaper und Wolfgang Kleiber vom Werner-Verlag . Die GuG erscheint zweimonatlich unter der ISSN
+  0938-0175 .
+Weblinks [ Bearbeiten | Quelltext bearbeiten ]
+
+### ANSWER
+
+- lastname: Schaper
+  firstname: Daniela
+  position: Herausgeber
+  affiliation: Werner-Verlag
+  role: Herausgeber
+- lastname: Kleiber
+  firstname: Wolfgang
+  position: Herausgeber
+  affiliation: Werner-Verlag
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GuP
+
+### URL
+
+https://www.nomos-shop.de/nomos/titel/gup-gesundheit-und-pflege-id-114026/
+
+### CONTENT
+
+und des Strafrechts bis hin zur Biopolitik. Die Zeitschrift richtet sich an Anwälte, Gerichte und Leistungserbringer und
+ihre Verbände - von Ärzten und Apothekern über Krankenhäuser und die Kranken- und Pflegekassen sowie Pflegedienste. 
+Herausgeber: Prof. Dr. Hermann Plagemann, FA Sozial- und Medizinrecht, Frankfurt, Dr. Ole Ziegler (V.i.S.d.P.), FA
+Medizinrecht und Handels- und Gesellschaftsrecht, Frankfurt, Prof. Dr. Peter Axer, Prof. Dr. Markus Finn, RA Prof. Dr.
+Ingo Heberlein, Prof. Dr. Andrea Kießling, Prof. Dr. Thorsten Kingreen, RA Dr. Martin Krasney, RA Dr. Kyrill Makoski,
+Dr. Frank Ulrich Montgomery, VRiBSG Dr. Elke Roos, Marcus Schian, Prof. Dr. Stefan Schick, Dr. Bernd Schütze, Prof. Dr.
+Astrid Wallrabenstein, RiBGH a.D. Wolfgang Wellner und Prof. Dr. Felix Welti Schriftleitung: Prof. Dr. Hermann Plagemann
+und Dr. Ole Ziegler (V.i.S.d.P.), Plagemann Rechtsanwälte Partnerschaft mbB, Niedenau 13-19, 60325 Frankfurt am
+MainHomepage: www.gup.nomos.de Gesundheitsrecht Sozialrecht Pflegerecht Zuletzt angesehen Über Nomos Verlag
+Presseservice Karriere eLibrary NomosOnline Service Newsletter Häufig gestellte Fragen Lieferung und Zahlung
+
+### ANSWER
+
+- lastname: Plagemann
+  firstname: Hermann
+  title: Prof. Dr.
+  position: FA Sozial- und Medizinrecht
+  affiliation: Frankfurt
+  role: Herausgeber
+- lastname: Ziegler
+  firstname: Ole
+  title: Dr.
+  position: FA Medizinrecht und Handels- und Gesellschaftsrecht
+  affiliation: Frankfurt
+  role: Herausgeber
+- lastname: Axer
+  firstname: Peter
+  title: Prof. Dr.
+  affiliation: Frankfurt
+  role: Herausgeber
+- lastname: Finn
+  firstname: Markus
+  title: Prof. Dr.
+  affiliation: Frankfurt
+  role: Herausgeber
+- lastname: Heberlein
+  firstname: Ingo
+  title: Prof. Dr.
+  position: RA
+  affiliation: Frankfurt
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+GuS
+
+### URL
+
+https://www.nomos.de/zeitschriften/gus/
+
+### CONTENT
+
+ISSN Print 1611-5821, ISSN Online 2942-3201. Erscheint alle zwei Monate.
+Herausgeberkreis
+Prof. Dr. Volker Amelung Medizinische Hochschule Hannover
+Dr. Bernadette Klapper Bundesgeschäftsführerin des Deutschen Berufsverbands für Pflegeberufe (DBfK)
+Franz Knieps Vorstand des BKK Dachverbandes e.V., Berlin
+Beirat
+Prof. Dr. med. Reinhard Busse Technische Universität Berlin
+Prof. Josef Hecken Unparteiischer Vorsitzender des Gemeinsamen Bundesausschusses, Berlin
+Dr. Christopher Hermann ehemaliger Vorsitzender des Vorstandes der AOK Baden-Württemberg, Stuttgart
+Dr. Johanna Hornung Kompetenzzentrum für Public Management, Universität Bern
+
+### ANSWER
+
+- lastname: Amelung
+  firstname: Volker
+  title: Prof. Dr.
+  position: Medizinische Hochschule Hannover
+  role: Herausgeber
+- lastname: Klapper
+  firstname: Bernadette
+  title: Dr.
+  position: Bundesgeschäftsführerin des Deutschen Berufsverbands für Pflegeberufe
+    (DBfK)
+  role: Herausgeber
+- lastname: Knieps
+  firstname: Franz
+  position: Vorstand des BKK Dachverbandes e.V., Berlin
+  role: Herausgeber
+- lastname: Busse
+  firstname: Reinhard
+  title: Prof. Dr. med.
+  position: Technische Universität Berlin
+  role: Beirat
+- lastname: Hecken
+  firstname: Josef
+  title: Prof.
+  position: Unparteiischer Vorsitzender des Gemeinsamen Bundesausschusses, Berlin
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+HFR
+
+### URL
+
+https://shop.deubner.de/details-hoechstrichterliche-finanzrechtsprechung-hfr/
+
+### CONTENT
+
+Erscheinungsweise : 12 Ausgaben/Jahr
+Kündigungsfrist: 6 Wochen zum Jahresende weiterlesen
+Verlag: Stollfuß Medien Herausgegeben von Silvia Schuster Stichwörter:
+Jahresbezugspreis
+396,00 €
+
+### ANSWER
+
+- lastname: Schuster
+  firstname: Silvia
+  affiliation: Stollfuß Medien
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+HJIL
+
+### URL
+
+https://www.mpil.de/de/pub/publikationen/publikationen-des-instituts/zaoerv.cfm
+
+### CONTENT
+
+Herausgeber
+Direktoren des Max-Planck-Instituts für ausländisches öffentliches Recht und Völkerrecht
+Armin von Bogdandy , Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht, Heidelberg (V.i.S.d.P.)
+Anne Peters , Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht, Heidelberg (V.i.S.d.P.)
+in Gemeinschaft mit den ehemaligen Direktoren
+Jochen Abr. Frowein , Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht, Heidelberg
+Rüdiger Wolfrum, Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht, Heidelberg
+Schriftleitung
+Robert Stendel , Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht, Heidelberg
+Schriftleitung Comment
+Carolyn Moser , Forschungsgruppenleiterin, Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht,
+
+### ANSWER
+
+- lastname: von Bogdandy
+  firstname: Armin
+  position: Direktor
+  affiliation: Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht
+  role: Herausgeber
+- lastname: Peters
+  firstname: Anne
+  position: Direktorin
+  affiliation: Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht
+  role: Herausgeber
+- lastname: Frowein
+  firstname: Jochen Abr.
+  position: Ehemaliger Direktor
+  affiliation: Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht
+  role: Herausgeber
+- lastname: Wolfrum
+  firstname: Rüdiger
+  position: Ehemaliger Direktor
+  affiliation: Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht
+  role: Herausgeber
+- lastname: Stendel
+  firstname: Robert
+  affiliation: Max-Planck-Institut für ausländisches öffentliches Recht und Völkerrecht
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+HRN
+
+### URL
+
+https://hamburger-rechtsnotizen.de/
+
+### CONTENT
+
+Habilitand:innen, Praktiker:innen sowie Professor:innen.
+Sie ist als gedrucktes Heft und online erhältlich. Ältere Ausgaben finden Sie hier .
+Die Hamburger Rechtsnotizen laden zum Get-Together bei Glühwein ein / 13. Dezember ab 18 Uhr, EG 15/16
+Liebe Studis,
+juristische Fachzeitschriften wie JuS, JA und NJW kennt jeder. Aber habt ihr euch schon einmal gefragt, was sich hinter
+Am 13.12. um 18:00 Uhr habt ihr die Gelegenheit, genau das herauszufinden. Dann öffnet nämlich die „Hamburger
+Rechtsnotizen“ ihre Pforten und gibt euch im Raum EG 15/16 einen Einblick in die Redaktionsarbeit
+Die „Hamburger Rechtsnotizen“ ist eine juristische Fachzeitschrift, die redaktionell von Studierenden der Universität
+Hamburg verantwortet wird. Wir sammeln Beiträge zu den unterschiedlichsten rechtlichen Fragestellungen, wählen diese
+sorgfältig für unsere halbjährigen Ausgaben aus und bereiten sie in enger Absprache mit den Autor:innen auf. Außerdem
+Und das beste daran? Ab Januar kommenden Jahres suchen wir neue Mitglieder wie euch, die frischen Wind in unsere
+Redaktion bringen! Besondere Vorkenntnisse sind dabei weder auf redaktioneller noch auf juristischer Ebene erforderlich.
+Ausdrücklich möchten wir auch Studierende aus jüngeren Semestern zu einer Bewerbung ermutigen. Das Einzige, das ihr
+mitbringen solltet, ist Spaß an redaktioneller und journalistischer Tätigkeit, etwas organisatorisches Geschick und
+Teamgeist. Je nach Interesse könnt ihr ganz unterschiedlichen Aufgaben in der Redaktion nachgehen: egal, ob ihr euch für
+Herzliche Grüße und bis dahin
+Euer Redaktionsteam
+Herausgeber: Hamburger Rechtsnotizen e.V. ·   Redaktion: Studierende der Fakultät für Rechtswissenschaft der Universität
+Hamburg  · Sitz von Herausgeber und Redaktion: Universität Hamburg, Fakultät für Rechtswissenschaft, Rothenbaumchaussee
+33, 20148 Hamburg · ISSN (Print) 2191-6543 – ISSN Online 2699-2999
+© 2024 Hamburger Rechtsnotizen│ Impressum
+
+### ANSWER
+
+- lastname: Hamburger Rechtsnotizen
+  firstname: e.V.
+  affiliation: Universität Hamburg
+  role: Herausgeber
+- lastname: Studierende
+  position: Fakultät für Rechtswissenschaft
+  affiliation: Universität Hamburg
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+HuFR
+
+### URL
+
+https://de.wikipedia.org/wiki/Humboldt_Forum_Recht
+
+### CONTENT
+
+Herausgegeben wurde das HFR ehrenamtlich von Studenten, Referendaren und wissenschaftlichen Mitarbeitern.
+Der HFR-Beirat setzte sich aus ehemaligen Herausgebern des HFR zusammen.
+Das wissenschaftliche Kuratorium bestand aus den Rechtsprofessoren Christoph G. Paulus , Bernhard Schlink und Gerhard
+Werle .
+HFR-Beiträge [ Bearbeiten | Quelltext bearbeiten ]
+Seit Gründung der Zeitschrift wurden über 100 wissenschaftliche juristische Beiträge publiziert.
+
+### ANSWER
+
+- lastname: Paulus
+  firstname: Christoph G.
+  title: Rechtsprofessor
+  affiliation: Humboldt Forum Recht
+- lastname: Schlink
+  firstname: Bernhard
+  title: Rechtsprofessor
+  affiliation: Humboldt Forum Recht
+- lastname: Werle
+  firstname: Gerhard
+  title: Rechtsprofessor
+  affiliation: Humboldt Forum Recht
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+HuV
+
+### URL
+
+https://www.steiner-verlag.de/series/2625-719X
+
+### CONTENT
+
+DEUTSCHLAND
+ifhv@rub.de
+RedaktionProf. Dr. Hans-Joachim Heintze (verantwortlich) Nadine Grünhagen-Rösler Sissy KatsoniIFHV Institut für
+Friedenssicherungsrecht und Humanitäres Völkerrecht Ruhr-Universität Bochum Massenbergstr. 9B 44787 Bochum DEUTSCHLAND
+hans-joachim.heintze@rub.de In Zusammenarbeit mitProf. Dr. Pierre Thielbörger Prof. Dr. Robert HeinschBeiratRobin Geiß,
+Wolff Heintschel von Heinegg, Jana Hertwig, Laura Hofmann, Knut Ipsen, Jann K. Kleffner, Claus Kreß, Charlotte Lülf,
+Thilo Marauhn, Math Noorthmann, Sven Peterke
+
+### ANSWER
+
+- firstname: IFHV
+  title: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht
+  affiliation: Ruhr-Universität Bochum
+  role: Herausgeber
+- lastname: Heintze
+  firstname: Hans-Joachim
+  title: Prof. Dr.
+  position: verantwortlich
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht
+  role: Redaktion
+- lastname: Grünhagen
+  firstname: Nadine
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht
+  role: Redaktion
+- lastname: Katsoni
+  firstname: Sissy
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht
+  role: Redaktion
+- lastname: Thielbörger
+  firstname: Pierre
+  title: Prof. Dr.
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+HuV-I
+
+### URL
+
+https://www.steiner-verlag.de/series/2625-719X
+
+### CONTENT
+
+DEUTSCHLAND
+ifhv@rub.de
+RedaktionProf. Dr. Hans-Joachim Heintze (verantwortlich) Nadine Grünhagen-Rösler Sissy KatsoniIFHV Institut für
+Friedenssicherungsrecht und Humanitäres Völkerrecht Ruhr-Universität Bochum Massenbergstr. 9B 44787 Bochum DEUTSCHLAND
+hans-joachim.heintze@rub.de In Zusammenarbeit mitProf. Dr. Pierre Thielbörger Prof. Dr. Robert HeinschBeiratRobin Geiß,
+Wolff Heintschel von Heinegg, Jana Hertwig, Laura Hofmann, Knut Ipsen, Jann K. Kleffner, Claus Kreß, Charlotte Lülf,
+Thilo Marauhn, Math Noorthmann, Sven Peterke
+
+### ANSWER
+
+- lastname: Heintze
+  firstname: Hans-Joachim
+  title: Prof. Dr.
+  position: verantwortlich
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht, Ruhr-Universität
+    Bochum
+  role: Redaktion
+- lastname: Grünhagen
+  firstname: Nadine
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht, Ruhr-Universität
+    Bochum
+  role: Redaktion
+- lastname: Katsoni
+  firstname: Sissy
+  affiliation: Institut für Friedenssicherungsrecht und Humanitäres Völkerrecht, Ruhr-Universität
+    Bochum
+  role: Redaktion
+- lastname: Thielbörger
+  firstname: Pierre
+  title: Prof. Dr.
+  affiliation: Ruhr-Universität Bochum
+  role: Schriftleitung
+- lastname: Heinsch
+  firstname: Robert
+  title: Prof. Dr.
+  affiliation: Ruhr-Universität Bochum
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+IBR
+
+### URL
+
+https://www.ibr-online.de/ID-Verlag/impressum.php?zg=6&Zeitschrift=IBR
+
+### CONTENT
+
+Impressum (Zeitschrift IBR Immobilien- & Baurecht)
+35. Jahrgang 2024, ISSN 0941-5750
+HerausgeberDr. Gregor Basty, Notar, M³nchen
+Prof. Dr. Klaus Eschenbruch, RA und FA f³r Bau- und Architektenrecht, FA f³r Steuerrecht, D³sseldorf
+Thomas Manteufel, Vorsitzender Richter am OLG, Bonn
+Dr.-Ing. Michael Mechnig, Baubetrieblicher Sachverstõndiger, Dortmund
+Dr. Claus Schmitz, RA und FA f³r Bau- und Architektenrecht, M³nchen
+Dr. Alfons Schulze-Hagen, Rechtsanwalt, FA f³r Bau- und Architektenrecht, Mannheim
+Werner Seifert, Dipl.-Ing. (FH), Architekt, ÷.b.u.v. Sachverstõndiger f³r Achitekten- und Ingenieurhonorare, W³rzburg
+
+### ANSWER
+
+- lastname: Basty
+  firstname: Gregor
+  title: Dr.
+  position: Notar
+  affiliation: München
+  role: Herausgeber
+- lastname: Eschenbruch
+  firstname: Klaus
+  title: Prof. Dr.
+  position: RA und FA für Bau- und Architektenrecht, FA für Steuerrecht
+  affiliation: Düsseldorf
+  role: Herausgeber
+- lastname: Manteufel
+  firstname: Thomas
+  position: Vorsitzender Richter am OLG
+  affiliation: Bonn
+  role: Herausgeber
+- lastname: Mechnig
+  firstname: Michael
+  title: Dr.-Ing.
+  position: Baubetrieblicher Sachverständiger
+  affiliation: Dortmund
+  role: Herausgeber
+- lastname: Schmitz
+  firstname: Claus
+  title: Dr.
+  position: RA und FA für Bau- und Architektenrecht
+  affiliation: München
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+IMR
+
+### URL
+
+https://www.ibr-online.de/ID-Verlag/impressum.php?zg=0&Zeitschrift=IMR
+
+### CONTENT
+
+19. Jahrgang 2024, ISSN 2190-4251
+HerausgeberGeschõftsf³hrender Ausschuss der Arbeitsgemeinschaft Mietrecht und Immobilien, vertreten durch dessen
+Vorsitzende RAin Beate Heilmann, Katharinenstr. 18, 10711 Berlin - Charlottenburg.
+Schriftleitung und V.i.S.d.P.RA Michael Mayer, Heinrich-von-Stephan-Str. 3, 68161 Mannheim
+Tel.: 0621 - 120 32-11, Fax: 0621 - 2 83 83, E-Mail: michael.mayer@ibr-online.de
+RedaktionRA Michael Mayer Claudia Ritter
+Redaktionsbeirat
+RAin und FAMuW Henrike Butenberg (Kanzlei M³ller & Hillmayer, M³nchen)
+RAin und FAMuW Wiebke F÷rst (Kanzlei Dr. H³sch & Partner, Neuss)
+RA und FAMuW Dr. Michael Sommer
+
+### ANSWER
+
+- lastname: Heilmann
+  firstname: Beate
+  title: RAin
+  position: Vorsitzende
+  affiliation: Arbeitsgemeinschaft Mietrecht und Immobilien
+  role: Herausgeber
+- lastname: Mayer
+  firstname: Michael
+  title: RA
+  position: Schriftleitung
+  affiliation: id Verlags GmbH
+  role: Schriftleitung
+- lastname: Mayer
+  firstname: Michael
+  title: RA
+  position: Redaktion
+  affiliation: id Verlags GmbH
+  role: Redaktion
+- lastname: Ritter
+  firstname: Claudia
+  position: Redaktion
+  affiliation: id Verlags GmbH
+  role: Redaktion
+- lastname: Butenberg
+  firstname: Henrike
+  title: RAin und FAMuW
+  position: Redaktionsbeirat
+  affiliation: Kanzlei Müller & Hillmayer
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+IR
+
+### URL
+
+https://rsw.beck.de/zeitschriften/infrastrukturrecht
+
+### CONTENT
+
+12.02.2024
+Geschäftsführende Herausgeber
+Prof. Dr. Christian Theobald, BBH
+Dr. Andreas Zuber, Verband kommunaler Unternehmen e.V. (VKU)
+Herausgeber
+Prof. Dr. Gabriele Britz, Justus-Liebig-Universität Gießen
+Dr. Norman Fricke, AGFW | Der Effizienzverband für Wärme, Kälte und KWK e.V.
+Timm Fuchs, Deutscher Städte- und Gemeindebund e.V. (DStGB)
+Andrees Gentzsch, Bundesverband der Energie- und Wasserwirtschaft e.V. (BDEW)
+Prof. Christian Held, BBH, Europäischer Verband der unabhängigen Strom- und Gasverteilerunternehmen (GEODE)
+Holger Lösch, Bundesverband der Deutschen Industrie e.V. (BDI)
+Prof. Dr. Markus Ludwigs, Julius-Maximilians-Universität Würzburg
+Dr. Christiane Nill-Theobald, TheobaldConsulting
+Prof. Dr. Jens-Peter Schneider, Albert-Ludwigs-Universität Freiburg
+Dr. Christine Wilcken, Deutscher Städtetag
+
+### ANSWER
+
+- lastname: Theobald
+  firstname: Christian
+  title: Prof. Dr.
+  position: Geschäftsführender Herausgeber
+  affiliation: BBH
+  role: Herausgeber
+- lastname: Zuber
+  firstname: Andreas
+  title: Dr.
+  position: Geschäftsführender Herausgeber
+  affiliation: Verband kommunaler Unternehmen e.V. (VKU)
+  role: Herausgeber
+- lastname: Britz
+  firstname: Gabriele
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: Justus-Liebig-Universität Gießen
+  role: Herausgeber
+- lastname: Fricke
+  firstname: Norman
+  title: Dr.
+  position: Herausgeber
+  affiliation: AGFW | Der Effizienzverband für Wärme, Kälte und KWK e.V.
+  role: Herausgeber
+- lastname: Fuchs
+  firstname: Timm
+  position: Herausgeber
+  affiliation: Deutscher Städte- und Gemeindebund e.V. (DStGB)
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ITRB
+
+### URL
+
+https://de.wikipedia.org/wiki/Der_IT-Rechts-Berater
+
+### CONTENT
+
+monatlich
+Chefredakteur
+Stefanie Fuchs-Galilea
+Weblink
+cr-online.de
+Verlags Dr. Otto Schmidt , Köln . Er ging 2001 als Beraterzeitschrift aus dem seit 1998 bestehenden Informationsdienst
+CompterrechtIntern (CI) hervor und enthält kommentierte Gerichtsentscheidungen , Aufsätze und Kurzinformationen zum
+Computer-, Internet- , Telekommunikations- und Datenschutzrecht . Herausgeber ist Jochen Schneider. Das Abonnement
+umfasst ein Volltextarchiv. Frei zugänglich ist das Portal CRonline mit IT-rechtlichen Nachrichten , einem Experten blog
+und einem zweiwöchentlichen Newsletter . Die Zeitschrift ist Bestandteil der Datenbank CR-online.
+
+### ANSWER
+
+- lastname: Schneider
+  firstname: Jochen
+  affiliation: Verlag Dr. Otto Schmidt
+  role: Herausgeber
+- lastname: Fuchs-Galilea
+  firstname: Stefanie
+  position: Chefredakteur
+  affiliation: Verlag Dr. Otto Schmidt
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+IÖD
+
+### URL
+
+https://shop.wolterskluwer-online.de/rechtsgebiete/verwaltungsrecht/oeffentliches-dienstrecht/04102500-ioed-informationsdienst-oeffentliches-dienstrecht.html
+
+### CONTENT
+
+IÖD - Informationsdienst Öffentliches Dienstrecht, Öffentliches Dienstrecht, Wieland, 1610-0468, Fachliteratur, Carl
+Heymanns Verlag | Wolters Kluwer Online Shop Um Wolters Kluwer Online Shop in vollem Umfang nutzen zu können, empfehlen
+wir Ihnen Javascript in Ihrem Browser zu aktiveren.
+Häufige Fragen (FAQ) Informationen AGB & Leistungsbeschreibung Impressum Versandkosten und Lieferinformationen
+Widerrufsrecht Datenschutzhinweise Cookie-Einstellungen Kontakt Hilfe Freischaltcode einlösen IÖD - Informationsdienst
+Öffentliches Dienstrecht Wieland Aktuelle Rechtsprechung 31%-Ersparnis* Online Jahresabo 28,25 € pro Monat zzgl. MwSt
+Online Monatsabo 41,13 € pro Monat zzgl. MwSt Printausgabe 367,00 € inkl. MwSt Jahresabonnement Probeabonnement *ggü.
+dem Monatsabo Printausgabe 367,00 € *Preis pro Jahr, Abo-Laufzeit: 12 Monate inkl. MwSt. zzgl. Versandkosten Info
+
+### ANSWER
+
+- lastname: Wieland
+  title: Rechtsanwalt und Fachanwalt für Verwaltungsrecht
+  position: Rechtsanwalt und Fachanwalt für Verwaltungsrecht in Bonn / Bad Godesberg
+  affiliation: Informationsdienst Öffentliches Dienstrecht
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+JAmt
+
+### URL
+
+https://dijuf.de/veroeffentlichungen/jamt-fachzeitschrift
+
+### CONTENT
+
+Der JAmt Beirat begleitet die Zeitschrift mit der Expertise aus Lehre und Forschung, Familiengerichtsbarkeit und Praxis
+des Jugendamts mit konstruktivem Feedback und innovativen Ideen:
+VorsRiKG Prof. Dr. Rüdiger Ernst , Berlin, Prof. Dr. Birgit Hoffmann , Hochschule Mannheim, Prof. Dr. Matthias Jestaedt
+, Albert-Ludwigs-Universität Freiburg i. Br., Cornelia Kazakob-Marsollek , JA Saarpfalz-Kreis, Prof. Dr. Kerima Kostka ,
+Frankfurt University of Applied Sciences, Prof. Dr. Katharina Lugani , Heinrich-Heine-Universität Düsseldorf, Heike
+Steege , StJA Chemnitz
+
+### ANSWER
+
+- firstname: DIJuF
+  affiliation: DIJuF
+  role: Herausgeber
+- lastname: Ernst
+  firstname: Rüdiger
+  title: Prof. Dr.
+  position: VorsRiKG
+  affiliation: Berlin
+  role: Beirat
+- lastname: Hoffmann
+  firstname: Birgit
+  title: Prof. Dr.
+  affiliation: Hochschule Mannheim
+  role: Beirat
+- lastname: Jestaedt
+  firstname: Matthias
+  title: Prof. Dr.
+  affiliation: Albert-Ludwigs-Universität Freiburg i. Br.
+  role: Beirat
+- lastname: Kazakob-Marsollek
+  firstname: Cornelia
+  affiliation: JA Saarpfalz-Kreis
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Kriminalist
+
+### URL
+
+https://www.dbbverlag.de/der-kriminalist/54
+
+### CONTENT
+
+der kriminalist - Fachzeitschrift des Bund Deutscher Kriminalbeamter
+Um unseren Shop in vollem Umfang nutzen zu können, empfehlen wir Ihnen Javascript in Ihrem Browser zu aktivieren.
+DBB Verlag
+Übersicht
+der kriminalist
+Fachzeitschrift des Bund Deutscher Kriminalbeamter
+9,50 €*
+Preise inkl. MwSt. zzgl. Versandkosten
+Mindestlaufzeit 1 Jahr, Kündigungsfrist: bis zum 01.12. des Bezugsjahres
+Autor:
+Bund Deutscher Kriminalbeamter e.V. (Hrsg.)
+Umfang:
+52 Seiten
+0722-3501
+Beschreibung
+Die Verbandszeitschrift des Bund Deutscher Kriminalbeamter e.V. ist eine Fachzeitschrift für Kriminalbeamte,
+Staatsanwälte,…
+Mehr
+Menü schließen
+Produktinformationen "der kriminalist"
+Die Verbandszeitschrift des Bund Deutscher Kriminalbeamter e.V. ist eine Fachzeitschrift für Kriminalbeamte,
+Staatsanwälte, Strafrichter und die Politik.
+Seit über 40 Jahren nutzen Kriminalisten die anspruchsvollen fachlichen Inhalte für ihre tägliche Arbeit. Die
+
+### ANSWER
+
+- lastname: Jaeger
+  firstname: Rolf Rainer
+  title: Leitender Kriminaldirektor a.D.
+  position: Chefredaktion
+  affiliation: Der Kriminalist
+  role: Redaktion
+- lastname: Bund Deutscher Kriminalbeamter
+  firstname: e.V.
+  affiliation: DBB Verlag
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Landkreis
+
+### URL
+
+https://www.landkreistag.de/publikationen/fachzeitschrift-qder-landkreisq/impressum-qder-landkreisq
+
+### CONTENT
+
+Impressum „Der Landkreis“
+Fachzeitschrift „Der Landkreis“ Impressum und Media-Informationen
+Herausgeber: Deutscher Landkreistag, Geschäftsführendes Präsidialmitglied Prof. Dr. Hans-Günter Henneke, Lennéstraße 11,
+10785 Berlin Schriftleitung: Prof. Dr. Hans-Günter Henneke und Daniela Willrodt Tel.: 030 590097-319, Fax: 030
+590097-412 E-mail: Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.
+Internet: www.landkreistag.de Bezugspreis: Jahresabo: Euro 109,00, Versand Euro 8,75 Einzelheft: Euro 14,20 Einzelpreis
+
+### ANSWER
+
+- lastname: Henneke
+  firstname: Hans-Günter
+  title: Prof. Dr.
+  position: Geschäftsführendes Präsidialmitglied
+  affiliation: Deutscher Landkreistag
+  role: Herausgeber
+- lastname: Henneke
+  firstname: Hans-Günter
+  title: Prof. Dr.
+  affiliation: Deutscher Landkreistag
+  role: Schriftleitung
+- lastname: Willrodt
+  firstname: Daniela
+  affiliation: Deutscher Landkreistag
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+MedSach
+
+### URL
+
+https://www.isbn.de/buch/9783708313047/der-medizinische-sachverstaendige
+
+### CONTENT
+
+Bücher Recht Recht bestimmter Jurisdiktionen und bestimmter Rechtsgebiete Zivilrecht, Privatrecht, allgemein Der
+medizinische SachverständigeRechtsgrundlagen und Beispiele guter Praxis medizinischer und pflegerischer
+Sachverständigengutachten herausgegeben von Wolfgang Kröll , Peter Schweppe und Oliver Neuper Mitwirkende Herausgegeben
+von Wolfgang Kröll Herausgegeben von Peter Schweppe Herausgegeben von Oliver Neuper
+×
+Der medizinische SachverständigeRechtsgrundlagen und Beispiele guter Praxis medizinischer und pflegerischer
+Sachverständigengutachten herausgegeben von Wolfgang Kröll , Peter Schweppe und Oliver Neuper Mitwirkende Herausgegeben
+von Wolfgang Kröll Herausgegeben von Peter Schweppe Herausgegeben von Oliver Neuper Dem medizinischen
+Sachverständigengutachten kommt im Verfahren nicht nur als Beweismittel eine erhebliche Bedeutung zu, sondern es stellt
+vielmehr auch eine der wesentlichsten Grundlagen für die Beurteilung von Sachverhalten durch Gerichte und Behörden dar.
+
+### ANSWER
+
+- lastname: Kröll
+  firstname: Wolfgang
+  role: Herausgeber
+- lastname: Schweppe
+  firstname: Peter
+  role: Herausgeber
+- lastname: Neuper
+  firstname: Oliver
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+PersV
+
+### URL
+
+https://www.persvdigital.de/info/
+
+### CONTENT
+
+- Seitenanfang
+Herausgeber:
+Erich Schmidt Verlag GmbH & Co. KG
+Schriftleitung:
+Prof. Dr. Timo Hebeler
+Tipps, Trends, Termine:
+Mit dem Infodienst der PersV sind Sie über jede Aktualisierung informiert.
+internationalen Bestellungen gelten ggf. abweichende Steuersätze. Internationale Bestellungen bearbeiten wir gerne über
+unseren Online-Shop ESV.info oder via Tel.: +49 (30) 25 00 85-227 (Customer Service).
+© 2024 Erich Schmidt Verlag GmbH & Co. KG, Genthiner Straße 30 G, 10785 Berlin
+Die Nutzung für das Text und Data Mining ist ausschließlich dem Erich Schmidt Verlag GmbH & Co. KG vorbehalten. Der
+Verlag untersagt eine Vervielfältigung gemäß § 44b UrhG ausdrücklich.
+The use for text and data mining is reserved exclusively for Erich Schmidt Verlag GmbH & Co. KG. The publisher expressly
+prohibits reproduction in accordance with Section 44b of the Copy Right Act.
+Wir verwenden Cookies.
+
+### ANSWER
+
+- lastname: Schmidt
+  firstname: Erich
+  affiliation: Erich Schmidt Verlag GmbH & Co. KG
+  role: Herausgeber
+- lastname: Hebeler
+  firstname: Timo
+  title: Prof. Dr.
+  affiliation: Erich Schmidt Verlag GmbH & Co. KG
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Polizei
+
+### URL
+
+https://de.wikipedia.org/wiki/Die_Polizei
+
+### CONTENT
+
+monatlich
+Herausgeber
+Klaus Neidhardt et al.
+Weblink
+wolterskluwer.de
+Hochschule der Polizei in Münster-Hiltrup. Die Zeitschrift wird von leitenden Polizei- und Ministerialbeamten
+herausgegeben und erscheint monatlich im Carl Heymanns Verlag , der seit 2006 zu Wolters Kluwer gehört.
+Herausgeber ist der ehemalige Präsident der Deutschen Hochschule der Polizei, Klaus Neidhardt . Mitherausgeber sind mit
+Stand 2009 die Landespolizeipräsidenten von Baden-Württemberg (Erwin Hetger), Bayern (Waldemar Kindler), Hessen (bis
+2010: Norbert Nedela ) und Niedersachsen (Andreas Bruns), die Ministerialbeamten und Leiter der Polizeiabteilung in den
+Ministerien des Inneren von Nordrhein-Westfalen (Norbert Salmon), Rheinland-Pfalz (Joachim Laux) und Saarland (Klaus
+Viergutz) sowie Jörg Ziercke , ehemaliger Präsident des BKA.
+
+### ANSWER
+
+- lastname: Neidhardt
+  firstname: Klaus
+  position: ehemaliger Präsident der Deutschen Hochschule der Polizei
+  affiliation: Deutsche Hochschule der Polizei
+  role: Herausgeber
+- lastname: Hetger
+  firstname: Erwin
+  position: Landespolizeipräsident von Baden-Württemberg
+  affiliation: Baden-Württemberg Polizei
+  role: Herausgeber
+- lastname: Kindler
+  firstname: Waldemar
+  position: Landespolizeipräsident von Bayern
+  affiliation: Bayern Polizei
+  role: Herausgeber
+- lastname: Nedela
+  firstname: Norbert
+  position: Landespolizeipräsident von Hessen bis 2010
+  affiliation: Hessen Polizei
+  role: Herausgeber
+- lastname: Bruns
+  firstname: Andreas
+  position: Landespolizeipräsident von Niedersachsen
+  affiliation: Niedersachsen Polizei
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+RGSt
+
+### URL
+
+https://www.degruyter.com/serial/ergs-b/html?lang=de
+
+### CONTENT
+
+2008
+Band 78 ENTSCHEIDUNGEN DES REICHSGERICHTS IN STRAFSACHEN BD 78
+Werner Schubert
+Mehr
+Zitieren
+
+### ANSWER
+
+- lastname: Schubert
+  firstname: Werner
+  affiliation: De Gruyter
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Rpfleger
+
+### URL
+
+https://www.rpfleger.de/
+
+### CONTENT
+
+Kostenrecht
+Herausgeber:
+Dipl.-Rpfl. Mario Blödtner Dipl.-Rpfl. Hinrich Clausen Prof. Dipl.-Rpfl. Udo Hintzen Dipl.-Rpfl. Klaus Rellermeyer
+Beirat:
+Dipl.-Rpfl. Horst Bestelmeyer Prof. Walter Böhringer, Notar a.D. Dipl.-Rpfl. Uwe Harm Dipl.-Rpfl. Heinrich Hellstab
+
+### ANSWER
+
+- lastname: Blödtner
+  firstname: Mario
+  title: Dipl.-Rpfl.
+  position: Herausgeber
+  affiliation: Der Deutsche Rechtspfleger
+  role: Herausgeber
+- lastname: Clausen
+  firstname: Hinrich
+  title: Dipl.-Rpfl.
+  position: Herausgeber
+  affiliation: Der Deutsche Rechtspfleger
+  role: Herausgeber
+- lastname: Hintzen
+  firstname: Udo
+  title: Prof. Dipl.-Rpfl.
+  position: Herausgeber
+  affiliation: Der Deutsche Rechtspfleger
+  role: Herausgeber
+- lastname: Rellermeyer
+  firstname: Klaus
+  title: Dipl.-Rpfl.
+  position: Herausgeber
+  affiliation: Der Deutsche Rechtspfleger
+  role: Herausgeber
+- lastname: Reiß
+  firstname: Günter
+  title: Dipl.-Rechtspfleger
+  position: Herausgeber
+  affiliation: Der Deutsche Rechtspfleger
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+SGb
+
+### URL
+
+https://www.esv.info/z/SGbZ/zeitschriften.html
+
+### CONTENT
+
+Zeitschrift für das aktuelle Sozialrecht
+Herausgeber:
+Prof. Dr. Peter Axer, Prof. Dr. Peter Becker, Prof. Dr. Frauke Brosius-Gersdorf, Prof. Dr. Dr. h. c. Eberhard
+Eichenhofer, Dr. Christine Fuchsloch, Prof. Dr. Otto Ernst Krasney, Dr. h.c. Peter Masuch, Prof. Dr. Dr. h.c. Ulrich
+Preis, Prof. Dr. Rainer Schlegel, Prof. Dr. Peter Udsching, Prof. Dr. Thomas Voelzke, Dr. h. c. Matthias von Wulffen
+Schriftleitung:
+Prof. Dr. Dr. h. c. Eberhard Eichenhofer
+Redaktion:
+Holger Menk
+
+### ANSWER
+
+- lastname: Axer
+  firstname: Peter
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: Die Sozialgerichtsbarkeit
+  role: Herausgeber
+- lastname: Becker
+  firstname: Peter
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: Die Sozialgerichtsbarkeit
+  role: Herausgeber
+- lastname: Brosius-Gersdorf
+  firstname: Frauke
+  title: Prof. Dr.
+  position: Herausgeber
+  affiliation: Die Sozialgerichtsbarkeit
+  role: Herausgeber
+- lastname: Eichenhofer
+  firstname: Eberhard
+  title: Prof. Dr. Dr. h. c.
+  position: Herausgeber & Schriftleitung
+  affiliation: Die Sozialgerichtsbarkeit
+  role: Herausgeber
+- lastname: Eichenhofer
+  firstname: Eberhard
+  title: Prof. Dr. Dr. h. c.
+  position: Herausgeber & Schriftleitung
+  affiliation: Die Sozialgerichtsbarkeit
+  role: Schriftleitung
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+StAZ
+
+### URL
+
+https://www.standesbeamte.de/bds/profil/wissenschaftlicher-beirat/
+
+### CONTENT
+
+Privatscheidungen und der neue Art. 17 Abs. 2 EGBGB: Rom III-VO à la berlinoise, StAZ 2019, 33-42
+Ausländische Privatscheidungen im Standesamt, StAZ 2020, 33-43
+Gemeinschaftsaufsatz Arbeitsgruppe „Namensrecht“ des BDS Dutta / Frank / Freitag / Helms / Krömer / Pintens
+Ein Name in ganz Europa – Entwurf einer Europäischen Verordnung über das Internationale Namensrecht (StAZ 2014, 33)
+Gemeinschaftsaufsatz Arbeitsgruppe „Grünbuch“ des Wiss. Beirats: Dutta / Freitag / Helms / Kissner / Frank / Krömer
+Der Freiheit eine Gasse – Zur Anerkennung der Namenserklärungen von Auslandsdeutschen. Zugleich Besprechung der
+Entscheidung des BGH vom 20. Juli 2016. StAZ 2017, 129.
+Gemeinschaftsaufsatz Dutta / Helms / Mayer
+Zur Zukunft von Ehefähigkeitszeugnis und Befreiungsverfahren – Auswertung einer Umfrage unter Standesbeamten, StAZ 2019,
+295.
+Unwirksamkeit mit eingeschränkten Folgen: Der Beschluss des Bundesverfassungsgerichts zu ausländischen
+Minderjährigenehen (BVerfG 1.2.2023 – 1BvL 7/18) (StAZ 2023 S. 206)
+Gemeinschaftsaufsatz Antomo / Duden / Dutta /Hettich / Krömer / Mayer / Helms
+Vorschlag der Kommission für eine neue Verordnung zum Internationalen Abstammungsrecht vom 07.12.2022 (COM (2022) 695
+final) (StAZ 2023 S. 141)
+
+### ANSWER
+
+- lastname: Dutta
+  firstname: Anatol
+  title: Professor Dr.
+  position: M. Jur. (Oxford), Ludwig-Maximilians-Universität München
+  role: Beirat
+- lastname: Frank
+  firstname: Rainer
+  title: em. Professor Dr.
+  position: Freiburg i.Br.
+  role: Beirat
+- lastname: Hettich
+  firstname: Matthias
+  title: Richter am VGH
+  affiliation: Mannheim
+  role: Beirat
+- lastname: Mayer
+  firstname: Claudia
+  title: 'Prof. Dr. '
+  position: LL.M. (Chicago), Universität Regensburg
+  role: Beirat
+- lastname: Krömer
+  firstname: Karl
+  title: Leiter des Standesamtes
+  affiliation: Augsburg
+  role: Beirat
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+StBp
+
+### URL
+
+https://www.esv.info/z/BP/zeitschriften.html
+
+### CONTENT
+
+Erich Schmidt Verlag GmbH & Co. KG
+Redaktion:
+Ass. iur. Stefan Daniel Littnanski
+add_shopping_cart
+Print-Digital-Bundle Jahresabonnement
+
+### ANSWER
+
+- firstname: Erich Schmidt Verlag GmbH & Co. KG
+  affiliation: Erich Schmidt Verlag (ESV)
+  role: Herausgeber
+- lastname: Littnanski
+  firstname: Stefan Daniel
+  title: Ass. iur.
+  role: Redaktion
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Stbg
+
+### URL
+
+https://de.wikipedia.org/wiki/Die_Steuerberatung
+
+### CONTENT
+
+Deutsch
+Verlag
+Stollfuß Medien GmbH & Co. KG
+Erscheinungsweise
+monatlich
+34.500 Exemplare
+Chefredakteur
+Bert Kaminski
+Herausgeber
+Stollfuß Medien mit dem DStV
+Geschäftsführer
+Wolfgang Stollfuß, Michael Stollfuß
+Weblink
+die-steuerberatung.de
+
+### ANSWER
+
+- lastname: Kaminski
+  firstname: Bert
+  position: Chefredakteur
+  affiliation: Die Steuerberatung
+  role: Redaktion
+- lastname: Stollfuß
+  firstname: Wolfgang
+  position: Geschäftsführer
+  affiliation: Stollfuß Medien mit dem DStV
+- lastname: Stollfuß
+  firstname: Michael
+  position: Geschäftsführer
+  affiliation: Stollfuß Medien mit dem DStV
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+UFITA
+
+### URL
+
+https://de.wikipedia.org/wiki/Archiv_f%C3%BCr_Medienrecht_und_Medienwissenschaft
+
+### CONTENT
+
+halbjährlich [1]
+Herausgeber
+Mark D. Cole Nadine Klass
+Weblink
+www.ufita.nomos.de
+Diskussionen geöffnet werden und auch Publikationen aus der Medien- und Kommunikationswissenschaft ermöglichen.
+Die UFITA wird neu gemeinsam getragen vom Institut für Urheber- und Medienrecht (München) und vom Institut für
+Europäisches Medienrecht (Saarbrücken). Herausgeber sind Nadine Klass (Direktorin Institut für Urheber- und Medienrecht)
+und Mark D. Cole (Direktor Institut für Europäisches Medienrecht).
+Schriftenreihe [ Bearbeiten | Quelltext bearbeiten ]
+Zur UFITA gehört auch eine Schriftenreihe , in der in erster Linie Dissertationen zum Urheberrecht veröffentlicht werden
+
+### ANSWER
+
+- lastname: Cole
+  firstname: Mark D.
+  position: Direktor
+  affiliation: Institut für Europäisches Medienrecht
+  role: Herausgeber
+- lastname: Klass
+  firstname: Nadine
+  position: Direktorin
+  affiliation: Institut für Urheber- und Medienrecht
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+VerkA
+
+### URL
+
+https://de.wikipedia.org/wiki/Der_Verkehrsanwalt
+
+### CONTENT
+
+vierteljährlich
+Chefredakteur
+Christian Janeczek
+Herausgeber
+Arbeitsgemeinschaft Verkehrsrecht des DAV
+
+### ANSWER
+
+- lastname: Janeczek
+  firstname: Christian
+  position: Chefredakteur
+  affiliation: Der Verkehrsanwalt
+  role: Redaktion
+- position: Herausgeber
+  affiliation: Arbeitsgemeinschaft Verkehrsrecht des DAV
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+Verkehrsjurist
+
+### URL
+
+https://de.wikipedia.org/wiki/Der_Verkehrsanwalt
+
+### CONTENT
+
+vierteljährlich
+Chefredakteur
+Christian Janeczek
+Herausgeber
+Arbeitsgemeinschaft Verkehrsrecht des DAV
+
+### ANSWER
+
+- lastname: Janeczek
+  firstname: Christian
+  position: Chefredakteur
+  affiliation: Deutscher Anwaltverlag, Bonn
+  role: Redaktion
+- firstname: ' "Arbeitsgemeinschaft Verkehrsrecht des DAV"'
+  position: Herausgeber
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+ZMV
+
+### URL
+
+https://de.wikipedia.org/wiki/Zeitschrift_f%C3%BCr_die_Praxis_der_Mitarbeitervertretung_in_den_Einrichtungen_der_katholischen_und_evangelischen_Kirche
+
+### CONTENT
+
+( [1] )
+Chefredakteur
+Jacob Joussen
+Herausgeber
+kifas gemeinnützige GmbH, KAB-Institut für Fortbildung und angewandte Sozialethik, u. a. [2]
+verfügbare Datenbank mit kirchlicher Rechtsprechung .
+Herausgeber (Stand: August 2023): [2]
+Jacob Joussen (verantwortlicher Schriftleiter)
+Detlev Fey (stellvertretender Schriftleiter)
+Joachim Eder, ehem. Vorsitzender der Zentral-KODA
+Thomas Schwendele, ehemaliges Mitglied der Zentral-KODA und der Arbeitsrechtlichen Kommission des Deutschen
+Caritasverbandes
+kifas gemeinnützige GmbH, KAB -Institut für Fortbildung und angewandte Sozialethik, vertreten durch Christoph Jacobowsky
+Ständige Mitarbeiterinnen und Mitarbeiter:
+Walter Berroth, ehem. Vorsitzender des Gesamtausschusses der Evangelischen Landeskirche in Baden
+
+### ANSWER
+
+- lastname: Joussen
+  firstname: Jacob
+  position: verantwortlicher Schriftleiter
+  affiliation: Die Mitarbeitervertretung
+  role: Herausgeber
+- lastname: Fey
+  firstname: Detlev
+  position: stellvertretender Schriftleiter
+  affiliation: Die Mitarbeitervertretung
+  role: Herausgeber
+- lastname: Eder
+  firstname: Joachim
+  title: ehem. Vorsitzender der Zentral-KODA
+  role: Herausgeber
+- lastname: Schwendele
+  firstname: Thomas
+  title: ehemaliges Mitglied der Zentral-KODA und der Arbeitsrechtlichen Kommission
+    des Deutschen Caritasverbandes
+  role: Herausgeber
+- lastname: Jacobowsky
+  firstname: Christoph
+  position: vertreten durch
+  affiliation: kifas gemeinnützige GmbH, KAB-Institut für Fortbildung und angewandte
+    Sozialethik
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+apf
+
+### URL
+
+https://de.wikipedia.org/wiki/Ausbildung_%E2%80%93_Pr%C3%BCfung_%E2%80%93_Fachpraxis
+
+### CONTENT
+
+Erstmals erschien die Zeitschrift im Jahr 1975 unter dem Titel Ausbildung – Prüfung – Fortbildung mit der ISSN
+0344-3825. Im Jahr 2009 erfolgte die Umbenennung. [2]
+Die Zeitschrift wird von Philipp Austermann , Joachim Bender, Frank Ebert , Robert Klüsener , Frank Nolden , Hans-Gerd
+Pieper, Jacqueline Reichardt, Thomas Sauerland, Ludger Schrapper, Frank Stollmann und Gesine Wilke herausgegeben. [3]
+Einzelnachweise [ Bearbeiten | Quelltext bearbeiten ]
+
+### ANSWER
+
+- lastname: Austermann
+  firstname: Philipp
+  role: Herausgeber
+- lastname: Bender
+  firstname: Joachim
+  role: Herausgeber
+- lastname: Ebert
+  firstname: Frank
+  role: Herausgeber
+- lastname: Klüsener
+  firstname: Robert
+  role: Herausgeber
+- lastname: Nolden
+  firstname: Frank
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
+### JOURNAL
+
+info also
+
+### URL
+
+https://www.nomos-shop.de/nomos/titel/info-also-informationen-zum-arbeitslosenrecht-und-sozialhilferecht-id-114028/
+
+### CONTENT
+
+ersten Instanzen berücksichtigt. Darüber hinaus informiert die info also über Gesetzesentwürfe und Verordnungen. Die
+Zeitschrift ist somit die Informationsdrehscheibe für Rechtsanwälte, Sozialarbeiter, Sozialpädagogen, Richter,
+Arbeitslosenzentren und Sozialhilfezentren. Herausgeber/innen und Redaktion : Nicola Behrend, Prof. RiVerwG Dr. Uwe
+Berlit, RA Dr. Wolfgang Conradis, Prof. Dr. Susanne Dern, RiSG Udo Geiger, RiSG Jörn Hökendorf, Susanne Igelmann, RA Uwe
+Klerks, Prof. Dr. Ingo Palsherm, Prof. Ulrich Stascheit, RiLSG Horst Steinmeyer (V.i.S.d.P.), Hedi Vogel, Prof. Dr.
+Maria Wersig, Ute Winkler, Antje Wrackmeyer-Schoene (Mit-)Begründer der Zeitschrift und ständige Mitarbeiter: Albert
+Hofmann, Horstpeter Kreppel, Helga Spindler, Günther Stahlmann, Peter Trenk-Hinterberger Redaktionsadresse Recht der
+Arbeitsförderung (SGB III): Udo Geiger, Bernauer Heerstr. 2, 16230 Melchow, Redaktionsadresse für Grundsicherung für
+Arbeitsuchende (SGB II) und Sozialhilferecht: Uwe Berlit, Tschaikowskistr. 10, 04105 Leipzig. E-Mail: infoalso@berlit.de
+Homepage: www.info-also.nomos.de Sozialhilfe Sozialrecht Existenzsicherungsrecht Zuletzt angesehen Über Nomos Verlag
+Presseservice Karriere eLibrary NomosOnline Service Newsletter Häufig gestellte Fragen Lieferung und Zahlung
+
+### ANSWER
+
+- lastname: Behrend
+  firstname: Nicola
+  role: Herausgeber
+- lastname: Berlit
+  firstname: Uwe
+  title: Prof. RiVerwG
+  role: Herausgeber
+- lastname: Conradis
+  firstname: Wolfgang
+  title: RA Dr.
+  role: Herausgeber
+- lastname: Dern
+  firstname: Susanne
+  title: Prof. Dr.
+  role: Herausgeber
+- lastname: Geiger
+  firstname: Udo
+  title: RiSG
+  role: Herausgeber
+
+
+------------------------------------------------------------------------------------------------------------------------
+
