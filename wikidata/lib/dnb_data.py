@@ -2,9 +2,9 @@
 
 import requests
 from bs4 import BeautifulSoup
-import csv
 import urllib.parse
 from lxml import etree
+import pandas as pd
 
 def generate_query_string(person, startRecord):
     base_url = "https://services.dnb.de/sru/dnb"
@@ -63,14 +63,13 @@ def parse_records(xml_data):
     return results, num_records
 
 
-def query_to_csv(person, file_path):
+def get_publications(person):
     start_record = 1
-    num_records = 0
     retrieved_records = 0
+    data = []  # Initialize an empty list to store the data
 
-    with open(file_path, 'w', newline='', encoding='utf-8') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(['Title', 'Author', 'Publication Year'])
+    # The structure of the DataFrame columns
+    columns = ['Title', 'Author', 'Publication Year']
 
     while True:
         xml_data = fetch_data(person, start_record)
@@ -79,21 +78,16 @@ def query_to_csv(person, file_path):
             if not results:
                 break
 
-            with open(file_path, 'a', newline='', encoding='utf-8') as csvfile:
-                csvwriter = csv.writer(csvfile)
-                for row in results:
-                    csvwriter.writerow(row)
+            data.extend(results)
+
             retrieved_records += len(results)
             start_record += len(results)
 
             if retrieved_records >= num_records:
                 break
 
-def load_data_from_csv(file_path):
-    data = []
-    with open(file_path, 'r', newline='', encoding='utf-8') as csvfile:
-        csvreader = csv.reader(csvfile)
-        next(csvreader)  # Skip the header row
-        for row in csvreader:
-            data.append(row)
-    return data
+    # Convert the list of data to a pandas DataFrame
+    df = pd.DataFrame(data, columns=columns)
+    return df
+
+
