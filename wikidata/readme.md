@@ -1,3 +1,3 @@
 # WikiData data retrieval
 
-`pip install openpyxl`
+`pip install openpyxl plotly lxml`
