@@ -1,1 +1,6 @@
 timeline_data.xlsx
+user-config.py
+.env
+apicache
+/throttle.ctrl
+data/*-chatgpt.csv
